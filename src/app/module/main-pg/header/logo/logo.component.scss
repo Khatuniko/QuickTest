@@ -1,0 +1,15 @@
+img {
+    position:fixed;
+    // justify-content: space-around;
+    height: 80px;
+    width: 80;
+    cursor: pointer;
+}
+
+
+@media (max-width: 952px){
+    img{
+        padding-left: 50px;
+    }
+}
+
