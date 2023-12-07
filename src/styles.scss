@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -32,6 +33,12 @@ body {
     // --header-color:box-shadow: 0px 4px 4px 0px #00000040;
     // box-shadow: 0px 4px 4px 0px #00000040;
 
+}
 
-
+body {
+    font-family: 'Noto Sans Georgian', sans-serif;
+    // font-family: 'Quicksand', sans-serif;
+    // font-family: 'Work Sans', sans-serif;
+    // margin-left: 240px;
+    // margin-right:240px;
 }

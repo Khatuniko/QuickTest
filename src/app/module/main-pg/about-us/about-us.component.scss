@@ -1,0 +1,84 @@
+.aboutus__section{
+    margin-left: 240px;
+    margin-right:240px;
+
+}
+
+
+.aboutus__heading {
+    width: 184px;
+    height: 33px;
+    margin-top: 44px;
+    margin-left: 618px;
+    font-family: Noto Sans Georgian;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #000000;
+
+
+}
+
+.cards  {
+    display: flex;
+    // justify-content: space-around;
+    width: 1,320px;
+    height:351px;
+    margin-top: 65px;
+    margin-left: 60px;
+    gap: 24px;
+
+}
+
+.card {
+    border: 2px;
+    border-radius: 16px;
+    width: 424px;
+    height: 351px;
+    padding: 36px, 24px, 36px, 24px;
+    gap: 16px;
+    box-shadow: 0px 0px 24px 0px #00000026;
+
+img {
+    padding: 12px;
+    border-radius: 8px;
+    width:104px;
+    height:104px;
+    gap:10px;
+ }
+.card__photos {
+    margin-left:25%;
+} 
+.card__heading {
+    font-family: Noto Sans Georgian;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+.card__paragraph {
+    font-family: Noto Sans Georgian;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.015em;
+    text-align: center;
+}
+
+}
+.aboutus__paragraph {
+    width: 1240px;
+height: 286px;
+margin-top: 40px;
+margin-left: 100px;
+font-family: Noto Sans Georgian;
+font-size: 16px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: -0.015em;
+text-align: left;
+
+}
