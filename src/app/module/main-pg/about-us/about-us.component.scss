@@ -26,9 +26,11 @@
     // justify-content: space-around;
     width: 1,320px;
     height:351px;
-    margin-top: 65px;
+    margin-top: 32px;
+    // margin-top:76px;
     margin-left: 60px;
     gap: 24px;
+
 
 }
 
@@ -47,38 +49,48 @@ img {
     width:104px;
     height:104px;
     gap:10px;
+    margin-top:32px;
  }
 .card__photos {
     margin-left:25%;
 } 
 .card__heading {
-    font-family: Noto Sans Georgian;
     font-size: 24px;
     font-weight: 600;
     line-height: 33px;
     letter-spacing: -0.015em;
     text-align: center;
+    margin-top:8px;
 }
 .card__paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.015em;
+    margin-top:16px;
+    width: 339px;
+    height: 88px;
+    text-align: center;
+    margin-left:10%;
+
+}
+// .card__text {
+//     margin-left:15%;
+
+// }
+}
+.aboutus__paragraph {
+    width: 1240px;
+    height: 286px;
+    margin-top: 32px;
+    margin-left: 100px;
     font-family: Noto Sans Georgian;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: -0.015em;
-    text-align: center;
-}
-
-}
-.aboutus__paragraph {
-    width: 1240px;
-height: 286px;
-margin-top: 40px;
-margin-left: 100px;
-font-family: Noto Sans Georgian;
-font-size: 16px;
-font-weight: 400;
-line-height: 22px;
-letter-spacing: -0.015em;
-text-align: left;
-
+    text-align: left;
+    p{
+        padding: 5px;
+    }
 }
