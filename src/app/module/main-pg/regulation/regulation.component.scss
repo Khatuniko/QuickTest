@@ -28,7 +28,7 @@
             .yellow__text {
                 color:var(--yellow-color);
                 font-weight: 600;
-                line-height: 33px;
+                // line-height: 33px;
                 letter-spacing: -0.015em;
                 font-size: var(--font-standard);
         
@@ -37,17 +37,17 @@
 
     }
 
-    .regulation__folders{
+    // .regulation__folders{
 
 
 
-    }
+    // }
 
     .regulation__cards {
         display: flex;
         justify-content: space-around;
         width:1180px;
-        margin-top:24px;
+        // margin-top:24px;
         margin-left: 130px;
         gap: 52px;
 
@@ -57,7 +57,7 @@
     .regulation__card {
         width: 256px;
         // height: 290px;
-        height: 210px;
+        height: 232px;
         padding: 24px;
         border-radius: 16px;
         gap: 36px;
