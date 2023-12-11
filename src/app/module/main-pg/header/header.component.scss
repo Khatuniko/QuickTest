@@ -6,14 +6,25 @@
     box-sizing: border-box;
 }
 
-nav{
-    // background-color: #EACF0C;
-    background-color:#00000080;
+.header__navigation{
+    // black header
+    // background-color:#00000080;
+    // box-shadow: 0px 4px 4px 0px #00000040;
+    // height:  80px;
+    // width: 100%;
     box-shadow: 0px 4px 4px 0px #00000040;
     height:  80px;
     width: 100%;
-    // width: 1440px
+    // background-color: #FFFFFF;
+    ;
+
 }
+// font-family: Noto Sans Georgian;
+// font-size: 16px;
+// font-weight: 400;
+// line-height: 22px;
+// letter-spacing: -0.015em;
+// text-align: center;
 
 
 nav ul{
@@ -25,18 +36,25 @@ nav ul{
         margin: 0 5px;
 
         a{
-            color: #ffffff;
-            font-size:17px;
+            // color: #ffffff;
+            color: #000000;
             padding: 7px 13px;
             border-radius: 3px;
             text-transform: uppercase;
+            font-family: Noto Sans Georgian;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: -0.015em;
+            text-align: center;
+            
         }
 
     }
 }
 a:hover{
-    background-color: #d2bc13;
-    transition: .5s;
+    // color: var(--yellow-color);
+    // transition: .5s;
 }
 .menu {
     width: 40px;
@@ -46,6 +64,7 @@ a:hover{
 .checkbtn{
     font-size:30px;
     color: #ffffff;
+    // color:Red;
     float:right;
     align-items: center;
     line-height: 64px;
@@ -89,7 +108,7 @@ a:hover{
 
     a:hover{
         background-color: none;
-        color:#EACF0C;
+        // color: var(--yellow-color);
     }
 
     #check:checked ~ ul {
