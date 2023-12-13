@@ -4,9 +4,12 @@
         <label for="check" class="checkbtn">
             <img src="/assets/burger-menu.svg" alt="menu" class="menu">
         </label>
-        <app-logo></app-logo>
+        <div class="header__components">
+            <app-logo></app-logo>
+            <app-languages></app-languages>
+        </div>
         <ul>
-            <li><a routerLink="/" [routerLinkActive]="'active-link'" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+            <!-- <li><a routerLink="/" [routerLinkActive]="'active-link'" [routerLinkActiveOptions]="{exact:true}">Home</a></li> -->
             <li><a routerLink="/about-us" [routerLinkActive]="'active-link'">ჩვენს შესახებ</a></li>
             <li><a routerLink="/service-centers" [routerLinkActive]="'active-link'">ფილიალები</a></li>
             <li><a routerLink="/reservation" [routerLinkActive]="'active-link'">რეზერვაცია</a></li>
@@ -15,4 +18,3 @@
         </ul>
     </nav>
 </header>
-<ul>
