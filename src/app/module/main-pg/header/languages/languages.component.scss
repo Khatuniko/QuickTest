@@ -48,6 +48,23 @@
     }
 }
 
+@media (max-width: 952px){
+    .language__btn {
+        float:right;
+        width: 40px;
+        height: 40px;
+        margin-top:14px;
+        // margin:10px;
+        
+    }
+    .languages__img {
+        margin:12%;
+    }
+    p {
+        display: none;
+    }
+}
+
 
 
 // //  with drop eng/geo change
