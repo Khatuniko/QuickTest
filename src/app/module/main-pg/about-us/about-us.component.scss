@@ -36,6 +36,7 @@
     gap: 16px;
     box-shadow: 0px 0px 24px 0px #00000026;
 
+
 img {
     padding: 12px;
     border-radius: 8px;
@@ -82,4 +83,8 @@ img {
     p{
         padding: 5px;
     }
+}
+
+.card:hover {
+    border: 2px solid #F7A23E;
 }

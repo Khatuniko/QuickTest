@@ -1,71 +1,65 @@
 .reservation__section {
-
-        margin-left: 240px;
-        margin-right:240px;
+  margin-left: 240px;
+  margin-right:240px;
 }
 
 .reservation__heading {
-    margin-top: 44px;
-    font-family: Noto Sans Georgian;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 33px;
-    letter-spacing: -0.015em;
-    text-align: center;
+  margin-top: 44px;
+  font-family: Noto Sans Georgian;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
+  letter-spacing: -0.015em;
+  text-align: center;
 
 }
 
 .reservation__container {
-    width: 470px;
-height: 588px;
-margin-top: 40px;
-margin-left: 485px;
-padding: 44px;
-border-radius: 16px;
-gap: 52px;
-box-shadow: 0px 0px 24px 0px #00000026;
-
-
+  width: 470px;
+  height: 588px;
+  margin-top: 40px;
+  margin-left: 485px;
+  padding: 44px;
+  border-radius: 16px;
+  gap: 52px;
+  box-shadow: 0px 0px 24px 0px #00000026;
 }
+
 input {
     width: 382px;
-height:44px;
-padding: 11px, 16px, 11px, 16px;
-border-radius: 8px;
-border: 1px;
-gap: 10px;
-border: 1px solid #E0E0E0;
-
-
+    height:44px;
+    padding: 11px, 16px, 11px, 16px;
+    border-radius: 8px;
+    border: 1px;
+    gap: 10px;
+    border: 1px solid #E0E0E0;
 }
 // :placeholder-shown {
-
-
 // }
 
  label {
-    font-family: Noto Sans Georgian;
-font-size: 16px;
-font-weight: 600;
-line-height: 22px;
-letter-spacing: -0.015em;
-text-align: center;
-width: 175px;
-height: 22px;
-padding: 0px, 16px, 0px, 16px;
-gap: 10px;
-margin-left:16px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  width: 175px;
+  height: 22px;
+  padding: 0px, 16px, 0px, 16px;
+  gap: 10px;
+  margin-left:16px;
 
 
  }
 ::placeholder {
-    color:#E0E0E0;
-    font-family: Noto Sans Georgian;
-font-size: 16px;
-font-weight: 400;
-line-height: 22px;
-letter-spacing: -0.015em;
-padding-left:16px;
+  color:#E0E0E0;
+  font-family: Noto Sans Georgian;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.015em;
+  padding-left:16px;
+  
 
 }
 
@@ -74,99 +68,90 @@ padding-left:16px;
 // }
 
 .branches  {
-    width: 382px;
-height:46px;
-padding: 11px, 16px, 11px, 16px;
-border-radius: 8px;
-border: 1px;
-justify-content: space-between;
+  width: 382px;
+  height:46px;
+  padding: 11px, 16px, 11px, 16px;
+  border-radius: 8px;
+  border: 1px;
+  justify-content: space-between;
+  
 
 }
 
 input[type=submit]:hover {
-    background-color: var(--yellow-color);
+  background-color: var(--yellow-color);
   }
 
-  input[type=submit] {
-    font-family: Noto Sans Georgian;
-font-size: 16px;
-font-weight: 600;
-line-height: 22px;
-letter-spacing: -0.015em;
-text-align: center;
-color: #FFFFFF;
-margin-left:25%;
-// background-color: var(--yellow-color);
-  }
+input[type=submit] {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color: #FFFFFF;
+  margin-left:25%;
+}
 
-  .col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-  }
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
   
 //akedaaaaaaaan
 
-  input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
   
 //   label {
 //     padding: 12px 12px 12px 0;
 //     display: inline-block;
 //   }
   
-  input[type=submit] {
-    // background-color: #04AA6D;
-background-color:var(--yellow-color);
-width: 155px;
-height: 44px;
-padding: 11px, 36px, 11px, 36px;
-border-radius: 8px;
-gap: 10px;
-opacity: 0.5px;
-cursor: pointer;
-color:#FFFFFF;
-border: none;
+input[type=submit] {
+  background-color:var(--yellow-color);
+  width: 155px;
+  height: 44px;
+  padding: 11px, 36px, 11px, 36px;
+  border-radius: 8px;
+  gap: 10px;
+  opacity: 0.5px;
+  cursor: pointer;
+  color:#FFFFFF;
+  border: none;
 
-  }
+}
   
-  input[type=submit]:hover {
-    background-color:var(--yellow-color);
-  }
+input[type=submit]:hover {
+  background-color:var(--yellow-color);
+}
   
 span {
-    color:var(--yellow-color);
-    text-decoration-line: underline; 
-    font-family: Noto Sans Georgian;
-font-size: 16px;
-font-weight: 400;
-line-height: 22px;
-letter-spacing: -0.015em;
-text-align: center;
+  color:var(--yellow-color);
+  text-decoration-line: underline; 
+  font-family: Noto Sans Georgian;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.015em;
+  text-align: center;
 
 
 }
 
 input[type=checkbox]{
-    width: 24px;
-height: 24px;
-border-radius: 4px;
-border: 2px;
-
-
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px;
 }
+
 
 .reservation__inputs{
-    // margin:16px;
     margin-bottom: 24px;
 }
-
-// input{
-//     // margin-bottom: 8px;
-//     margin:24px;
-// }
