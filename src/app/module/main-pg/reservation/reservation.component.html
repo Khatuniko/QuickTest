@@ -1,31 +1,54 @@
-<p>reservation works!</p>
-
-<h3>ვიზიტის რეზერვაცია</h3>
-
-<div class="container">
+<section class="reservation__section">
+    <div>
+        <h3 class="reservation__heading">ვიზიტის რეზერვაცია</h3>
+<div class="reservation__container">
     <div class="form">
-        <label>მანქანის ნომერი</label>
-        <input>
-        <label>ტელეფონის ნომერი</label>
-        <input type="number">
-        <label for="">თარიღი</label>
-        <input type="date">
-        <label for="">ფილიალი</label>
-        <select name="centers" id="">
-            <option value="tbilisi">თბილისი</option>
-            <option value="rustavi">რუსთავი</option>
-            <option value="kvitiri">ქვიტირი</option>
-            <option value="batumi">ბათუმი</option>
-        </select>
+        <div>
+            <label>მანქანის ნომერი</label>
+            <input placeholder="სახელი/გვარი">
 
-        <input type="date">
+        </div>
+        <div>
+            <label>ტელეფონის ნომერი (9 ციფრი)</label>
+            <input placeholder="+995 123-456" type="number">
+
+        
+        </div>
+        <div>
+            <label for="">თარიღი</label>
+            <input type="date" placeholder="now">
+
+        </div>
+        <div class=container>
+            <div class="col-75" class="branches">
+                <label for="">ფილიალი</label>
+                <br>
+                <select id="city" name="centers">
+                    <label for="">ფილიალი</label>
+                  <option value="tbilisi">თბილისი</option>
+                  <option value="rustavi">რუსთავი</option>
+                  <option value="kutaisi">ქუთაისი</option>
+                  <option value="batumi">ბათუმი</option>
+                </select>
+            </div>
+
+        </div>
         <br>
-        <!-- <input type="checkbox"> -->
-        <input type="checkbox">
-        <label>ვეთანხმები <span>წესებს და პირობებს</span></label>
         <br>
-        <button>დაჯავშნა</button>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> ვეთანხმები <span>წესებს და პირობებს</span></label>
+        <br>
+        <br>
+        
+        <input type="submit" value="დაჯავშნა">
+        <!-- <button>დაჯავშნა</button> -->
 
     </div>
 
 </div>
+
+</div>
+
+
+</section>
+
