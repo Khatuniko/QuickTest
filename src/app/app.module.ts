@@ -16,6 +16,7 @@ import { RegulationComponent } from './module/main-pg/regulation/regulation.comp
 import { MainPgComponent } from './module/main-pg/main-pg.component';
 import { LogoComponent } from './module/main-pg/header/logo/logo.component';
 import { LanguagesComponent } from './module/main-pg/header/languages/languages.component';
+import { RemainderComponent } from './module/main-pg/reservation/remainder/remainder.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LanguagesComponent } from './module/main-pg/header/languages/languages.
     RegulationComponent,
     MainPgComponent,
     LogoComponent,
-    LanguagesComponent
+    LanguagesComponent,
+    RemainderComponent
   ],
   imports: [
     BrowserModule,

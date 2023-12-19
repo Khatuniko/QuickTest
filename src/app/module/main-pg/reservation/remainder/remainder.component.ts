@@ -1,0 +1,10 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-remainder',
+  templateUrl: './remainder.component.html',
+  styleUrls: ['./remainder.component.scss']
+})
+export class RemainderComponent {
+
+}
