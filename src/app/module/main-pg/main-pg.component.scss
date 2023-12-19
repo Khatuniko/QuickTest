@@ -3,11 +3,7 @@
 //   height: 1024px;
 // }
 
-img {
-  width: 64px;
-  height: 64px;
 
-}
 .calculator__section {
   margin-left: 240px;
   margin-right:240px;
@@ -16,18 +12,24 @@ img {
 .calculator__container {
   width: 520px;
   height: 657px;
-  margin-top: 40px;
   margin-left: 860px;
+  margin-top: 103px;
   // padding: 44px;
   padding: 44px, 24px, 44px, 24px;
   border-radius: 24px;
   gap: 36px;
   box-shadow: 0px 0px 24px 0px #00000026;
+
+
+
+
 }
 
 .calculator__img{
   margin-top: 15%;
   margin-left: 43%;
+  width: 64px;
+  height: 64px;
 
 }
 
@@ -39,6 +41,7 @@ img {
   letter-spacing: -0.015em;
   text-align: center;
   color: #1B1B1B;
+  margin-top:16px;
 
 
 }
@@ -62,63 +65,57 @@ img {
   border:none;
   color: #ffffff;
   font-family: Noto Sans Georgian;
-font-size: 16px;
-font-weight: 600;
-line-height: 22px;
-letter-spacing: -0.015em;
-text-align: center;
-width: 156px;
-height: 44px;
-padding: 11px, 36px, 11px, 36px;
-border-radius: 8px;
-gap: 10px;
-margin-top:32px;
-margin-left:20%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  width: 156px;
+  height: 44px;
+  padding: 11px, 36px, 11px, 36px;
+  border-radius: 8px;
+  gap: 10px;
+  margin-top:32px;
+  margin-left:20%;
+  cursor: pointer;
+
+
+
+
+
+
 
 
 }
 
-input[type=text] {
-  color: #E0E0E0;
-  font-family: Noto Sans Georgian;
-font-size: 32px;
-font-weight: 700;
-line-height: 44px;
-letter-spacing: -0.015em;
-text-align: center;
-
-
-}
 
 .calculator__inputs{
   border: 1px solid #E0E0E0;
   width:220px;
-height: 60px;
-padding: 8px, 36px, 8px, 36px;
-border-radius: 8px;
-gap: 10px;
-margin-top:32px;
-
+  height: 60px;
+  padding: 8px, 36px, 8px, 36px;
+  border-radius: 8px;
+  gap: 10px;
+  margin-top:32px;
+  color:#E0E0E0;
+  font-family: Noto Sans Georgian;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  margin-left:8%;
 
 }
 
 .calculator__information {
   width: 288px;
-margin-left:25%;
-margin-top:48px;
+  margin-left:25%;
+  margin-top:48px;
 
 }
-// width: Hug (220px)
-// height: Hug (60px)
-// padding: 8px, 36px, 8px, 36px
-// border-radius: 8px
-// border: 1px
-// gap: 10px
 
-hr {
-
+.calculator__line {
   border: 1px solid #E0E0E0;
   width: 288px;
-// border: 1px;
-
 }
