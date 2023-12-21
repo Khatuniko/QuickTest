@@ -17,6 +17,7 @@ import { MainPgComponent } from './module/main-pg/main-pg.component';
 import { LogoComponent } from './module/main-pg/header/logo/logo.component';
 import { LanguagesComponent } from './module/main-pg/header/languages/languages.component';
 import { RemainderComponent } from './module/main-pg/reservation/remainder/remainder.component';
+import { MapComponent } from './module/main-pg/service-centers/map/map.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { RemainderComponent } from './module/main-pg/reservation/remainder/remai
     MainPgComponent,
     LogoComponent,
     LanguagesComponent,
-    RemainderComponent
+    RemainderComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
