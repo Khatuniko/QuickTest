@@ -11,7 +11,7 @@
 
 
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reservation',
@@ -20,13 +20,11 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class ReservationComponent implements OnInit {
   title = "ვიზიტის რეზერვაცია"
-  // Initialize myForm in the constructor
   myForm: FormGroup = new FormGroup({
-    'carname': new FormControl(''),
+    'carname': new FormControl('', [Validators.required]),
     'number': new FormControl(''),
     'date': new FormControl(''),
     'selectedOption': new FormControl(''),
-    // Add more form controls as needed
   });
 
   ngOnInit() {
@@ -36,8 +34,13 @@ export class ReservationComponent implements OnInit {
   // Handle form submission
   onSubmit() {
     console.log(this.myForm.value);
+    // console.log(this.onSubmit);
     // Add further logic, such as sending the form data to the server
   }
+
+  // get carname(){
+  //   return this.loginForm.get('carname')
+  // }
 }
 
 

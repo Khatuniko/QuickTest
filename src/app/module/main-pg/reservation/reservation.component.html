@@ -6,6 +6,7 @@
         <div class="reservation__inputs">
             <label>მანქანის ნომერი</label>
             <input placeholder="სახელი/გვარი" formControlName="carname">
+            <!-- <span *ngIf="carname && carname.invalid && carname.touched" >this is mistake</span> -->
 
         </div>
 
@@ -36,11 +37,13 @@
         </div>
         <label class="container__checkbox">
             ვეთანხმები <span>წესებს და პირობებს</span>
-            <input type="checkbox" checked="checked">
+            <input type="checkbox">
             <span class="checkmark"></span>
           </label>
-        <input type="submit" value="დაჯავშნა">
-        <!-- <button>დაჯავშნა</button> -->
+        <!-- <input type="submit" value="დაჯავშნა"> -->
+        <button [disabled]="myForm.invalid" class="btn__sumbit" type="submit" value="დაჯავშნა" >
+        დაჯავშნა
+        </button>
 
 </div>
 
