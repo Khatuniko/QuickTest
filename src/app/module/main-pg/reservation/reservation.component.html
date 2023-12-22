@@ -1,22 +1,22 @@
-<section class="reservation__section">
+ <form class="reservation__form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
     <div>
-        <h3 class="reservation__heading">ვიზიტის რეზერვაცია</h3>
+        <h3 class="reservation__heading"> {{ title }}</h3>
 <div class="reservation__container">
     <div class="form">
         <div class="reservation__inputs">
             <label>მანქანის ნომერი</label>
-            <input placeholder="სახელი/გვარი">
+            <input placeholder="სახელი/გვარი" formControlName="carname">
 
         </div>
 
         <div class="reservation__inputs">
             <label>ტელეფონის ნომერი (9 ციფრი)</label>
-            <input value="111-1111-1111" placeholder="+995 123-456" type="number">
+            <input formControlName="number" value="111-1111-1111" placeholder="+995 123-456" type="number">
         </div>
 
         <div class="reservation__inputs">
             <label for="">თარიღი</label>
-            <input type="date" placeholder="now">
+            <input formControlName="date"  type="date" placeholder="now" >
 
         </div>
         <div class="reservation__inputs">
@@ -24,7 +24,7 @@
                 <div class="col-75" class="branches">
                     <label for="">ფილიალი</label>
                     <br>
-                    <select id="city" name="centers" class="classic">
+                    <select id="centers" name="centers" class="classic" formControlName="centers">
                         <label for="">ფილიალი</label>
                       <option value="tbilisi">თბილისი</option>
                       <option value="rustavi">რუსთავი</option>
@@ -32,43 +32,22 @@
                       <option value="batumi">ბათუმი</option>
                     </select>
                 </div>
-    
             </div>
-
         </div>
-       
-        <br>
-        <br>
-        <!-- <div class="reservation__inputs">
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="rules">
-            <label for="vehicle1"> ვეთანხმები <span>წესებს და პირობებს</span></label>
-
-        </div> -->
         <label class="container__checkbox">
             ვეთანხმები <span>წესებს და პირობებს</span>
             <input type="checkbox" checked="checked">
             <span class="checkmark"></span>
           </label>
-        <br>
-        <br>
-
-<!-- 
-        <label class="container__checkbox">
-            ვეთანხმები <span>წესებს და პირობებს</span>
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-          </label> -->
-        
-        
         <input type="submit" value="დაჯავშნა">
         <!-- <button>დაჯავშნა</button> -->
 
-    </div>
-
 </div>
 
 </div>
 
+</div>
 
-</section>
+
+</form>
 

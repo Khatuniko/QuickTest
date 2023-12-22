@@ -1,4 +1,4 @@
-.reservation__section {
+.reservation__form {
   margin-left: 240px;
   margin-right:240px;
 }
@@ -116,6 +116,7 @@ input[type=submit] {
   text-align: center;
   color: #FFFFFF;
   margin-left:25%;
+  margin-top:15%;
 
 }
   
@@ -145,8 +146,6 @@ input[type=submit]:hover {
 ::-webkit-datetime-edit-year-field  {
   color: #E0E0E0;
 }
-
-
 
 ::-webkit-calendar-picker-indicator { 
   margin: 16px;
@@ -188,13 +187,11 @@ select.classic {
 
 }
 
-// akedan
 
 
 .container__checkbox {
   display: block;
   position: relative;
-  // margin-bottom: 12px;
   cursor: pointer;
   font-size: 16px;
   -webkit-user-select: none;
@@ -204,11 +201,12 @@ select.classic {
   width: 320px;
   height: 22px;
   padding-left:16px;
+  margin-top:15%;
 
   
 }
 
-/* Hide the browser's default checkbox */
+
 .container__checkbox input {
   position: absolute;
   opacity: 0;
@@ -218,7 +216,7 @@ select.classic {
 
 }
 
-/* Create a custom checkbox */
+
 .checkmark {
   position: absolute;
   top: 0;
@@ -232,19 +230,17 @@ select.classic {
 
 
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 .container__checkbox input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
+
 .container__checkbox .checkmark:after {
   width: 10px;
   height: 10px;
@@ -269,4 +265,21 @@ span {
   text-align: center;
 
 
+}
+
+
+
+input {
+  border: 1px solid #ccc;
+
+}
+
+input:focus {
+  border: none;
+  border-color: #007bff; 
+}
+
+input.focused {
+  border: none;
+  border-color: #ff0000; 
 }

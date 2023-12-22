@@ -18,6 +18,7 @@ import { LogoComponent } from './module/main-pg/header/logo/logo.component';
 import { LanguagesComponent } from './module/main-pg/header/languages/languages.component';
 import { RemainderComponent } from './module/main-pg/reservation/remainder/remainder.component';
 import { MapComponent } from './module/main-pg/service-centers/map/map.component';
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { MapComponent } from './module/main-pg/service-centers/map/map.component
   imports: [
     BrowserModule,
     AppRoutingModule,
+    [ReactiveFormsModule],
   ],
   providers: [],
   bootstrap: [AppComponent]
