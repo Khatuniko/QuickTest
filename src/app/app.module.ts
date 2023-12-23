@@ -18,6 +18,10 @@ import { LogoComponent } from './module/main-pg/header/logo/logo.component';
 import { LanguagesComponent } from './module/main-pg/header/languages/languages.component';
 import { RemainderComponent } from './module/main-pg/reservation/remainder/remainder.component';
 import { MapComponent } from './module/main-pg/service-centers/map/map.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -42,8 +46,22 @@ import { MapComponent } from './module/main-pg/service-centers/map/map.component
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
+
+export function HttpLoaderFactory(http:HttpClient){
+  return new TranslateHttpLoader(http);
+}
