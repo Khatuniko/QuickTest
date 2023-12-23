@@ -5,10 +5,21 @@
             <option lang="ka" value="georgia" selected>GEO</option>
             <option lang="en" value="english">ENG</option>
           </select> -->
+          <!-- <label class="languages" for="">
+            <select id="select" class="text-uppercase"  #langselect (change)="translate.use(langselect.value)">
+              <option *ngFor="let lang of translate.getLangs()" class="text-uppercase" [value]="lang">{{lang}}</option>
+            </select>
+          </label> -->
         <p>GEO</p>
 
     </div>
 </button>
+
+<!-- <label class="languages" for="">
+    <select id="select" class="text-uppercase"  #langselect (change)="translate.use(langselect.value)">
+      <option *ngFor="let lang of translate.getLangs()" class="text-uppercase" [value]="lang">{{lang}}</option>
+    </select>
+  </label> -->
 
 <!-- <div class="language-picker js-language-picker">
     <form action="" class="language-picker__form">
