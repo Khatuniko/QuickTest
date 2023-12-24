@@ -1,81 +1,19 @@
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<select (change)="selectLanguage($event)">
-  <option value="ka"> {{'GEO'}}</option>
-  <option value="en"> {{'ENG'}}</option>
-
-</select>
-
-
-<h2>{{'data.language | translate'}}</h2>
-<h1> {{'data.nivti' | translate}}</h1>
-<div>{{'data.gogo' | translate}}</div>
-<h1> {{'data.nivti' | translate}}</h1>
-
-
-
-<!-- 
-{
-  "data": {
-      "english": "english",
-      "details": "somethingdjdedh",
-      "language": "enebi",
-      "nivti": "table",
-      "gogo": "girl"
-  }
-} -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- <h1>{{'HELLO' | translate }}</h1>
-
-
 <button class="language__btn">
-    <div class="languages">
-        <img class="languages__img"src="./assets/header/globe.png" alt="language">
-        <select class="select__languages" name="language-picker-select" id="language-picker-select">
-            <option (click)="switchLanguage('ka')" lang="ka" value="georgia" selected>GEO</option>
-            <option (click)="switchLanguage('en')" lang="en" value="english">ENG</option>
+  <div class="languages">
+      <img class="languages__img"src="./assets/header/globe.png" alt="language">
+      <!-- <select class="select__languages" name="language-picker-select" id="language-picker-select">
+          <option lang="ka" value="georgia" selected>GEO</option>
+          <option lang="en" value="english">ENG</option>
+        </select> -->
+        <!-- <label class="languages" for="">
+          <select id="select" class="text-uppercase"  #langselect (change)="translate.use(langselect.value)">
+            <option *ngFor="let lang of translate.getLangs()" class="text-uppercase" [value]="lang">{{lang}}</option>
           </select>
-          
-          
+        </label> -->
+      <p>GEO</p>
 
   </div>
-  
-</button> -->
-
-
-<!-- 
-<button class="language__btn">
-    <div class="languages">
-        <img class="languages__img"src="./assets/header/globe.png" alt="language">
-        <select class="select__languages" #selectedLang (change)="switchLang(selectedLang)" name="language-picker-select" id="language-picker-select">
-            <option *ngFor="let language of translate.getLangs()" [value]="language"
-            [selected] = "language === translate.currentLang">{{language}}</option>
-            <option >ENG</option>
-          </select>
-      
-  </div>
-  
-</button> -->
-
-<!-- <div class="container">
-  <h1>{{'HELLO' | translate }}</h1>
-</div> -->
+</button>
 
 <!-- <label class="languages" for="">
   <select id="select" class="text-uppercase"  #langselect (change)="translate.use(langselect.value)">
@@ -83,58 +21,44 @@
   </select>
 </label> -->
 
+<!-- <div class="language-picker js-language-picker">
+  <form action="" class="language-picker__form">
+    <label for="language-picker-select">Select your language</label>
 
-<!-- <h1>{{'HELLO' | translate }}</h1>
-
-<button (click)="switchLanguage('ka')">Georgia</button>
-<button (click)="switchLanguage('en')">English</button> -->
-
-
-
- <!-- <div class="language-picker js-language-picker">
-    <form action="" class="language-picker__form">
-      <label for="language-picker-select">Select your language</label>
-  
-      <select name="language-picker-select" id="language-picker-select">
-        <option lang="de" value="deutsch">Deutsch</option>
-        <option lang="en" value="english" selected>English</option>
-        <option lang="fr" value="francais">Français</option>
-        <option lang="it" value="italiano">Italiano</option>
-      </select>
-    </form>
-  </div>  -->
+    <select name="language-picker-select" id="language-picker-select">
+      <option lang="de" value="deutsch">Deutsch</option>
+      <option lang="en" value="english" selected>English</option>
+      <option lang="fr" value="francais">Français</option>
+      <option lang="it" value="italiano">Italiano</option>
+    </select>
+  </form>
+</div> -->
 
 
 <!-- <header>
-    <nav>
-        <div class="logo">
-            <a href="#"><img src="/assets/yellow car.jpg" alt="yellow"></a>
-        </div> 
-        <div class="lang-menu">
-            <div class="selected-lang">
-                Georgia
-            </div>
-            <ul>
-                <li>
-                    <a href="" class="en">English</a>
-                </li>
-            </ul>
-            
-        </div>
-    </nav>
+  <nav>
+      <div class="logo">
+          <a href="#"><img src="/assets/yellow car.jpg" alt="yellow"></a>
+      </div> 
+      <div class="lang-menu">
+          <div class="selected-lang">
+              Georgia
+          </div>
+          <ul>
+              <li>
+                  <a href="" class="en">English</a>
+              </li>
+          </ul>
+          
+      </div>
+  </nav>
 </header> -->
 
 <!-- 
 <div class="dropdown">
-    <button class="dropbtn">GEO</button>
-    <div class="dropdown-content">
-    <a href="#">ENG</a>
+  <button class="dropbtn">GEO</button>
+  <div class="dropdown-content">
+  <a href="#">ENG</a>
 
-    </div>
+  </div>
 </div> -->
-
-<!-- 
-<h1>{{'HELLO' | translate }}</h1>
-
-<button (click)="switchLanguage('ka')">Georgia</button>
-<button (click)="switchLanguage('en')">English</button> -->

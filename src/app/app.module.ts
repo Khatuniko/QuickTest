@@ -47,21 +47,25 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule,
+    // RouterModule.forRoot(routes),
     TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-
-      }
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
     })
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
 
-export function HttpLoaderFactory(http:HttpClient){
+// export function HttpLoaderFactory(http:HttpClient){
+//   return new TranslateHttpLoader(http);
+// }
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }

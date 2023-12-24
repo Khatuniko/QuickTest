@@ -8,6 +8,12 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'QuickTestProject';
+
+  constructor(public translate: TranslateService) {
+    translate.addLangs(['ge', 'en', 'ru']);
+    translate.setDefaultLang('en');
+    const browerLang = translate.getBrowserLang();
+  }
   // constructor(private translate: TranslateService){
   //   this.translate.setDefaultLang('ka');
   // }

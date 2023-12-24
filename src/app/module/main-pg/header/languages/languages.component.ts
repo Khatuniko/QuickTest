@@ -8,6 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./languages.component.scss']
 })
 export class LanguagesComponent {
+
+  constructor(public translate: TranslateService, private route:Router) {
+    translate.addLangs(['ge', 'en', 'ru']);
+    translate.setDefaultLang('ge');
+    const browerLang = translate.getBrowserLang();
+  }
   // constructor(private translate: TranslateService){
   //   this.translate.setDefaultLang('ka');
   // }
@@ -29,14 +35,14 @@ export class LanguagesComponent {
   //   this.translate.use(lang)
   // }
 
-  constructor(private translate:TranslateService){
-    this.translate.setDefaultLang('en');
-  }
+  // constructor(private translate:TranslateService){
+  //   this.translate.setDefaultLang('en');
+  // }
 
-  selectLanguage(event:any) {
-    this.translate.use(event.target.value);
+  // selectLanguage(event:any) {
+  //   this.translate.use(event.target.value);
 
-  }
+  // }
   
   }
 

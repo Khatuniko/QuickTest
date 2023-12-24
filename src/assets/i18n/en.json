@@ -1,9 +1,31 @@
+// {
+//     "data": {
+//         "english": "english",
+//         "details": "somethingdjdedh",
+//         "language": "enebi",
+//         "nivti": "table",
+//         "gogo": "girl"
+//     }
+// }
+
 {
-    "data": {
-        "english": "english",
-        "details": "somethingdjdedh",
-        "language": "enebi",
-        "nivti": "table",
-        "gogo": "girl"
-    }
+    "HOME": {
+    "SELECT": "Select Languages",
+    "MAIN": "Home",
+    "ABOUT-US": "About Us",
+    "OUTBOUND":"Outbound Tours",
+    "LOCAL": "Local Tours",
+    "TRANSFERS":"Transfers",
+    "BLOG":"Blog",
+    "CONTACT":"Contact Us",
+    "TEXT": "was founded in 2018, the team consists of people with many years of experience in tourism, who worked for many years for development inbound and outbound tourism. Company is owner of rafting company",
+    "RESTAURANT": "restaurant",
+    "CARS": "and Transfers",
+    "CONTACT-INFO":"Contact Information",
+    "ADRESS": "Pekini str.2"
+
+    
+
+} 
+
 }
