@@ -1,67 +1,126 @@
+// .language__btn {
+//     background-color: var(--yellow-color);
+//     color:var(--header-color);
+//     border:none;
+//     border-radius: 8px;
+//     width: 99px;
+//     height: 46px;
+//     padding: 11px, 16px, 11px, 16px;
+//     gap:10px;
+//     margin-top:19px;
+//     display: flex;
+//     cursor: pointer;
+//     margin:10px;
+//     float:right;
+
+//     // p {
+//     //     font-size: 16px;
+//     //     font-weight: 600;
+//     //     line-height: 22px;
+//     //     letter-spacing: -0.015em;
+//     //     margin-left:8px;
+
+
+//     // }
+//     .select__languages {
+//         margin-left:6px;
+//         font-weight: 600;
+//         font-size: 16px;
+//         line-height: 22px;
+//         letter-spacing: -0.015em;
+//         border:none;
+//         color: var(--header-color);
+//         background-color: var(--yellow-color);
+//     }
+//     .option {
+//         border:none;
+//     }
+//     // .option.checked{
+//     //     border:none;
+//     // }
+//     select.option {
+
+//     }
+
+
+//     .languages {
+//         display: flex;
+//         align-items: center;
+//         text-align: center;
+//         margin:12%;
+
+
+//     }
+// }
+
+// @media (max-width: 952px){
+//     .language__btn {
+//         float:right;
+//         width: 40px;
+//         height: 40px;
+//         margin-top:14px;
+//         // margin:10px;
+        
+//     }
+//     .languages__img {
+//         margin:12%;
+//     }
+//     p {
+//         display: none;
+//     }
+// }
+
 .language__btn {
+    margin-top: 250px;
     background-color: var(--yellow-color);
-    color:var(--header-color);
     border:none;
     border-radius: 8px;
-    width: 99px;
-    height: 46px;
-    padding: 11px, 16px, 11px, 16px;
-    gap:10px;
-    margin-top:19px;
-    display: flex;
-    cursor: pointer;
-    margin:10px;
-    float:right;
 
-
-    p {
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 22px;
-        letter-spacing: -0.015em;
-        margin-left:8px;
-
-
-    }
-    .select__languages {
-        margin-left:6px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 22px;
-        letter-spacing: -0.015em;
-        border:none;
-        color: var(--header-color);
-        background-color: var(--yellow-color);
-    }
-    .option {
-        border:none;
-    }
-
-
-    .languages {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin:12%;
-
-
-    }
 }
 
-@media (max-width: 952px){
-    .language__btn {
-        float:right;
-        width: 40px;
-        height: 40px;
-        margin-top:14px;
-        // margin:10px;
-        
-    }
-    .languages__img {
-        margin:12%;
-    }
-    p {
-        display: none;
-    }
+.languages__img {
+    width: 24px;
+height: 24px;
+margin-top:19px;
+margin-left:16px;
+
 }
 
+
+        /* Style for the select element */
+        select {
+            background-color: var(--yellow-color);
+            color:var(--header-color);
+            border:none;
+            border-radius: 8px;
+            width: 99px;
+            height: 46px;
+            padding: 11px, 16px, 11px, 16px;
+            gap:10px;
+            margin-top:19px;
+            display: flex;
+            cursor: pointer;
+            margin:10px;
+            float:right;
+            padding: 10px;
+            font-size: 16px;
+            // border: 1px solid #ccc;
+            // border-radius: 5px;
+            // background-color: var(--yellow-color);
+            // color: #333;
+            border:none;
+            // outline: none; /* Remove the default focus outline */
+        }
+
+        /* Style for the options within the select element */
+        select option {
+            color:red;
+            background-color:var(--yellow-color);
+            color: var(--header-color);
+        }
+
+        /* Style when the select element is focused */
+        select:focus {
+            // border-color: #007bff;
+            // box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }

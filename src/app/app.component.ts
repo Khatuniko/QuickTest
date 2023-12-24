@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,32 +10,15 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'QuickTestProject';
 
-  constructor(public translate: TranslateService) {
-    translate.addLangs(['ge', 'en', 'ru']);
-    translate.setDefaultLang('en');
-    const browerLang = translate.getBrowserLang();
-  }
-  // constructor(private translate: TranslateService){
-  //   this.translate.setDefaultLang('ka');
-  // }
-  // switchLanguage(language:string){
-  //   this.translate.use(language);
-  // }
+
   // constructor(public translate: TranslateService) {
-  //   translate.addLangs(['ka', 'en']);
-  //   translate.setDefaultLang('ka');
-  //   // const browerLang = translate.getBrowserLang();
-  // }
-  // switchLang(lang:string){
-  //   this.translate.use(lang)
-  // }
-
-  // constructor(private translate:TranslateService){
-  //   this.translate.setDefaultLang('en');
-  // }
-
-  // selectLanguage(event:any) {
-
+  //   translate.addLangs(['ge', 'en', 'ru']);
+  //   translate.setDefaultLang('en');
+  //   const browerLang = translate.getBrowserLang();
   // }
 }
+
+// app.component.ts
+
+
 

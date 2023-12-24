@@ -41,7 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     LogoComponent,
     LanguagesComponent,
     RemainderComponent,
-    MapComponent
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,9 +62,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class AppModule {}
 
-// export function HttpLoaderFactory(http:HttpClient){
-//   return new TranslateHttpLoader(http);
-// }
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
