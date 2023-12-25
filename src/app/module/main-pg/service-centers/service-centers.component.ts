@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ServiceCentersComponent {
 
+  ReadMore:boolean = true;
+
+  visible:boolean = false;
+
+  onClick(){
+    this.ReadMore = !this.ReadMore;
+    this.visible = !this.visible;
+  }
 }

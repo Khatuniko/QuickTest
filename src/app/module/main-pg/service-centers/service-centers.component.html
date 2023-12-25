@@ -2,41 +2,102 @@
     <h3 class="branches__heading">ფილიალები</h3>
     <div class="branches">
         <div class="branch">
-            <button class="branch__btn">
+            <!-- <button class="branch__btn">
                 <h3 class="btn__heading">თბილისი</h3>
-                <img class=btn__img src="./assets/branches/chevron-up.png" alt="chevron-up">
+                <img   class=btn__img src="./assets/branches/chevron-up.png" alt="chevron-up">
+            </button> -->
+            <button (click)="onClick()"class="try__btn" type="button">
+                თბილისი
+                
+                {{ReadMore?"^": "^^"}}
+            
             </button>
-            <div class="branch__infoo">
+            
+            
+            <ng-container *ngIf="visible">
+                <!-- <div class="bg-white shadow-sm p-3"> -->
+                    <div class="branch__info" >
+                        <div class="branch__address">
+                            <img class="info__img" src="./assets/branches/location.png" alt="location">
+                            <p class="info">ჯორჯ ბალანჩინის ქ. N36, ქ. თბილისი</p>
+                        </div>
+                        <div class="branch__phone">
+                            <img  class="info__img" src="./assets/branches/phone.png" alt="phone">
+                            <a class="info" class="link" href="tel:0322480042">032 2 48 00 42</a>
+                        </div>
+                        <div class="branch__email">
+                            <img class="info__img" src="./assets/branches/phone.png" alt="email">
+                            <a class="info" class="link" href="mailto:info@qt.ge">info@qt.ge</a>
+                        </div>
+                        <div class="branch__clock">
+                            <img class="info__img" src="./assets/branches/clock.png" alt="clock">
+                            <p class="info">ორშაბათი-პარასკევი: 09:00 - 19:00</p>
+            
+                        </div>
+                        <div class="branch__clock">
+                            <img class="info__img" src="./assets/branches/clock.png" alt="clock">
+                            <p class="info">შაბათი: 09:00 - 18:00</p>
+            
+                        </div>
+                        <div class="branch__clock">
+                            <img class="info__img" src="./assets/branches/clock.png" alt="clock">
+                            <p class="info">კვირა: 09:00 - 15:00</p>
+                        </div>
+            
+                    </div>
+            
+                <!-- </div> -->
+            </ng-container>
+            
+            
+            
+  
+            
+            
+            
+            
+            <!-- <div class="branch__info">
                 <div class="branch__address">
-                    <img src="./assets/branches/location.png" alt="location">
+                    <img class="info__img" src="./assets/branches/location.png" alt="location">
                     <p class="info">ჯორჯ ბალანჩინის ქ. N36, ქ. თბილისი</p>
                 </div>
                 <div class="branch__phone">
-                    <img src="./assets/branches/phone.png" alt="phone">
-                    <a  class="info" href="tel:0322480042">032 2 48 00 42</a>
+                    <img  class="info__img" src="./assets/branches/phone.png" alt="phone">
+                    <a class="info" class="link" href="tel:0322480042">032 2 48 00 42</a>
                 </div>
-                <!-- <div class="branch__email">
-                    <img src="./assets/branches/" alt="">
-                    <a class="info" href="mailto:info@qt.ge">info@qt.ge</a>
-                </div> -->
+                <div class="branch__email">
+                    <img class="info__img" src="./assets/branches/phone.png" alt="email">
+                    <a class="info" class="link" href="mailto:info@qt.ge">info@qt.ge</a>
+                </div>
                 <div class="branch__clock">
-                    <img src="./assets/branches/clock.png" alt="clock">
+                    <img class="info__img" src="./assets/branches/clock.png" alt="clock">
                     <p class="info">ორშაბათი-პარასკევი: 09:00 - 19:00</p>
 
                 </div>
                 <div class="branch__clock">
-                    <img src="./assets/branches/clock.png" alt="clock">
+                    <img class="info__img" src="./assets/branches/clock.png" alt="clock">
                     <p class="info">შაბათი: 09:00 - 18:00</p>
 
                 </div>
                 <div class="branch__clock">
-                    <img src="./assets/branches/clock.png" alt="clock">
+                    <img class="info__img" src="./assets/branches/clock.png" alt="clock">
                     <p class="info">კვირა: 09:00 - 15:00</p>
                 </div>
 
-            </div>
+            </div> -->
         </div>
-        <div class="branch">
+        <!-- <div class="branch__map"> -->
+            <!-- <div class="map"> -->
+                <!-- <app-map></app-map>
+        
+            </div>
+            <h3 class="company__code">
+                საიდენტიფიკაციო კოდი <span class="code__span"> 405239503</span>
+            </h3> -->
+            <!-- <p class="email">info@qt.ge</p> -->
+        
+        <!-- </div> -->
+        <!-- <div class="branch">
             <button class="branch__btn">
                 <h3 class="btn__heading">რუსთავი</h3>
                 <img class=btn__img src="./assets/branches/chevron-up.png" alt="chevron-up">
@@ -50,10 +111,10 @@
                     <img src="./assets/branches/phone.png" alt="phone">
                     <a  class="info" href="tel:0322480042">032 2 48 00 42</a>
                 </div>
-                <!-- <div class="branch__email">
+                <div class="branch__email">
                     <img src="./assets/branches/" alt="">
                     <a class="info" href="mailto:info@qt.ge">info@qt.ge</a>
-                </div> -->
+                </div>
                 <div class="branch__clock">
                     <img src="./assets/branches/clock.png" alt="clock">
                     <p class="info">ორშაბათი-პარასკევი: 09:00 - 19:00</p>
@@ -70,8 +131,8 @@
                 </div>
                 
             </div>
-        </div>
-        <div class="branch">
+        </div> -->
+        <!-- <div class="branch">
             <button class="branch__btn">
                 <h3 class="btn__heading">ქუთაისი</h3>
                 <img class=btn__img src="./assets/branches/chevron-up.png" alt="chevron-up">
@@ -85,10 +146,10 @@
                     <img src="./assets/branches/phone.png" alt="phone">
                     <a  class="info" href="tel:0322480042">032 2 48 00 42</a>
                 </div>
-                <!-- <div class="branch__email">
+                <div class="branch__email">
                     <img src="./assets/branches/" alt="">
                     <a class="info" href="mailto:info@qt.ge">info@qt.ge</a>
-                </div> -->
+                </div>
                 <div class="branch__clock">
                     <img src="./assets/branches/clock.png" alt="clock">
                     <p class="info">ორშაბათი-პარასკევი: 10:00 - 18:00</p>
@@ -105,8 +166,8 @@
                 </div>
 
             </div>
-        </div>
-        <div class="branch">
+        </div> -->
+        <!-- <div class="branch">
             <button class="branch__btn">
                 <h3 class="btn__heading">ბათუმი</h3>
                 <img class=btn__img src="./assets/branches/chevron-up.png" alt="chevron-up">
@@ -120,10 +181,10 @@
                     <img src="./assets/branches/phone.png" alt="phone">
                     <a  class="info" href="tel:0322480042">032 2 48 00 42</a>
                 </div>
-                <!-- <div class="branch__email">
+                <div class="branch__email">
                     <img src="./assets/branches/" alt="">
                     <a class="info" href="mailto:info@qt.ge">info@qt.ge</a>
-                </div> -->
+                </div>
                 <div class="branch__clock">
                     <img src="./assets/branches/clock.png" alt="clock">
                     <p class="info">ორშაბათი-პარასკევი: 10:00 - 18:00</p>
@@ -137,36 +198,84 @@
                 <div class="branch__clock">
                     <img src="./assets/branches/clock.png" alt="clock">
                     <p class="info">კვირა: 10:00 - 17:00</p>
-                </div>
+                </div> -->
+
+            <!-- </div> -->
+        <!-- </div> -->
+        
+        
+        
+
+    </div>
+<!-- 
+<button (click)="onClick()"class="try__btn" type="button">
+    {{ReadMore?"down": "top"}}
+
+</button>
+
+
+<ng-container *ngIf="visible">
+        <div class="branch__info">
+            <div class="branch__address">
+                <img class="info__img" src="./assets/branches/location.png" alt="location">
+                <p class="info">ჯორჯ ბალანჩინის ქ. N36, ქ. თბილისი</p>
+            </div>
+            <div class="branch__phone">
+                <img  class="info__img" src="./assets/branches/phone.png" alt="phone">
+                <a class="info" class="link" href="tel:0322480042">032 2 48 00 42</a>
+            </div>
+            <div class="branch__email">
+                <img class="info__img" src="./assets/branches/phone.png" alt="email">
+                <a class="info" class="link" href="mailto:info@qt.ge">info@qt.ge</a>
+            </div>
+            <div class="branch__clock">
+                <img class="info__img" src="./assets/branches/clock.png" alt="clock">
+                <p class="info">ორშაბათი-პარასკევი: 09:00 - 19:00</p>
 
             </div>
+            <div class="branch__clock">
+                <img class="info__img" src="./assets/branches/clock.png" alt="clock">
+                <p class="info">შაბათი: 09:00 - 18:00</p>
+
+            </div>
+            <div class="branch__clock">
+                <img class="info__img" src="./assets/branches/clock.png" alt="clock">
+                <p class="info">კვირა: 09:00 - 15:00</p>
+            </div>
+
         </div>
-        
-        
-        
 
-    </div>
 
-<div class="branch__map">
-    <div class="map">
-        <app-map></app-map>
+</ng-container>
 
-    </div>
-    <!-- <h3>
-        საიდენტიფიკაციო კოდი:<b>405239503</b>
-    </h3>
-    <p>info@qt.ge</p> -->
-
-</div>
- 
-
-<br>
-<br>
-<br>
-<br>
-<br>
 
 
 </section>
 
 
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+ -->

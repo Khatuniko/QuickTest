@@ -1,5 +1,9 @@
 .service__centers {
-    // display: flex;
+
+        margin-left: 240px;
+        margin-right:240px;
+
+
 
 
     .branches__heading{
@@ -15,6 +19,8 @@
     .branches {
         margin-top:109px;
         margin-left:60px;
+        display: flex;
+        
 
     }
 
@@ -25,6 +31,7 @@
         padding: 8px;
         border-radius: 16px;
         gap: 10px;
+        
 
         .branch__btn{
             width: 551px;
@@ -51,26 +58,17 @@
             .btn__img {
                 margin-top:8px;
                 margin-right:8px;
+                cursor: pointer;
 
             }
         
         }
-        .branch__infoo {
-            margin-top:24px;
-            margin-left:16px;
+        .branch__info {
+            margin-top:8px;
+            margin-left:8px;
+            padding: 0px, 12px, 0px, 12px;
 
-            // width: 365px;
-            // height: 180px;
-            // padding: 0px, 12px, 0px, 12px;
-            // gap: 10px; 
-
-
-// font-family: Noto Sans Georgian;
-// font-size: 16px;
-// font-weight: 600;
-// line-height: 36px;
-// letter-spacing: -0.015em;
-// text-align: left;
+            
        
         }
     }
@@ -79,46 +77,132 @@
 }
 .info  {
     margin-left:8px;
-    // padding:0px,12px,0px,12px;
-    // font-family: Noto Sans Georgian;
-font-size: 16px;
-font-weight: 400;
-// line-height: 36px;
-letter-spacing: -0.015em;
-// text-align: left;
-  }
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    padding: 0px, 12px, 0px, 12px;
+    gap: 10px;
+    color: #0D0D0D;
 
+
+  }
 .branch__address {
-    // padding:0px,12px,0px,12px;
  display:flex;
+padding:3px;
 
 }
 
 .branch__phone {
     display:flex;
-    // padding:8px;
+    padding-left:3px;
+    text-align: center;
+
+
 }
 
 .branch__clock {
     display: flex;
+    padding:3px;
+}
+.branch__email {
+    display: flex;
+    padding-left: 3px;
 }
 
-.img {
+.info__img{
     width: 16px;
     height: 16px;
+    margin-top:8px;
+}
+
+
+
+.map {
+    display: flex;
+}
+
+.company__code {
+    margin-top:16px;
+    color: #B9B9B9;
+    font-family: Noto Sans Georgian;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    text-align: center;
+
 
 }
 
-// .map {
-//     width: 729px;
-// height: 464px;
-// border-radius: 16px;
-// border: 2px;
-// gap: 16px;
-// // border: 2px solid #FFFFFF;
-// box-shadow: 0px 0px 24px 0px #00000026;
-// display: flex;
-// margin:15%;
+.code__span {
+    color:#000000;
+    font-family: Noto Sans Georgian;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    text-align: center;
+
+}
+
+.email{
+    color:#000000;
+    font-family: Noto Sans Georgian;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    margin-top:2px;
+
+}
+
+.link {
+    color:inherit;
+    color: #0D0D0D;
+    font-family: Noto Sans Georgian;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+    padding-left:8px;
 
 
-// }
+
+
+
+}
+.link:hover {
+    color:var(--yellow-color);
+}
+
+
+.try__btn{
+        width: 551px;
+        height: 43px;
+        padding: 8px, 12px, 8px, 12px;
+        border-radius: 8px;
+        border: none;
+        gap: 10px;
+        background-color: var(--yellow-color);
+        display:flex;
+        justify-content: space-between;
+        .btn__heading {
+        font-family: Noto Sans Georgian;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 27px;
+        letter-spacing: -0.015em;
+        margin-top:8px;
+        margin-left:8px;
+        color:#FFFFFF;
+        // color:red;
+        }
+    
+}
+
+.branch__info {
+    background: #f6f6f6;
+}
+
+// visibleze kondes heifh da width tavidan 0 vapshe

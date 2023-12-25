@@ -1,26 +1,15 @@
-<button class="language__btn">
-  <div class="languages">
-      <img class="languages__img"src="./assets/header/globe.png" alt="language">
-      <!-- <select class="select__languages" name="language-picker-select" id="language-picker-select">
-          <option lang="ka" value="georgia" selected>GEO</option>
-          <option lang="en" value="english">ENG</option>
-        </select> -->
-        <!-- <label class="languages" for="">
-          <select id="select" class="text-uppercase"  #langselect (change)="translate.use(langselect.value)">
-            <option *ngFor="let lang of translate.getLangs()" class="text-uppercase" [value]="lang">{{lang}}</option>
-          </select>
-        </label> -->
-        <select id="mySelect">
-          <img class="languages__img"src="./assets/header/globe.png" alt="language">
-
+<!-- <button class="language__btn"> -->
+  <!-- <div class="languages"> -->
+    <!-- <img class="languages__img"src="./assets/header/globe.png" alt="language"> -->
+        <!-- <select class="select__language">
           <option value="option1">GEO</option>
           <option value="option2">ENG</option>
       
-      </select>
+      </select> -->
       <!-- <p>GEO</p> -->
 
-  </div>
-</button>
+  <!-- </div> -->
+<!-- </button> -->
 <!-- 
 <img class="languages__img"src="./assets/header/globe.png" alt="language">
 <select id="mySelect">
@@ -28,3 +17,24 @@
     <option value="option2">ENG</option>
 
 </select> -->
+
+
+<!-- language-select.component.html -->
+<!-- <div class="custom-select" (click)="showDropdown = !showDropdown">
+  <div class="selected-option">
+    <img [src]="languages.find(lang => lang.code === selectedLanguage)?.flagUrl" alt="Selected Flag">
+    <span>{{ languages.find(lang => lang.code === selectedLanguage)?.name }}</span>
+  </div>
+  <div class="dropdown" *ngIf="showDropdown">
+    <div class="option" *ngFor="let language of languages" (click)="selectLanguage(language)">
+      <img [src]="language.flagUrl" alt="{{ language.name }} Flag">
+      {{ language.name }}
+    </div>
+  </div>
+</div> -->
+
+<div class="languages">
+  <img src="" alt="">
+  <div></div>
+
+</div>
