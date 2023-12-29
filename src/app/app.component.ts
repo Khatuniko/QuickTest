@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 
@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'QuickTestProject';
 
 
@@ -16,9 +16,28 @@ export class AppComponent {
   //   translate.setDefaultLang('en');
   //   const browerLang = translate.getBrowserLang();
   // }
-}
 
-// app.component.ts
+  // constructor(){}
+
+  ngOnInit(){}
+
+  // id:any = '';
+  // accordion(ids:any){
+  //   if(this.id == ids){
+  //     this.id = '';
+  //   }
+  //   else {
+  //     this.id = ids;
+  //   }
+
+  }
+
+
+
+
+
+
+
 
 
 

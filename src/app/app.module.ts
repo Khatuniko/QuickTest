@@ -22,6 +22,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { ReactiveFormsModule } from '@angular/forms';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    // FontAwesomeModule,
+    // AngularFontAwesomeModule,
     AppRoutingModule,
     HttpClientModule,
     // RouterModule.forRoot(routes),

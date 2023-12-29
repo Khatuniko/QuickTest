@@ -25,7 +25,8 @@
     }
 
     .branch {       
-        background-color: #F4F4F4CC;
+        // background-color: #F4F4F4CC;
+        
         width: 567px;
         height: 263px;
         padding: 8px;
@@ -43,17 +44,17 @@
             background-color: var(--yellow-color);
             display:flex;
             justify-content: space-between;
-            .btn__heading {
-            font-family: Noto Sans Georgian;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 27px;
-            letter-spacing: -0.015em;
-            // text-align: center;
-            margin-top:8px;
-            margin-left:8px;
-            color:#FFFFFF;
-            }
+            // .btn__heading {
+            // font-family: Noto Sans Georgian;
+            // font-size: 20px;
+            // font-weight: 600;
+            // line-height: 27px;
+            // letter-spacing: -0.015em;
+            // // text-align: center;
+            // margin-top:8px;
+            // margin-left:8px;
+            // color:#FFFFFF;
+            // }
 
             .btn__img {
                 margin-top:8px;
@@ -180,13 +181,14 @@ padding:3px;
 .try__btn{
         width: 551px;
         height: 43px;
-        padding: 8px, 12px, 8px, 12px;
+        // padding: 8px, 12px, 8px, 12px;
         border-radius: 8px;
         border: none;
         gap: 10px;
         background-color: var(--yellow-color);
         display:flex;
         justify-content: space-between;
+        margin-top:24px;
         .btn__heading {
         font-family: Noto Sans Georgian;
         font-size: 20px;
@@ -196,13 +198,97 @@ padding:3px;
         margin-top:8px;
         margin-left:8px;
         color:#FFFFFF;
-        // color:red;
+        }
+        .btn__arrow {
+            font-size: 24px;
+            width: 10px;
+            color:#FFFFFF;
+            font-weight: 400;
+            margin-top: 8px;
+            margin-right: 16px;
+//             width: 18px;
+// height: 10px;
+// margin-top: 6px;
+// margin-left: 3px
+
+
         }
     
 }
 
 .branch__info {
-    background: #f6f6f6;
+    background-color: #f6f6f6;
 }
 
 // visibleze kondes heifh da width tavidan 0 vapshe
+// .chevron-up::before {
+//     // unicode: "\F077/";
+//     content: "\F077"; /* Unicode for the chevron-up icon in Font Awesome */
+//     font-family: 'Font Awesome 5 Free'; /* Adjust the font-family based on your icon library */
+//     /* Add any additional styles for size, color, etc. */
+//   }
+
+
+
+
+// final functional 
+
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+
+.accordion-heading{
+    padding:10px;
+    cursor: pointer;
+    background: red;
+    color:#fff;
+    font-weight: 600px;
+    margin-top:4px;
+    border-radius:2px;
+}
+
+.accordion-content{
+    transition:4s ease-in-out;
+    padding:10px;
+    background: rgb(252,243,243);
+    border: 1px solid rgb(255, 255, 255);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    animation-name:slideDown;
+    animation-duration:1s;
+    animation-timing-function:ease;
+    -webkit-animation-timing-function: ease ;
+
+
+}
+
+@keyframes slideDown {
+    0% {
+        transform:translate(-100%);
+    }
+    50% {
+        transform:translateY(-8%);
+    }
+    65% {
+        transform:translateY(-4%);
+    }
+    80% {
+        transform:translateY(-4%);
+    }
+    95% {
+        transform:translateY(-2%);
+    }
+    100% {
+        transform:translateY(0%);
+    }
+    
+}
+
+.up-icon{
+    transition: 0.2s ease-out;
+} 
+
+.icon{
+    animation-name:icon;
+    transform:rotate(180deg);
+    transition: 0.2s ease-out;
+}
