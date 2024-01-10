@@ -1,235 +1,3 @@
-.service__centers {
-
-        margin-left: 240px;
-        margin-right:240px;
-
-
-
-
-    .branches__heading{
-        font-family: Noto Sans Georgian;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 33px;
-        letter-spacing: -0.015em;
-        text-align: center;
-        margin-top: 44px;
-    }
-
-    .branches {
-        margin-top:109px;
-        margin-left:60px;
-        display: flex;
-        
-
-    }
-
-    .branch {       
-        // background-color: #F4F4F4CC;
-        
-        width: 567px;
-        height: 263px;
-        padding: 8px;
-        border-radius: 16px;
-        gap: 10px;
-        
-
-        .branch__btn{
-            width: 551px;
-            height: 43px;
-            padding: 8px, 12px, 8px, 12px;
-            border-radius: 8px;
-            border: none;
-            gap: 10px;
-            background-color: var(--yellow-color);
-            display:flex;
-            justify-content: space-between;
-            // .btn__heading {
-            // font-family: Noto Sans Georgian;
-            // font-size: 20px;
-            // font-weight: 600;
-            // line-height: 27px;
-            // letter-spacing: -0.015em;
-            // // text-align: center;
-            // margin-top:8px;
-            // margin-left:8px;
-            // color:#FFFFFF;
-            // }
-
-            .btn__img {
-                margin-top:8px;
-                margin-right:8px;
-                cursor: pointer;
-
-            }
-        
-        }
-        .branch__info {
-            margin-top:8px;
-            margin-left:8px;
-            padding: 0px, 12px, 0px, 12px;
-
-            
-       
-        }
-    }
-
-
-}
-.info  {
-    margin-left:8px;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: -0.015em;
-    padding: 0px, 12px, 0px, 12px;
-    gap: 10px;
-    color: #0D0D0D;
-
-
-  }
-.branch__address {
- display:flex;
-padding:3px;
-
-}
-
-.branch__phone {
-    display:flex;
-    padding-left:3px;
-    text-align: center;
-
-
-}
-
-.branch__clock {
-    display: flex;
-    padding:3px;
-}
-.branch__email {
-    display: flex;
-    padding-left: 3px;
-}
-
-.info__img{
-    width: 16px;
-    height: 16px;
-    margin-top:8px;
-}
-
-
-
-.map {
-    display: flex;
-}
-
-.company__code {
-    margin-top:16px;
-    color: #B9B9B9;
-    font-family: Noto Sans Georgian;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 33px;
-    letter-spacing: -0.015em;
-    text-align: center;
-
-
-}
-
-.code__span {
-    color:#000000;
-    font-family: Noto Sans Georgian;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 33px;
-    letter-spacing: -0.015em;
-    text-align: center;
-
-}
-
-.email{
-    color:#000000;
-    font-family: Noto Sans Georgian;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 33px;
-    letter-spacing: -0.015em;
-    text-align: center;
-    margin-top:2px;
-
-}
-
-.link {
-    color:inherit;
-    color: #0D0D0D;
-    font-family: Noto Sans Georgian;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 36px;
-    letter-spacing: -0.015em;
-    padding-left:8px;
-
-
-
-
-
-}
-.link:hover {
-    color:var(--yellow-color);
-}
-
-
-.try__btn{
-        width: 551px;
-        height: 43px;
-        // padding: 8px, 12px, 8px, 12px;
-        border-radius: 8px;
-        border: none;
-        gap: 10px;
-        background-color: var(--yellow-color);
-        display:flex;
-        justify-content: space-between;
-        margin-top:24px;
-        .btn__heading {
-        font-family: Noto Sans Georgian;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 27px;
-        letter-spacing: -0.015em;
-        margin-top:8px;
-        margin-left:8px;
-        color:#FFFFFF;
-        }
-        .btn__arrow {
-            font-size: 24px;
-            width: 10px;
-            color:#FFFFFF;
-            font-weight: 400;
-            margin-top: 8px;
-            margin-right: 16px;
-//             width: 18px;
-// height: 10px;
-// margin-top: 6px;
-// margin-left: 3px
-
-
-        }
-    
-}
-
-.branch__info {
-    background-color: #f6f6f6;
-}
-
-// visibleze kondes heifh da width tavidan 0 vapshe
-// .chevron-up::before {
-//     // unicode: "\F077/";
-//     content: "\F077"; /* Unicode for the chevron-up icon in Font Awesome */
-//     font-family: 'Font Awesome 5 Free'; /* Adjust the font-family based on your icon library */
-//     /* Add any additional styles for size, color, etc. */
-//   }
-
-
-
 
 // final functional 
 
@@ -243,43 +11,23 @@ padding:3px;
     color:#fff;
     font-weight: 600px;
     margin-top:4px;
-
     width: 551px;
     height: 43px;
     border-radius: 8px;
     gap: 10px;
-    
     font-family: Noto Sans Georgian;
     font-size: 20px;
     font-weight: 600;
     line-height: 27px;
     letter-spacing: -0.015em;
-
-
-
 }
 
 .accordion-content{
-    // transition:4s ease-in-out;
-    // padding:10px;
     background-color: #f6f6f6;
-    // border: 1px solid rgb(255, 255, 255);
-    // border-bottom-left-radius: 2px;
-    // border-bottom-right-radius: 2px;
-    // animation-name:slideDown;
-    // animation-duration:1s;
-    // animation-timing-function:ease;
-    // -webkit-animation-timing-function: ease ;
-
-//     width: 567px;
-// height: 263px;
-padding: 8px;
-border-radius: 16px;
-gap: 10px;
-background-color: #F4F4F4CC;
-
-
-
+    padding: 8px;
+    border-radius: 16px;
+    gap: 10px;
+    background-color: #F4F4F4CC;
 }
 
 @keyframes slideDown {
@@ -314,15 +62,88 @@ background-color: #F4F4F4CC;
     transition: 0.2s ease-out;
 }
 
-
-
-
 .container {
-
     width: 551px;
     height: 247px;
     gap: 24px;
     margin-top:204px;
     margin-left: 204px;
-
 }
+// inside info
+.info {
+    margin-left:8px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    padding: 0px, 12px, 0px, 12px;
+    gap: 10px;
+    color: #0D0D0D;
+}
+.branch__address {
+    display:flex;
+    padding:3px;
+}
+
+.branch__phone {
+    display:flex;
+    padding-left:3px;
+    text-align: center;
+}
+
+.branch__clock {
+    display: flex;
+    padding:3px;
+}
+.branch__email {
+    display: flex;
+    padding-left: 3px;
+}
+.info__img{
+    width: 16px;
+    height: 16px;
+    margin-top:8px;
+}
+.link {
+    color:inherit;
+    color: #0D0D0D;
+    font-family: Noto Sans Georgian;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+    padding-left:8px;
+}
+
+// map start here 
+
+// .map {
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+
+.company__code {
+    // margin-top:16px;
+    // color: #B9B9B9;
+    // font-family: Noto Sans Georgian;
+    // font-size: 24px;
+    // font-weight: 600;
+    // line-height: 33px;
+    // letter-spacing: -0.015em;
+    // text-align: center;
+}
+
+// .code__span {
+//     color:#000000;
+//     font-family: Noto Sans Georgian;
+//     font-size: 24px;
+//     font-weight: 600;
+//     line-height: 33px;
+//     letter-spacing: -0.015em;
+//     text-align: center;
+// }
+
+
+
+
+
