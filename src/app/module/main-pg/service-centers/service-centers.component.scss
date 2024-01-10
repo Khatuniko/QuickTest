@@ -239,24 +239,45 @@ padding:3px;
 .accordion-heading{
     padding:10px;
     cursor: pointer;
-    background: red;
+    background-color: var(--yellow-color);
     color:#fff;
     font-weight: 600px;
     margin-top:4px;
-    border-radius:2px;
+
+    width: 551px;
+    height: 43px;
+    border-radius: 8px;
+    gap: 10px;
+    
+    font-family: Noto Sans Georgian;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: -0.015em;
+
+
+
 }
 
 .accordion-content{
-    transition:4s ease-in-out;
-    padding:10px;
-    background: rgb(252,243,243);
-    border: 1px solid rgb(255, 255, 255);
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-    animation-name:slideDown;
-    animation-duration:1s;
-    animation-timing-function:ease;
-    -webkit-animation-timing-function: ease ;
+    // transition:4s ease-in-out;
+    // padding:10px;
+    background-color: #f6f6f6;
+    // border: 1px solid rgb(255, 255, 255);
+    // border-bottom-left-radius: 2px;
+    // border-bottom-right-radius: 2px;
+    // animation-name:slideDown;
+    // animation-duration:1s;
+    // animation-timing-function:ease;
+    // -webkit-animation-timing-function: ease ;
+
+//     width: 567px;
+// height: 263px;
+padding: 8px;
+border-radius: 16px;
+gap: 10px;
+background-color: #F4F4F4CC;
+
 
 
 }
@@ -291,4 +312,17 @@ padding:3px;
     animation-name:icon;
     transform:rotate(180deg);
     transition: 0.2s ease-out;
+}
+
+
+
+
+.container {
+
+    width: 551px;
+    height: 247px;
+    gap: 24px;
+    margin-top:204px;
+    margin-left: 204px;
+
 }
