@@ -21,14 +21,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(){}
 
-  // id:any = '';
-  // accordion(ids:any){
-  //   if(this.id == ids){
-  //     this.id = '';
-  //   }
-  //   else {
-  //     this.id = ids;
-  //   }
 
   }
 

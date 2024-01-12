@@ -11,7 +11,7 @@ export class ServiceCentersComponent implements OnInit {
 
   ngOnInit(){}
 
-  id:any = '';
+  id:any = 'f1';
   accordion(ids:any){
     if(this.id == ids){
       this.id = '';
@@ -21,13 +21,4 @@ export class ServiceCentersComponent implements OnInit {
     }
   }
 
-  // ReadMore:boolean = true;
-
-  // visible:boolean = false;
-
-  // onClick(){
-  //   this.ReadMore = !this.ReadMore;
-  //   this.visible = !this.visible;
-  // }
-// }
 }
