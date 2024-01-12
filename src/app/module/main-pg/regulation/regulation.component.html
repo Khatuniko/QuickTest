@@ -12,11 +12,41 @@
     <div class="regulation__folders">
         <div class="regulation__cards">
             <div class="regulation__card">
-                <h5 class="card__heading">დადგენილება NO510</h5>
+                <h5 class="card__heading">დადგენილება NO37</h5>
+                <!-- <p class="card__paragraph">01.07.2018</p> -->
+                <img class="card__img" src="./assets/regulation/pdf.png" alt="pdf">
+
+                <!-- <button (click)="downloadPdf()">Download PDF</button> -->
+    
+                <button (click)="downloadPdf37()" class="regulation__btn">
+                    <div class="btn__info">
+                        <img class="btn__img" src="./assets/regulation/download.png" alt="download">
+                        <p class="btn__paragraph">გადმოწერა</p>
+
+                    </div>
+                </button>
+            </div>
+
+            <div class="regulation__card">
+                <h5 class="card__heading">დადგენილება NO511</h5>
                 <!-- <p class="card__paragraph">01.07.2018</p> -->
                 <img class="card__img" src="./assets/regulation/pdf.png" alt="pdf">
     
-                <button class="regulation__btn">
+                <button (click)="downloadPdf511()" class="regulation__btn">
+                    <div class="btn__info">
+                        <img class="btn__img" src="./assets/regulation/download.png" alt="download">
+                        <p class="btn__paragraph">გადმოწერა</p>
+
+                    </div>
+                </button>
+            </div>
+
+            <div class="regulation__card">
+                <h5 class="card__heading">დადგენილება NO522</h5>
+                <!-- <p class="card__paragraph">01.07.2018</p> -->
+                <img class="card__img" src="./assets/regulation/pdf.png" alt="pdf">
+    
+                <button (click)="downloadPdf522()" class="regulation__btn">
                     <div class="btn__info">
                         <img class="btn__img" src="./assets/regulation/download.png" alt="download">
                         <p class="btn__paragraph">გადმოწერა</p>
@@ -30,35 +60,7 @@
                 <!-- <p class="card__paragraph">01.07.2018</p> -->
                 <img class="card__img" src="./assets/regulation/pdf.png" alt="pdf">
     
-                <button class="regulation__btn">
-                    <div class="btn__info">
-                        <img class="btn__img" src="./assets/regulation/download.png" alt="download">
-                        <p class="btn__paragraph">გადმოწერა</p>
-
-                    </div>
-                </button>
-            </div>
-
-            <div class="regulation__card">
-                <h5 class="card__heading">დადგენილება NO510</h5>
-                <!-- <p class="card__paragraph">01.07.2018</p> -->
-                <img class="card__img" src="./assets/regulation/pdf.png" alt="pdf">
-    
-                <button class="regulation__btn">
-                    <div class="btn__info">
-                        <img class="btn__img" src="./assets/regulation/download.png" alt="download">
-                        <p class="btn__paragraph">გადმოწერა</p>
-
-                    </div>
-                </button>
-            </div>
-
-            <div class="regulation__card">
-                <h5 class="card__heading">დადგენილება NO510</h5>
-                <!-- <p class="card__paragraph">01.07.2018</p> -->
-                <img class="card__img" src="./assets/regulation/pdf.png" alt="pdf">
-    
-                <button class="regulation__btn">
+                <button (click)="downloadPdf510()" class="regulation__btn">
                     <div class="btn__info">
                         <img class="btn__img" src="./assets/regulation/download.png" alt="download">
                         <p class="btn__paragraph">გადმოწერა</p>
@@ -72,12 +74,5 @@
         </div>
     </div>
 
-    <br>
-    
-    <br>
-    
-    <br>
-    
-    <br>
-    <br>
+
 </section>
