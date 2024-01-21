@@ -7,7 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./reservation.component.scss']
 })
 export class ReservationComponent implements OnInit {
-  title = "ვიზიტის რეზერვაცია"
+  
   myForm: FormGroup = new FormGroup({
     'carname': new FormControl('', [Validators.required]),
     'number': new FormControl('', [Validators.required]),
@@ -17,19 +17,10 @@ export class ReservationComponent implements OnInit {
 
   
   ngOnInit() {
-    // Additional initialization logic if needed
+
   }
 
-  // Handle form submission
-  // onSubmit() {
-  //   console.log(this.myForm.value);
-  //   // console.log(this.onSubmit);
-  //   // Add further logic, such as sending the form data to the server
-  // }
 
-  // get carname(){
-  //   return this.loginForm.get('carname')
-  // }
 }
 
 

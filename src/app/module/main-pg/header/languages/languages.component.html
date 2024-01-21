@@ -1,40 +1,42 @@
-<!-- <button class="language__btn"> -->
-  <!-- <div class="languages"> -->
-    <!-- <img class="languages__img"src="./assets/header/globe.png" alt="language"> -->
-        <!-- <select class="select__language">
+<!-- <button class="language__btn">
+  <div class="languages">
+    <img class="languages__img"src="./assets/header/globe.png" alt="language">
+        <select class="select__language">
           <option value="option1">GEO</option>
           <option value="option2">ENG</option>
       
-      </select> -->
-      <!-- <p>GEO</p> -->
+      </select>
 
-  <!-- </div> -->
-<!-- </button> -->
-<!-- 
-<img class="languages__img"src="./assets/header/globe.png" alt="language">
-<select id="mySelect">
+  </div>
+</button> -->
+
+<!-- <button class="languages">
+  <img class="languages__img"src="./assets/header/globe.png" alt="language">
+  <select class="select__language">
     <option value="option1">GEO</option>
     <option value="option2">ENG</option>
 
-</select> -->
+</select>
+
+</button> -->
 
 
-<!-- language-select.component.html -->
-<!-- <div class="custom-select" (click)="showDropdown = !showDropdown">
-  <div class="selected-option">
-    <img [src]="languages.find(lang => lang.code === selectedLanguage)?.flagUrl" alt="Selected Flag">
-    <span>{{ languages.find(lang => lang.code === selectedLanguage)?.name }}</span>
-  </div>
-  <div class="dropdown" *ngIf="showDropdown">
-    <div class="option" *ngFor="let language of languages" (click)="selectLanguage(language)">
-      <img [src]="language.flagUrl" alt="{{ language.name }} Flag">
-      {{ language.name }}
-    </div>
-  </div>
+<!-- start  -->
+
+<!-- <div>
+  <select class="custom-select" >
+    <option value="ka" [selected]="lang == 'ka'">GEO</option>
+    <option value="en" [selected]="lang == 'en'">ENG</option>
+  </select>
+
 </div> -->
 
-<div class="languages">
-  <img src="" alt="">
-  <div></div>
 
-</div>
+
+<label  for="">
+  <select id="select" class="text-uppercase"  #langselect (change)="translate.use(langselect.value)">
+    <option *ngFor="let lang of translate.getLangs()" class="text-uppercase" [value]="lang">{{lang}}</option>
+  </select>
+</label>
+
+<h1>{{'HOME.ABOUT-US' | translate }}</h1>

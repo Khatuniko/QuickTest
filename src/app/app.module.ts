@@ -24,7 +24,6 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { ReactiveFormsModule } from '@angular/forms';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +48,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     // FontAwesomeModule,
     // AngularFontAwesomeModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule,
     // RouterModule.forRoot(routes),
     TranslateModule.forRoot({
