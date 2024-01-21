@@ -1,42 +1,29 @@
-<!-- <button class="language__btn">
-  <div class="languages">
-    <img class="languages__img"src="./assets/header/globe.png" alt="language">
-        <select class="select__language">
-          <option value="option1">GEO</option>
-          <option value="option2">ENG</option>
-      
-      </select>
-
-  </div>
-</button> -->
-
-<!-- <button class="languages">
+<button class="languages">
   <img class="languages__img"src="./assets/header/globe.png" alt="language">
-  <select class="select__language">
-    <option value="option1">GEO</option>
-    <option value="option2">ENG</option>
+  <select class="select__language" class="text-uppercase"  #langselect (change)="translate.use(langselect.value)">
+    <option *ngFor="let lang of translate.getLangs()" class="text-uppercase" [value]="lang">{{lang}}</option>
+  </select>
 
-</select>
-
-</button> -->
+</button>
 
 
 <!-- start  -->
 
-<!-- <div>
-  <select class="custom-select" >
-    <option value="ka" [selected]="lang == 'ka'">GEO</option>
-    <option value="en" [selected]="lang == 'en'">ENG</option>
-  </select>
-
-</div> -->
 
 
-
-<label  for="">
-  <select id="select" class="text-uppercase"  #langselect (change)="translate.use(langselect.value)">
+<!-- <label class="languages">
+  <img class="languages__img"src="./assets/header/globe.png" alt="language">
+  <select class="select__language" class="text-uppercase"  #langselect (change)="translate.use(langselect.value)">
     <option *ngFor="let lang of translate.getLangs()" class="text-uppercase" [value]="lang">{{lang}}</option>
   </select>
-</label>
+</label> -->
 
-<h1>{{'HOME.ABOUT-US' | translate }}</h1>
+
+<!-- <div class="drop-down">
+  <div class="wrapper">
+    <img class="languages__img"src="./assets/header/globe.png" alt="language">
+    <div class="selected">India</div>
+  </div>
+  <i class="ri-arrow-drop-down-fill"> </i>
+
+</div> -->

@@ -5,19 +5,20 @@
 <div class="reservation__container">
     <div class="form">
         <div class="reservation__inputs">
-            <label>მანქანის ნომერი</label>
-            <input placeholder="სახელი/გვარი" formControlName="carname">
+            <label>{{'HOME.CAR_NUMBER' | translate }}</label>
+            <input placeholder="AA123AA" formControlName="carname">
             <!-- <span *ngIf="carname && carname.invalid && carname.touched" >this is mistake</span> -->
 
         </div>
 
         <div class="reservation__inputs">
-            <label>ტელეფონის ნომერი (9 ციფრი)</label>
+            <label>{{'HOME.MOBILE' | translate }}</label>
             <input formControlName="number" value="111-1111-1111" placeholder="+995 123-456" type="number">
         </div>
 
         <div class="reservation__inputs">
-            <label for="">თარიღი</label>
+            <!-- <label> {{'HOME.DATE' | translate }} </label> -->
+            <label> თარიღი</label>
             <input formControlName="date"  type="date" placeholder="now" >
 
         </div>
@@ -43,7 +44,7 @@
           </label>
         <!-- <input type="submit" value="დაჯავშნა"> -->
         <button [disabled]="myForm.invalid" class="btn__sumbit" type="submit" value="დაჯავშნა" >
-        დაჯავშნა
+            დაჯავშნა
         </button>
 
 </div>

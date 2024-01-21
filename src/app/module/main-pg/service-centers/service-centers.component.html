@@ -4,11 +4,11 @@
     <div>
         <div class="container">
             <!-- tbilisi -->
-                <div class="accordion-heading" id="f1" (click)="accordion('f1')" >თბილისი <span class="pull-right up-icon" [class.icon]="id === 'f1'" ><i class="fa fa-chevron-up" aria-hidden="true"></i></span></div>
+                <div class="accordion-heading" id="f1" (click)="accordion('f1')" > {{'HOME.TBILISI' | translate }} <span class="pull-right up-icon" [class.icon]="id === 'f1'" ><i class="fa fa-chevron-up" aria-hidden="true"></i></span></div>
                 <div class="accordion-content" *ngIf="id === 'f1'">
                     <div class="branch__address">
                         <img class="info__img" src="./assets/branches/location.png" alt="location">
-                        <p class="info">ჯორჯ ბალანჩინის ქ. N36, ქ. თბილისი</p>
+                        <p class="info">{{'HOME.TBILISI_ADRESS' | translate }}</p>
                     </div>
                     <div class="branch__phone">
                         <img  class="info__img" src="./assets/branches/phone.png" alt="phone">
@@ -20,27 +20,27 @@
                     </div>
                     <div class="branch__clock">
                         <img class="info__img" src="./assets/branches/clock.png" alt="clock">
-                        <p class="info">ორშაბათი-პარასკევი: 09:00 - 19:00</p>
+                        <p class="info">{{'HOME.MONDAY' | translate }}: 09:00 - 19:00</p>
             
                     </div>
                     <div class="branch__clock">
                         <img class="info__img" src="./assets/branches/clock.png" alt="clock">
-                        <p class="info">შაბათი: 09:00 - 18:00</p>
+                        <p class="info">{{'HOME.SATURDAY' | translate }}: 09:00 - 18:00</p>
             
                     </div>
                     <div class="branch__clock">
                         <img class="info__img" src="./assets/branches/clock.png" alt="clock">
-                        <p class="info">კვირა: 09:00 - 15:00</p>
+                        <p class="info">{{'HOME.SUNDAY' | translate }}: 09:00 - 15:00</p>
                     </div>
                 </div>
 
 
         <!-- Rustavi -->
-            <div class="accordion-heading" id="f2"  (click)="accordion('f2')" >რუსთავი <span class="pull-right up-icon" [class.icon]="id === 'f2'" ><i class="fa fa-chevron-up"></i></span></div>
+            <div class="accordion-heading" id="f2"  (click)="accordion('f2')" > {{'HOME.RUSTAVI' | translate }} <span class="pull-right up-icon" [class.icon]="id === 'f2'" ><i class="fa fa-chevron-up"></i></span></div>
             <div class="accordion-content" *ngIf="id === 'f2'"> 
                 <div class="branch__address">
                     <img class="info__img" src="./assets/branches/location.png" alt="location">
-                    <p class="info">რუსთავის გზატკეცილი მე-19კმ(მიკრო ავტობუსების ბაზრობასთან)</p>
+                    <p class="info"> {{'HOME.RUSTAVI_ADRESS' | translate }}</p>
                 </div>
                 <div class="branch__phone">
                     <img  class="info__img" src="./assets/branches/phone.png" alt="phone">
@@ -52,26 +52,26 @@
                 </div>
                 <div class="branch__clock">
                     <img class="info__img" src="./assets/branches/clock.png" alt="clock">
-                    <p class="info">ორშაბათი-პარასკევი: 09:00 - 19:00</p>
+                    <p class="info">{{'HOME.MONDAY' | translate }}: 09:00 - 19:00</p>
         
                 </div>
                 <div class="branch__clock">
                     <img class="info__img" src="./assets/branches/clock.png" alt="clock">
-                    <p class="info">შაბათი: 09:00 - 17:00</p>
+                    <p class="info">{{'HOME.SATURDAY' | translate }}: 09:00 - 17:00</p>
         
                 </div>
                 <div class="branch__clock">
                     <img class="info__img" src="./assets/branches/clock.png" alt="clock">
-                    <p class="info">კვირა: 09:00 - 17:00</p>
+                    <p class="info">{{'HOME.SUNDAY' | translate }}: 09:00 - 17:00</p>
                 </div>
         
             </div>
         <!-- Kutaisi-->
-            <div class="accordion-heading" id="f3"  (click)="accordion('f3')" >ქუთაისი <span class="pull-right up-icon" [class.icon]="id === 'f3'" ><i class="fa fa-chevron-up"></i></span></div>
+            <div class="accordion-heading" id="f3"  (click)="accordion('f3')" > {{'HOME.KUTAISI' | translate }} <span class="pull-right up-icon" [class.icon]="id === 'f3'" ><i class="fa fa-chevron-up"></i></span></div>
             <div class="accordion-content" *ngIf="id === 'f3'"> 
                 <div class="branch__address">
                     <img class="info__img" src="./assets/branches/location.png" alt="location">
-                    <p class="info">სოფ. ქვიტირი (ლუკოილის ბენზინგასამართი სადგურის მიმდებარედ), ქუთაისი</p>
+                    <p class="info"> {{'HOME.KUTAISI_ADRESS' | translate }}</p>
                 </div>
                 <div class="branch__phone">
                     <img  class="info__img" src="./assets/branches/phone.png" alt="phone">
@@ -83,26 +83,26 @@
                 </div>
                 <div class="branch__clock">
                     <img class="info__img" src="./assets/branches/clock.png" alt="clock">
-                    <p class="info">ორშაბათი-პარასკევი: 10:00 - 18:00</p>
+                    <p class="info">{{'HOME.MONDAY' | translate }}: 10:00 - 18:00</p>
         
                 </div>
                 <div class="branch__clock">
                     <img class="info__img" src="./assets/branches/clock.png" alt="clock">
-                    <p class="info">შაბათი: 10:00 - 15:00</p>
+                    <p class="info">{{'HOME.SATURDAY' | translate }}: 10:00 - 15:00</p>
         
                 </div>
                 <div class="branch__clock">
                     <img class="info__img" src="./assets/branches/clock.png" alt="clock">
-                    <p class="info">კვირა: 10:00 - 15:00</p>
+                    <p class="info">{{'HOME.SUNDAY' | translate }}: 10:00 - 15:00</p>
                 </div>
         
             </div>
         <!-- Batumi -->
-        <div class="accordion-heading" id="f4"  (click)="accordion('f4')" >ბათუმი <span class="pull-right up-icon" [class.icon]="id === 'f4'" ><i class="fa fa-chevron-up"></i></span></div>
+        <div class="accordion-heading" id="f4"  (click)="accordion('f4')" >{{'HOME.BATUMI' | translate }} <span class="pull-right up-icon" [class.icon]="id === 'f4'" ><i class="fa fa-chevron-up"></i></span></div>
         <div class="accordion-content" *ngIf="id === 'f4'"> 
             <div class="branch__address">
                 <img class="info__img" src="./assets/branches/location.png" alt="location">
-                <p class="info">აეროპორტის გზატკეცილი N181, ბათუმი</p>
+                <p class="info"> {{'HOME.BATUMI_ADRESS' | translate }}</p>
             </div>
             <div class="branch__phone">
                 <img  class="info__img" src="./assets/branches/phone.png" alt="phone">
@@ -114,17 +114,17 @@
             </div>
             <div class="branch__clock">
                 <img class="info__img" src="./assets/branches/clock.png" alt="clock">
-                <p class="info">ორშაბათი-პარასკევი: 10:00 - 18:00</p>
+                <p class="info">{{'HOME.MONDAY' | translate }}: 10:00 - 18:00</p>
         
             </div>
             <div class="branch__clock">
                 <img class="info__img" src="./assets/branches/clock.png" alt="clock">
-                <p class="info">შაბათი: 10:00 - 17:00</p>
+                <p class="info">{{'HOME.SATURDAY' | translate }}: 10:00 - 17:00</p>
         
             </div>
             <div class="branch__clock">
                 <img class="info__img" src="./assets/branches/clock.png" alt="clock">
-                <p class="info">კვირა: 10:00 - 17:00</p>
+                <p class="info">{{'HOME.SUNDAY' | translate }}: 10:00 - 17:00</p>
             </div>
         </div>
     </div>
@@ -135,7 +135,7 @@
    </div>
    <div class="code">
        <h3 class="company__code">
-           საიდენტიფიკაციო კოდი <span class="code__span">&nbsp;405239503</span>
+        {{'HOME.CODE' | translate }} <span class="code__span">&nbsp;405239503</span>
        </h3>
    </div>
 </section>
