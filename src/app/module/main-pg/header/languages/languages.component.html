@@ -1,17 +1,16 @@
-<button class="languages">
+<!-- <button class="languages">
   <img class="languages__img"src="./assets/header/globe.png" alt="language">
   <select class="select__language" class="text-uppercase"  #langselect (change)="translate.use(langselect.value)">
     <option *ngFor="let lang of translate.getLangs()" class="text-uppercase" [value]="lang">{{lang}}</option>
   </select>
 
-</button>
+</button> -->
 
 
 <!-- start  -->
 
-
-
-<!-- <label class="languages">
+<!-- 
+<label class="languages">
   <img class="languages__img"src="./assets/header/globe.png" alt="language">
   <select class="select__language" class="text-uppercase"  #langselect (change)="translate.use(langselect.value)">
     <option *ngFor="let lang of translate.getLangs()" class="text-uppercase" [value]="lang">{{lang}}</option>
@@ -19,11 +18,18 @@
 </label> -->
 
 
-<!-- <div class="drop-down">
+<!-- <div class="drop-down" #dropdown (click)="toggleList()">
   <div class="wrapper">
-    <img class="languages__img"src="./assets/header/globe.png" alt="language">
-    <div class="selected">India</div>
+    <img class="languages__img" src="./assets/header/globe.png" alt="language">
+    <div class="selected">GEO</div>
   </div>
-  <i class="ri-arrow-drop-down-fill"> </i>
+  <div class="list" #list [ngClass]="{'show': isListVisible}">
+    <div class="item">
+      <img src="./assets/header/globe.png" alt="language">
+      <div class="text">ENG</div>
+    </div>
+
+  </div>
+
 
 </div> -->

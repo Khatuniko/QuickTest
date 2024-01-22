@@ -10,12 +10,22 @@ import { Router } from '@angular/router';
 export class LanguagesComponent {
 
   constructor(public translate: TranslateService) {
-    translate.addLangs(['GE', 'ENG']);
-    translate.setDefaultLang('GE');
+    translate.addLangs(['ge', 'eng']);
+    translate.setDefaultLang('ge');
     const browerLang = translate.getBrowserLang();
   }
 
-  }
+  // isListVisible = false;
+
+  // toggleList(): void {
+  //   this.isListVisible = !this.isListVisible;
+  // }
+
+  
+
+
+
+}
 
 
 
