@@ -1,34 +1,32 @@
+ <!--შესაცვლელია ყველაფერი  -->
+ 
  <form class="reservation__form" >
     <!-- [formGroup]="myForm" (ngSubmit)="onSubmit()"ng -->
     <div>
-        <h3 class="reservation__heading">{{'HOME.RESERVATION' | translate }}</h3>
-<div class="reservation__container">
+    <h3 class="reservation__heading">{{'HOME.RESERVATION' | translate }}</h3>
+    <div class="reservation__container">
     <div class="form">
         <div class="reservation__inputs">
             <label>{{'HOME.CAR_NUMBER' | translate }}</label>
             <input placeholder="AA123AA" formControlName="carname">
-            <!-- <span *ngIf="carname && carname.invalid && carname.touched" >this is mistake</span> -->
-
         </div>
 
         <div class="reservation__inputs">
             <label>{{'HOME.MOBILE' | translate }}</label>
-            <input formControlName="number" value="111-1111-1111" placeholder="+995 123-456" type="number">
+            <input formControlName="number" value="111-1111" placeholder="+995 123-456" type="number">
         </div>
 
         <div class="reservation__inputs">
             <!-- <label> {{'HOME.DATE' | translate }} </label> -->
-            <label> თარიღი</label>
+            <label class="date"> თარიღი</label>
             <input formControlName="date"  type="date" placeholder="now" >
 
         </div>
         <div class="reservation__inputs">
             <div class=container>
                 <div class="col-75" class="branches">
-                    <label for="">ფილიალი</label>
-                    <br>
+                    <label>ფილიალი</label>
                     <select id="centers" name="centers" class="classic" formControlName="centers">
-                        <label for="">ფილიალი</label>
                       <option value="tbilisi">თბილისი</option>
                       <option value="rustavi">რუსთავი</option>
                       <option value="kutaisi">ქუთაისი</option>
@@ -50,7 +48,5 @@
 </div>
 </div>
 </div>
-
-
 </form>
 

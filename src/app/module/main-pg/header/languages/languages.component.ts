@@ -9,8 +9,9 @@ import { Router } from '@angular/router';
 })
 export class LanguagesComponent {
 
-  constructor(public translate: TranslateService) {
-    translate.addLangs(['ge', 'eng']);
+
+  constructor(public translate: TranslateService, private route:Router) {
+    translate.addLangs(['ge', 'en']);
     translate.setDefaultLang('ge');
     const browerLang = translate.getBrowserLang();
   }
@@ -21,7 +22,6 @@ export class LanguagesComponent {
   //   this.isListVisible = !this.isListVisible;
   // }
 
-  
 
 
 

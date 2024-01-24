@@ -23,6 +23,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { ReactiveFormsModule } from '@angular/forms';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    // FormsModule,
     // FontAwesomeModule,
     // AngularFontAwesomeModule,
     AppRoutingModule,
