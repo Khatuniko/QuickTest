@@ -85,16 +85,19 @@
 .branch__phone {
     display:flex;
     padding-left:3px;
-    text-align: center;
+    
 }
 
 .branch__clock {
     display: flex;
     padding:3px;
+    align-items: center;
 }
 .branch__email {
     display: flex;
     padding-left: 3px;
+    // align-items: center;
+
 }
 .info__img{
     width: 16px;
@@ -104,12 +107,11 @@
 .link {
     color:inherit;
     color: #0D0D0D;
-    font-family: Noto Sans Georgian;
     font-size: 16px;
     font-weight: 400;
     line-height: 36px;
-    letter-spacing: -0.015em;
     padding-left:8px;
+    align-items: center;
 }
 
 // map start here 

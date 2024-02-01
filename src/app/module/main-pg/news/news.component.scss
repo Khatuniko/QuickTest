@@ -16,18 +16,11 @@
 }
 
 .news__cards {
-    // margin-top:32px;
     margin-top:44px;
-    // margin-top:16px;
-    display: flex;
     width: 1,320px;
-    // height:208px;
     gap: 24px;
     display: flex;
     flex-wrap: wrap;
-
-
-
 
 }
 
@@ -40,13 +33,12 @@
     gap: 16px;
     display: flex;
     justify-content: space-between;
-
+    position: relative;
 
 }
 
 
 .news__paragraph {
-    font-family: Noto Sans Georgian;
     font-size: 20px;
     font-weight: 600;
     line-height: 27px;
@@ -56,15 +48,16 @@
 }
 
 .news__more {
-    font-family: Noto Sans Georgian;
     font-size: 16px;
     font-weight: 600;
     line-height: 22px;
     letter-spacing: -0.015em;
     text-align: center;
     color:var(--yellow-color);
-    // align-items: self-end ;
-    // margin-top:23%;
+    position: absolute;
+    bottom:24px;
+    right: 24px;
+    
 
 }
 
@@ -80,5 +73,4 @@
 .links a {
     color:var(--yellow-color);
     margin:5px;
-    // margin:5px;
 }

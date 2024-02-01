@@ -5,7 +5,6 @@
 
 .reservation__heading {
   margin-top: 44px;
-  font-family: Noto Sans Georgian;
   font-size: 24px;
   font-weight: 600;
   line-height: 33px;
@@ -24,6 +23,10 @@
   gap: 52px;
   box-shadow: 0px 0px 24px 0px #00000026;
 }
+
+
+// akedan 
+
 
 input {
     width: 382px;
@@ -63,8 +66,6 @@ input {
 }
 
 
-
-
 .branches  {
   width: 382px;
   height:46px;
@@ -94,9 +95,7 @@ input[type=text], select, textarea {
 //  btn and checkbox
   
 button[type=submit] {
-  // background-color: red;
   background-color: #FBD19E;
-  // background-color: var(--yellow-color);
   width: 155px;
   height: 44px;
   padding: 11px, 36px, 11px, 36px;
