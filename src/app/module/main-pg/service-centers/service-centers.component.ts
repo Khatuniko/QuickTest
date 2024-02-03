@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./service-centers.component.scss']
 })
 export class ServiceCentersComponent implements OnInit {
+  email = 'info@qt.ge';
 
   constructor(){}
 
