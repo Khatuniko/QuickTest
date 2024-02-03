@@ -10,7 +10,6 @@
   line-height: 33px;
   letter-spacing: -0.015em;
   text-align: center;
-
 }
 
 .reservation__container {
@@ -27,17 +26,23 @@
 
 // akedan 
 
+.reservation__inputs{
+  margin-bottom: 24px;
+}
 
 input {
     width: 382px;
     height:44px;
     padding: 11px, 16px, 11px, 16px;
     border-radius: 8px;
-    border: 1px;
-    gap: 10px;
-    // color:red;
     border: 1px solid #E0E0E0;
+    padding-left: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.015em;
 }
+
 
 
  label {
@@ -49,21 +54,18 @@ input {
   width: 175px;
   height: 22px;
   padding: 0px, 16px, 0px, 16px;
-  gap: 10px;
   margin-left:16px;
-
-
  }
+
+
 ::placeholder {
-  color:#E0E0E0; //ეს ფერია სანამ დააჭერ
-  font-family: Noto Sans Georgian;
+  color:#E0E0E0;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   letter-spacing: -0.015em;
-  padding-left:16px;
-
 }
+
 
 
 .branches  {
@@ -73,11 +75,8 @@ input {
   border-radius: 8px;
   border: 1px;
   justify-content: space-between;
-  
 
 }
-
-
 .col-75 {
   float: left;
   width: 75%;
@@ -88,7 +87,7 @@ input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
   resize: vertical;
 }
   
@@ -121,18 +120,6 @@ button[type=submit]:hover {
 }
 
 
-
-
-
-.reservation__inputs{
-    margin-bottom: 24px;
-}
-
-
-
-::-webkit-datetime-edit { 
-  padding: 1em;
-}
 ::-webkit-datetime-edit-text { 
   color: #E0E0E0;
   padding: 0 0.3em;
@@ -147,28 +134,22 @@ button[type=submit]:hover {
   margin: 16px;
 }
 
-
-
-select{
-color:#E0E0E0;
-}
-
-label {
-  color: #262626;
-}
-
-select option {
-color:#262626;
-}
-
-
-
 input[type="date"]::-webkit-calendar-picker-indicator {
   background-image: url('/assets/reservation/calendar.png');
   width: 24px;
   height: 24px;
 }
 
+
+// filialebi
+select{
+color:#E0E0E0;
+}
+
+select option {
+color:#262626;
+// background-color: var(--yellow-color);
+}
 
 
 
@@ -198,8 +179,6 @@ select.classic {
   height: 22px;
   padding-left:16px;
   margin-top:15%;
-
-  
 }
 
 
@@ -209,7 +188,6 @@ select.classic {
   cursor: pointer;
   height:0;
   width: 0;
-
 }
 
 
@@ -221,7 +199,6 @@ select.classic {
   width: 24px;
   border: 2px solid #E0E0E0;
   border-radius: 4px;
-
 }
 
 
@@ -236,7 +213,6 @@ select.classic {
   display: block;
 }
 
-
 .container__checkbox .checkmark:after {
   width: 10px;
   height: 10px;
@@ -246,7 +222,6 @@ select.classic {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   margin:2px 3px 2px 3px;
-
 }
 
 
@@ -259,25 +234,20 @@ span {
   line-height: 22px;
   letter-spacing: -0.015em;
   text-align: center;
-
-
 }
 
 
 
 input {
   border: 1px solid #ccc;
-
 }
 
 input:focus {
   border: none;
-  border-color: #007bff; 
 }
 
 input.focused {
   border: none;
-  border-color: #ff0000; 
 }
 
 
