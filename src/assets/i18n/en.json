@@ -41,7 +41,14 @@
     "BOOKING":"Booking",
     "DOWNLOAD": "Download",
     "RESOLUTION":"Resolution",
-    "BACK": "Back"
+    "BACK": "Back",
+    "PAST":"Car has been inspected",
+    "FUTURE":"The last date of your vehicle inspection",
+    "REMINDER":"Activate Reminder",
+    "BOOK":"Book technical inspection",
+    "ACTIVATION":"Activation",
+    "REMIND14":"Remind me 14 days before",
+    "REMIND30":"Remind me 30 days before"
 }
 }
 

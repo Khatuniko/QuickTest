@@ -4,18 +4,18 @@
         <div class="remainder__form">
             
         <div class="remainder__inputs">
-            <label>ტელეფონის ნომერი (9 ციფრი)</label>
-            <input value="111-1111-1111" placeholder="+995 123-456" type="number">
+            <label>{{'HOME.MOBILE' | translate }}</label>
+            <input  placeholder="+995 123-456" type="tel">
         </div>
         <div class="reservation__inputs">
             <div class=container>
                 <div class="col-75" class="branches">
-                    <label for="">პერიოდულობა</label>
+                    <label for="">{{'HOME.PERIOD' | translate }}</label>
                     <br>
                     <select id="period" name="period">
-                        <label for="">პერიოდულობა</label>
-                      <option value="14">შემახსენე 14 დღით ადრე </option>
-                      <option value="30">შემახსენე 30 დღით ადრე</option>
+                        <!-- <label for="">{{'HOME.PERIOD' | translate }}</label> -->
+                      <option value="14">{{'HOME.REMIND14' | translate }}</option>
+                      <option value="30">{{'HOME.REMIND30' | translate }}</option>
                     </select>
                 </div>
     
