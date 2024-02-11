@@ -22,6 +22,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CorrectModelComponent } from './module/main-pg/calculate/correct-model/correct-model.component';
+import { WrongModalComponent } from './module/main-pg/calculate/wrong-modal/wrong-modal.component';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // import { FormsModule } from '@angular/forms';
 
@@ -43,6 +45,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LanguagesComponent,
     RemainderComponent,
     MapComponent,
+    CorrectModelComponent,
+    WrongModalComponent,
   ],
   imports: [
     BrowserModule,

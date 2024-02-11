@@ -1,0 +1,13 @@
+<section class="calculator__section">
+    <div class="calculator__container">
+        <p class="btn__back" routerLink="/calculator" [routerLinkActive]="'active-link'"> {{'HOME.BACK' | translate }}</p>
+        <img class="calculator__img" src="./assets/calculator/wrong.png" alt="wrong">
+        <h3 class="calculator__number">AA-111-AA</h3>
+        <div class="calculator__information">
+            <h4 class="paragraph__past">ავტომობილი ინსპექტირება ვადაგადაცილებულია</h4>
+            <h4 class="calculator__paragraph">ინსპექტირების ვადა</h4>
+            <p class="calculator__date"> 25 ივნისი , 2023 წელი</p>
+            <button routerLink="/reservation" [routerLinkActive]="'active-link'" class="btn__booking">დაჯავშნე ტექდათვალიერება</button>
+        </div>
+    </div>
+</section>

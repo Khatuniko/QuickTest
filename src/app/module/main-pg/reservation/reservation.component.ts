@@ -20,6 +20,11 @@ export class ReservationComponent implements OnInit {
 
   }
 
+  btnbooking(){
+    alert("ვიზიტი წარმატებით დაიჯავშნა");
+
+  }
+
 
 }
 
