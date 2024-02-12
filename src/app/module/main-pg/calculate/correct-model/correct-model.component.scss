@@ -13,15 +13,27 @@
     border-radius: 24px;
     gap: 36px;
     box-shadow: 0px 0px 24px 0px #00000026;
-  
-  
   }
   .btn__back{
-    
+    color: #E0E0E0;
+    font-family: Noto Sans Georgian;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: -0.015em;
+    text-align: center;
   }
   
+  .calculator__back{
+    padding:24px 24px;
+    display: flex;
+    cursor: pointer;
+
+  }
+
+
   .calculator__img{
-    margin-top: 15%;
+    margin-top: 5%;
     margin-left: 43%;
     width: 64px;
     height: 64px;

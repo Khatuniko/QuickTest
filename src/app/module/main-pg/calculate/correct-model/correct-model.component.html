@@ -1,6 +1,9 @@
 <section class="calculator__section">
     <div class="calculator__container">
-        <p class="btn__back" routerLink="/calculator" [routerLinkActive]="'active-link'"> {{'HOME.BACK' | translate }}</p>
+        <div class="calculator__back"  routerLink="/calculator" [routerLinkActive]="'active-link'">
+            <img class="chevron__back" src="./assets/chevron-left.png" alt="chevron-left">
+            <p class="btn__back"> {{'HOME.BACK' | translate }}</p>
+        </div>
         <img class="calculator__img" src="./assets/calculator/correct.png" alt="correct">
         <h3 class="calculator__number">AA-111-AA</h3>
         <div class="calculator__information">
