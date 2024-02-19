@@ -1,71 +1,78 @@
 
-.drop-down{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+// .drop-down{
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     background-color: var(--yellow-color);
+//     // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
+//     cursor: pointer;
+//     width: 99px;
+//     height: 46px;
+//     top: 19px;
+//     // margin-left: 1281px;
+//     padding: 11px, 16px, 11px, 16px;
+//     // border-radius: 8px;
+//     border-radius: 8px;
+//     gap: 10px;
+//     border:none;
+//     color:var(--header-color);
+//     left:50px;
+// }
+
+// .wrapper {
+//     display: flex;
+//     gap:0.5rem;
+//     align-items: center;
+// }
+
+// .list{
+//     background-color: var(--yellow-color);
+//     position: absolute;
+//     top:45px;
+//     left:0;
+//     border-radius: 0 0 8px 8px;
+//     // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
+//     cursor: pointer;
+//     max-height: 250px;
+//     width: 100%;
+//     display: none;
+//     // width: 99px;
+//     // height: 46px;
+
+// }
+// .item {
+//     display: flex;
+//     align-items: center;
+//     padding:0.5rem 1rem;
+//     gap:0.5rem;
+
+// }
+
+
+
+// .languages__img {
+//     margin-left:16px;
+
+// }
+
+
+// .show{
+//     display: block;
+// }
+
+
+.main{
     background-color: var(--yellow-color);
-    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
-    cursor: pointer;
     width: 99px;
     height: 46px;
-    top: 19px;
-    // margin-left: 1281px;
+    // left: 1281px
     padding: 11px, 16px, 11px, 16px;
-    // border-radius: 8px;
     border-radius: 8px;
     gap: 10px;
-    border:none;
-    color:var(--header-color);
-    left:50px;
+    
 }
 
-.wrapper {
-    display: flex;
-    gap:0.5rem;
-    align-items: center;
-}
-
-.list{
+select{
     background-color: var(--yellow-color);
-    position: absolute;
-    top:45px;
-    left:0;
-    border-radius: 0 0 8px 8px;
-    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
-    cursor: pointer;
-    max-height: 250px;
-    width: 100%;
-    display: none;
-    // width: 99px;
-    // height: 46px;
-
 }
-.item {
-    display: flex;
-    align-items: center;
-    padding:0.5rem 1rem;
-    gap:0.5rem;
-
-}
-
-
-
-.languages__img {
-    margin-left:16px;
-
-}
-
-
-.show{
-    display: block;
-}
-
-
-// option#en option[value="en"]   { background-image:url(/QuickTest/src/assets/header/globe.png);   }
-// option#geo option[value="ge"] { background-image:url(/QuickTest/src/assets/header/globe.png); }
-
-// button {
-//     height: 100px;
-//     width: 100px;
-// }

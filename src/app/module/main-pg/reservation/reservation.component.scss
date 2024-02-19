@@ -126,9 +126,16 @@ button[type=submit]:hover {
 }
 ::-webkit-datetime-edit-month-field,
 ::-webkit-datetime-edit-day-field,
-::-webkit-datetime-edit-year-field  {
-  color: #E0E0E0;
+::-webkit-datetime-edit-year-field {
+  color: #E0E0E0; 
+  // es aris cifrebis mkrtalad roa
 }
+
+// ::-webkit-datetime-edit-month-field:enabled
+// ::-webkit-datetime-edit-day-field:enabled,
+// ::-webkit-datetime-edit-year-field:enabled{
+//   color: red;
+// }
 
 ::-webkit-calendar-picker-indicator { 
   margin: 16px;
@@ -144,6 +151,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 // filialebi
 select{
 color:#E0E0E0;
+// color:#262626;
 }
 
 select option {
@@ -225,7 +233,7 @@ select.classic {
 }
 
 
-span {
+.roles{
   color:var(--yellow-color);
   text-decoration-line: underline; 
   font-family: Noto Sans Georgian;

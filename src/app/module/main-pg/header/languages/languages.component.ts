@@ -16,11 +16,11 @@ export class LanguagesComponent {
     const browerLang = translate.getBrowserLang();
   }
 
-  // isListVisible = false;
+  isListVisible = false;
 
-  // toggleList(): void {
-  //   this.isListVisible = !this.isListVisible;
-  // }
+  toggleList(): void {
+    this.isListVisible = !this.isListVisible;
+  }
 
 
 
