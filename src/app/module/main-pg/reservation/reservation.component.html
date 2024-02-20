@@ -1,32 +1,38 @@
  <!--შესაცვლელია ყველაფერი  -->
- 
- <form class="reservation__form" >
-    <!-- [formGroup]="myForm" (ngSubmit)="onSubmit()"ng -->
+
+ <form  [formGroup]="registerForm"  (ngSubmit)="onSubmit()" class="reservation__form">
     <div>
     <h3 class="reservation__heading">{{'HOME.RESERVATION' | translate }}</h3>
     <div class="reservation__container">
     <div class="form">
         <div class="reservation__inputs">
             <label>{{'HOME.CAR_NUMBER' | translate }}</label>
-            <input placeholder="AA123AA" formControlName="carname">
+            <input formControlName="carNumber" [ngClass]="{'is-invalid':submitted && registerForm.controls.carNumber.errors}" placeholder="AA123AA">
+        <!-- <div *ngIf="submitted && registerForm.controls.carNumber.errors" class="text-danger"> -->
+        <!-- <div *ngIf="submitted && registerForm.controls.carNumber.errors.required">
+            გთხოვ, ჩაწეროთ მანქანის ნომერი
+
+        </div> -->
+        <!-- </div> -->
+
         </div>
 
         <div class="reservation__inputs">
             <label>{{'HOME.MOBILE' | translate }}</label>
-            <input formControlName="number"  placeholder="+995 123-456" type="tel">
+            <input formControlName="mobileNumber" [ngClass]="{'is-invalid': submitted && registerForm.controls.mobileNumber.errors}" placeholder="+995 123-456" type="tel">
         </div>
 
         <div class="reservation__inputs">
             <!-- <label> {{'HOME.DATE' | translate }} </label> -->
             <label> თარიღი</label>
-            <input  formControlName="date"  type="date" placeholder="now" >
+            <input (input)="onDateChange($event)" formControlName="date" [ngClass]="{'is-invalid': submitted && registerForm.controls.date.errors}" type="date" placeholder="now" >
 
         </div>
         <div class="reservation__inputs">
             <div class=container>
                 <div class="col-75" class="branches">
                     <label>ფილიალი</label>
-                    <select id="centers" name="centers" class="classic">
+                    <select formControlName="branches" [ngClass]="{'is-invalid': submitted && registerForm.controls.branches.errors}" id="centers" name="centers" class="classic">
                       <option value="tbilisi">თბილისი</option>
                       <option value="rustavi">რუსთავი</option>
                       <option value="kutaisi">ქუთაისი</option>
@@ -37,11 +43,14 @@
         </div>
         <label class="container__checkbox">
             ვეთანხმები <a class="roles" target="_blank" href="./assets/roles.pdf">წესებს და პირობებს</a>
-            <input type="checkbox">
+            <input type="checkbox" formControlName="checkbox" [ngClass]="{'is-invalid': submitted && registerForm.controls.checkbox.errors}">
             <span class="checkmark"></span>
           </label>
         <!-- <input type="submit" value="დაჯავშნა"> -->
-        <button (click)="btnbooking" [disabled]="myForm.invalid" class="btn__sumbit" type="submit" value="დაჯავშნა" >
+        <!-- <button (click)="btnbooking" [disabled]="myForm.invalid" class="btn__sumbit" type="submit" value="დაჯავშნა" >
+            დაჯავშნა
+        </button> -->
+        <button [disabled]="registerForm.invalid"  class="btn__sumbit" type="submit" value="დაჯავშნა" >
             დაჯავშნა
         </button>
 
@@ -49,3 +58,8 @@
 </div>
 </div>
 </form>
+
+
+
+
+

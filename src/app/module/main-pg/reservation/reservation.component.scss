@@ -1,3 +1,5 @@
+// @import "~bootstrap/dist/css/bootstrap.css";
+
 .reservation__form {
   margin-left: 240px;
   margin-right:240px;
@@ -118,24 +120,27 @@ button[type=submit] {
 button[type=submit]:hover {
   background-color:var(--yellow-color);
 }
+// es unda iyos roca kvela sheivseba
 
 
-::-webkit-datetime-edit-text { 
-  color: #E0E0E0;
-  padding: 0 0.3em;
-}
+
 ::-webkit-datetime-edit-month-field,
 ::-webkit-datetime-edit-day-field,
-::-webkit-datetime-edit-year-field {
+::-webkit-datetime-edit-year-field,
+::-webkit-datetime-edit-text {
   color: #E0E0E0; 
-  // es aris cifrebis mkrtalad roa
+  padding: 0 0.2em;
+
 }
 
-// ::-webkit-datetime-edit-month-field:enabled
-// ::-webkit-datetime-edit-day-field:enabled,
-// ::-webkit-datetime-edit-year-field:enabled{
-//   color: red;
-// }
+input[type="date"].selected-date::-webkit-datetime-edit-month-field,
+input[type="date"].selected-date::-webkit-datetime-edit-day-field,
+input[type="date"].selected-date::-webkit-datetime-edit-year-field,
+input[type="date"].selected-date::-webkit-datetime-edit-text {
+  color: #262626;
+}
+
+
 
 ::-webkit-calendar-picker-indicator { 
   margin: 16px;
@@ -150,13 +155,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 // filialebi
 select{
-color:#E0E0E0;
-// color:#262626;
+// color:#E0E0E0;
+color:#262626;
 }
 
 select option {
 color:#262626;
-// background-color: var(--yellow-color);
+
 }
 
 
@@ -257,5 +262,3 @@ input:focus {
 input.focused {
   border: none;
 }
-
-
