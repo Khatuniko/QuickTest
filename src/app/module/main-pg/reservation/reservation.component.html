@@ -23,26 +23,27 @@
         </div>
 
         <div class="reservation__inputs">
-            <!-- <label> {{'HOME.DATE' | translate }} </label> -->
-            <label> თარიღი</label>
+            <label> {{'HOME.DATE' | translate }} </label>
+            <!-- <label> თარიღი</label> -->
             <input (input)="onDateChange($event)" formControlName="date" [ngClass]="{'is-invalid': submitted && registerForm.controls.date.errors}" type="date" placeholder="now" >
 
         </div>
         <div class="reservation__inputs">
             <div class=container>
                 <div class="col-75" class="branches">
-                    <label>ფილიალი</label>
+                    <!-- <label>ფილიალი</label> -->
+                    <label> {{'HOME.BRANCHES' | translate }} </label>
                     <select formControlName="branches" [ngClass]="{'is-invalid': submitted && registerForm.controls.branches.errors}" id="centers" name="centers" class="classic">
-                      <option value="tbilisi">თბილისი</option>
-                      <option value="rustavi">რუსთავი</option>
-                      <option value="kutaisi">ქუთაისი</option>
-                      <option value="batumi">ბათუმი</option>
+                      <option value="tbilisi">{{'HOME.TBILISI' | translate }}</option>
+                      <option value="rustavi">{{'HOME.RUSTAVI' | translate }}</option>
+                      <option value="kutaisi">{{'HOME.KUTAISI' | translate }}</option>
+                      <option value="batumi">{{'HOME.BATUMI' | translate }}</option>
                     </select>
                 </div>
             </div>
         </div>
         <label class="container__checkbox">
-            ვეთანხმები <a class="roles" target="_blank" href="./assets/roles.pdf">წესებს და პირობებს</a>
+           {{ 'HOME.AGREE' | translate }} <a class="roles" target="_blank" href="./assets/roles.pdf">{{ 'HOME.POLICY' | translate }}</a>
             <input type="checkbox" formControlName="checkbox" [ngClass]="{'is-invalid': submitted && registerForm.controls.checkbox.errors}">
             <span class="checkmark"></span>
           </label>
@@ -51,7 +52,7 @@
             დაჯავშნა
         </button> -->
         <button [disabled]="registerForm.invalid"  class="btn__sumbit" type="submit" value="დაჯავშნა" >
-            დაჯავშნა
+            {{'HOME.BOOKING' | translate }}
         </button>
 
 </div>

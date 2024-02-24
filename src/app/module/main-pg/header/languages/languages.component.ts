@@ -21,11 +21,8 @@ export class LanguagesComponent {
   toggleList(): void {
     this.isListVisible = !this.isListVisible;
   }
-
-
-
-
 }
+
 
 
 

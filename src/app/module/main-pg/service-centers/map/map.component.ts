@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent {
+  selectedLocation!: string;
+
+  accordion(id: string) {
+    this.selectedLocation = id;
+  }
 
 }

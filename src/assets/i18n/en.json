@@ -48,7 +48,8 @@
     "BOOK":"Book technical inspection",
     "ACTIVATION":"Activation",
     "REMIND14":"Remind me 14 days before",
-    "REMIND30":"Remind me 30 days before"
+    "REMIND30":"Remind me 30 days before",
+    "PERIOD":"Periodicity"
 }
 }
 
