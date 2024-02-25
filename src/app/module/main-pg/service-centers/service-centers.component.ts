@@ -22,5 +22,4 @@ export class ServiceCentersComponent implements OnInit {
       this.id = ids;
     }
   }
-
 }
