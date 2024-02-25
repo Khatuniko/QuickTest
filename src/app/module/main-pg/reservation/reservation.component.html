@@ -31,9 +31,8 @@
         <div class="reservation__inputs">
             <div class=container>
                 <div class="col-75" class="branches">
-                    <!-- <label>ფილიალი</label> -->
                     <label> {{'HOME.BRANCHES' | translate }} </label>
-                    <select formControlName="branches" [ngClass]="{'is-invalid': submitted && registerForm.controls.branches.errors}" id="centers" name="centers" class="classic">
+                    <select class="branches__select" formControlName="branches" [ngClass]="{'is-invalid': submitted && registerForm.controls.branches.errors}">
                       <option value="tbilisi">{{'HOME.TBILISI' | translate }}</option>
                       <option value="rustavi">{{'HOME.RUSTAVI' | translate }}</option>
                       <option value="kutaisi">{{'HOME.KUTAISI' | translate }}</option>
@@ -59,7 +58,6 @@
 </div>
 </div>
 </form>
-
 
 
 

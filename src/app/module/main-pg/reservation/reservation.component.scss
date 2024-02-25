@@ -153,20 +153,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 
-// filialebi
-select{
-// color:#E0E0E0;
-color:#262626;
-}
+// branches select 
 
-select option {
-color:#262626;
-
-}
-
-
-
-select.classic {
+.branches__select {
   background-repeat: no-repeat;
   background-image: url('/assets/reservation/arrow.png');
   background-size: 24px;
@@ -174,6 +163,8 @@ select.classic {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  // color:#E0E0E0;
+  color:#262626;
 
 }
 

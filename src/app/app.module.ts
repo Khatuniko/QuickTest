@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Routes, RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ModuleComponent } from './module/module.component';
@@ -25,7 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CorrectModelComponent } from './module/main-pg/calculate/correct-model/correct-model.component';
 import { WrongModalComponent } from './module/main-pg/calculate/wrong-modal/wrong-modal.component';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-// import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,16 +47,17 @@ import { WrongModalComponent } from './module/main-pg/calculate/wrong-modal/wron
     MapComponent,
     CorrectModelComponent,
     WrongModalComponent,
+    
   ],
   imports: [
     BrowserModule,
-    // FormsModule,
+    FormsModule,
     // FontAwesomeModule,
     // AngularFontAwesomeModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    // RouterModule.forRoot(routes),
+    RouterModule,
     TranslateModule.forRoot({
         loader: {
             provide: TranslateLoader,
