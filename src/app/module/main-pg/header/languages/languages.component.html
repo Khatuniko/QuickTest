@@ -14,14 +14,14 @@
 
 <div class="main" >
   <label class="languages">
-    <!-- <img class="languages__img"src="./assets/header/globe.png" alt="language"> -->
-    <select  style="background-image:url('assets/global.png'); background-repeat: no-repeat;" class="select__language" class="text-uppercase"  #langselect (change)="translate.use(langselect.value)">
-      <img class="languages__img"src="./assets/header/globe.png" alt="language">
+    <select #langselect (change)="translate.use(langselect.value)" style="background-image:url('assets/global.png');" class="select__language">
       <option *ngFor="let lang of translate.getLangs()" class="text-uppercase" [value]="lang">{{lang}}</option>
     </select>
   </label>
 </div>
 
+
+    <!-- <img class="languages__img"src="./assets/header/globe.png" alt="language"> -->
 
 <!-- <div class="main">
   <label class="languages">

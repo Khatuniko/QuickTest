@@ -11,16 +11,16 @@ export class LanguagesComponent {
 
 
   constructor(public translate: TranslateService, private route:Router) {
-    translate.addLangs(['ge', 'en']);
-    translate.setDefaultLang('ge');
+    translate.addLangs(['geo', 'en']);
+    translate.setDefaultLang('geo');
     const browerLang = translate.getBrowserLang();
   }
 
-  isListVisible = false;
+  // isListVisible = false;
 
-  toggleList(): void {
-    this.isListVisible = !this.isListVisible;
-  }
+  // toggleList(): void {
+  //   this.isListVisible = !this.isListVisible;
+  // }
 }
 
 

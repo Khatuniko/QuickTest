@@ -15,8 +15,8 @@ export class AppComponent{
   title = 'QuickTestProject';
 
   constructor(public translate: TranslateService) {
-    translate.addLangs(['ge', 'en']);
-    translate.setDefaultLang('ge');
+    translate.addLangs(['geo', 'en']);
+    translate.setDefaultLang('geo');
     const browerLang = translate.getBrowserLang();
   }
 

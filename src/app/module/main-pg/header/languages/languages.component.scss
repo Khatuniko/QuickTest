@@ -194,18 +194,20 @@ select {
     color: #fff;
     width: 99px;
     height: 46px;
-    // left: 1281px
     padding: 11px, 16px, 11px, 16px;
     border-radius: 8px;
     gap: 10px;
     border: none;
     text-align: center;
-    margin-left: 40px;
-    // background-image:url('/QuickTest/src/assets/language_menu.png'); 
-    // background-repeat: no-repeat;
+    // margin-left: 40px;
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: 8px;
+    text-transform: uppercase;
+    padding-left:16px;
+    -webkit-appearance: none;
 
-
+          // background-image:url('/QuickTest/src/assets/language_menu.png'); 
       // background-image: url('/QuickTest/src/assets/global.png');
-      background-repeat: no-repeat;
 
   }
