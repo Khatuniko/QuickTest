@@ -7,27 +7,24 @@
 }
 .header__components {
     margin-left:60px;
-    display: inline;
-    // margin-right: 60px;
+    float: inline-start;
+
+    
 }
 
 .header__languages{
-    margin-left: 1400px;
-    // display: inline;
+    float: inline-end;
+    margin-top:16px;
+    margin-right: 60px;
 }
 
 
 .header__navigation{
-    // height:  80px;
-    // width: 100%;
     box-shadow: 0px 4px 4px 0px #00000040;
     height:  80px;
     width: 100%;
-    // background-color: #FFFFFF;
-    ;
 
 }
-
 
 nav ul{
     text-align: center;

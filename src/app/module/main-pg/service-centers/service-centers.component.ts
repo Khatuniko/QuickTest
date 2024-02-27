@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 
 @Component({
@@ -9,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class ServiceCentersComponent implements OnInit {
   email = 'info@qt.ge';
 
+
   constructor(){}
 
   ngOnInit(){}
+
 
   id:any = 'f1';
   accordion(ids:any){
@@ -22,4 +24,5 @@ export class ServiceCentersComponent implements OnInit {
       this.id = ids;
     }
   }
+
 }
