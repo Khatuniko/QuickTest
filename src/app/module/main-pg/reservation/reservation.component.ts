@@ -39,33 +39,11 @@ export class ReservationComponent implements OnInit {
 
   }
 
-
-
-  
-  // myForm: FormGroup = new FormGroup({
-  //   // registerForm: FormGroup = new FormGroup({
-  //   'firstName': new FormControl('', [Validators.required]),
-  //   'lastName': new FormControl('', [Validators.required]),
-  //   'date': new FormControl('', [Validators.required]),
-  //   'selectedOption': new FormControl('', [Validators.required]),
-  // });
-
-  
- 
-
-  // sxva 
-
-
-
-  
   onDateChange(event: Event) {
     const target = event.target as HTMLInputElement;
     const selectedDate = target.value;
     target.classList.add('selected-date');
   }
-  
-
-
 
 
 }
