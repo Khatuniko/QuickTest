@@ -26,6 +26,8 @@ import { CorrectModelComponent } from './module/main-pg/calculate/correct-model/
 import { WrongModalComponent } from './module/main-pg/calculate/wrong-modal/wrong-modal.component';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { PaymentComponent } from './module/main-pg/reservation/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -47,11 +49,13 @@ import { FormsModule } from '@angular/forms';
     MapComponent,
     CorrectModelComponent,
     WrongModalComponent,
+    PaymentComponent,
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    SweetAlert2Module.forRoot(),
     // FontAwesomeModule,
     // AngularFontAwesomeModule,
     AppRoutingModule,

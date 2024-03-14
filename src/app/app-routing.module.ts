@@ -10,6 +10,7 @@ import { RegulationComponent } from './module/main-pg/regulation/regulation.comp
 import { ContactComponent } from './module/main-pg/contact/contact.component';
 import { RemainderComponent } from './module/main-pg/reservation/remainder/remainder.component';
 import { CorrectModelComponent } from './module/main-pg/calculate/correct-model/correct-model.component';
+import { PaymentComponent } from './module/main-pg/reservation/payment/payment.component';
 
 const routes: Routes = [
   { path: '', component:ModuleComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'contact', component:ContactComponent},
   { path: 'remainder', component:RemainderComponent},
   { path: 'calculator', component:CalculateComponent},
-  { path: 'correct-model', component:CorrectModelComponent}
+  { path: 'correct-model', component:CorrectModelComponent},
+  { path: 'payment', component:PaymentComponent}
 ];
 
 
