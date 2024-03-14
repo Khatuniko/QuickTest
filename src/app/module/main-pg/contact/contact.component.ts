@@ -10,6 +10,12 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  borderRadius: string = '8px'; // Initial border-radius value
+
+  toggleBorderRadius() {
+    this.borderRadius = this.borderRadius === '8px' ? '0px' : '8px'; // Toggle between 8px and 0px
+  }
+
   // constructor(private translate: TranslateService, private route:Router) {
   //   translate.setDefaultLang('geo'); 
   // }

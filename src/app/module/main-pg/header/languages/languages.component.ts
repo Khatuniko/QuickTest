@@ -9,28 +9,18 @@ import { Router } from '@angular/router';
 })
 export class LanguagesComponent {
   selectedOption: string = 'Geo';
-  isDropdownOpen: boolean = false;
 
-  constructor(private translate: TranslateService, private route:Router) {
-    translate.setDefaultLang('geo'); 
+  constructor(private translate: TranslateService, private route: Router) {
+    translate.setDefaultLang('geo');
   }
 
-  switchLanguage(lang: 'geo' | 'en'){
+  switchLanguage(lang: 'geo' | 'en') {
     this.translate.use(lang);
+    this.selectedOption = lang === 'geo' ? 'Geo' : 'ENG';
   }
 
-  toggleDropdown(open: boolean) {
-    this.isDropdownOpen = open;
-  }
-  
-  selectOption(option: string) {
-    this.selectedOption = option;
-    this.isDropdownOpen = false;
+  toggleLanguage() {
+    this.selectedOption = this.selectedOption === 'Geo' ? 'ENG' : 'Geo';
+    this.switchLanguage(this.selectedOption === 'Geo' ? 'geo' : 'en');
   }
 }
-
-
-
-
-
-

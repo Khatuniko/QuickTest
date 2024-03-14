@@ -1,7 +1,13 @@
-<div class="custom__select"(click)="toggleDropdown(true)" (mouseleave)="toggleDropdown(false)">
+<div class="custom__select">
+  <span (click)="toggleLanguage()" class="select__trigger" style="background-image:url('assets/global.png');">{{ selectedOption }}</span>
+</div>
+
+
+
+<!-- <div class="custom__select"  (click)="toggleDropdown(true)" (mouseleave)="toggleDropdown(false)">
   <span class="select__trigger" style="background-image:url('assets/global.png');">{{ selectedOption }}</span>
   <ul class="select__options" [ngClass]="{'show': isDropdownOpen}">
     <li (click)="switchLanguage('en')"  (click)="selectOption('EN')" *ngIf="selectedOption !== 'EN'">EN</li>
     <li (click)="switchLanguage('geo')" (click)="selectOption('Geo')" *ngIf="selectedOption !== 'Geo'">Geo</li>
   </ul>
-</div>
+</div> -->
