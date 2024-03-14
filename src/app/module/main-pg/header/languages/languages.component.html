@@ -1,13 +1,7 @@
-
-<!-- start  mushaobs -->
-
-<div class="main" >
-  <label class="languages">
-    <select #langselect (change)="translate.use(langselect.value)" style="background-image:url('assets/global.png');" class="select__language">
-      <option *ngFor="let lang of translate.getLangs()" class="text-uppercase" [value]="lang">{{lang}}</option>
-    </select>
-  </label>
+<div class="custom__select"(click)="toggleDropdown(true)" (mouseleave)="toggleDropdown(false)">
+  <span class="select__trigger" style="background-image:url('assets/global.png');">{{ selectedOption }}</span>
+  <ul class="select__options" [ngClass]="{'show': isDropdownOpen}">
+    <li (click)="switchLanguage('en')"  (click)="selectOption('EN')" *ngIf="selectedOption !== 'EN'">EN</li>
+    <li (click)="switchLanguage('geo')" (click)="selectOption('Geo')" *ngIf="selectedOption !== 'Geo'">Geo</li>
+  </ul>
 </div>
-
-
-

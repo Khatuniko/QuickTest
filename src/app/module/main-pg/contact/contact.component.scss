@@ -1,51 +1,70 @@
+// .custom-select {
+//   position: relative;
+//   display: inline-block;
+// }
 
-button {
-  background-color: rgb(3, 154, 3);
-}
-/* Style for the custom select dropdown */
-.custom-select {
-  position: relative;
-  display: inline-block;
-  font-family: Arial, sans-serif;
-}
+// .custom-select .select-trigger {
+//   display: block;
+//   background-repeat: no-repeat;
+//   background-color: var(--yellow-color);
+//   color: #fff;
+//   width: 99px;
+//   height: 46px;
+//   text-align: center;
+//   outline: none;
+//   border-radius: 8px;
+//   background-position: 16px;
+//   text-transform: uppercase;
+//   cursor: pointer;
+//   padding: 11px 0 0 24px;
+// }
 
-.custom-select .select-trigger {
-  // border: 1px solid #ccc;
-  padding: 8px 15px;
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  outline: none;
-  background-repeat: no-repeat;
-  background-color: var(--yellow-color);
-  color: #fff;
-  width: 99px;
-  height: 46px;
-  border-radius: 8px;
-  text-transform: uppercase;
-}
 
-.custom-select .select-options {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-top: none;
-  display: none;
-}
+// .custom-select .select-options {
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   right: 0;
+//   z-index: 10;
+//   border-top: none;
+//   display: none;
+//   text-transform: uppercase;
+//   background-color: var(--yellow-color);
+//   color: #fff;
 
-.custom-select .select-options.show {
-  display: block;
-}
+// }
 
-.custom-select .select-options li {
-  padding: 8px 15px;
-  cursor: pointer;
-}
+// .custom-select .select-options.show {
+//   display: block;
+// }
 
-.custom-select .select-options li:hover {
-  background-color: #f0f0f0;
-}
+// .custom-select .select-options li {
+//   padding:8px;
+//   margin-left: 30px;
+//   list-style-type: none;
+//   cursor: pointer;
+// }
+
+
+// pirveli rac mqonda 
+
+// .select__language {
+//     background-color: var(--yellow-color);
+//     color: #fff;
+//     width: 99px;
+//     height: 46px;
+//     padding: 11px, 16px, 11px, 16px;
+//     border-radius: 8px;
+//     gap: 10px;
+//     border: none;
+//     text-align: center;
+//     // margin-left: 40px;
+//     outline: none;
+//     background-repeat: no-repeat;
+//     background-position: 8px;
+//     text-transform: uppercase;
+//     padding-left:16px;
+//     -webkit-appearance: none;
+//     cursor: pointer;
+
+//   }

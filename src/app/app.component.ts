@@ -14,12 +14,11 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent{
   title = 'QuickTestProject';
 
-  constructor(public translate: TranslateService) {
-    translate.addLangs(['geo', 'en']);
-    translate.setDefaultLang('geo');
-    const browerLang = translate.getBrowserLang();
-  }
+  // constructor(public translate: TranslateService) {
+  //   translate.addLangs(['geo', 'en']);
+  //   translate.setDefaultLang('geo');
+  //   const browerLang = translate.getBrowserLang();
+  // }
 
 }
-
 

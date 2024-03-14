@@ -8,14 +8,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./languages.component.scss']
 })
 export class LanguagesComponent {
+  selectedOption: string = 'Geo';
+  isDropdownOpen: boolean = false;
 
-
-  constructor(public translate: TranslateService, private route:Router) {
-    translate.addLangs(['geo', 'en']);
-    translate.setDefaultLang('geo');
-    const browerLang = translate.getBrowserLang();
+  constructor(private translate: TranslateService, private route:Router) {
+    translate.setDefaultLang('geo'); 
   }
 
+  switchLanguage(lang: 'geo' | 'en'){
+    this.translate.use(lang);
+  }
+
+  toggleDropdown(open: boolean) {
+    this.isDropdownOpen = open;
+  }
+  
+  selectOption(option: string) {
+    this.selectedOption = option;
+    this.isDropdownOpen = false;
+  }
 }
 
 

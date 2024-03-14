@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+// import { TranslateService } from '@ngx-translate/core';
+// import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-contact',
@@ -6,17 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  
 
-  // constructor(public translate: TranslateService, private route:Router) {
-  //   translate.addLangs(['geo', 'en']);
-  //   translate.setDefaultLang('geo');
-  //   const browerLang = translate.getBrowserLang();
+  // constructor(private translate: TranslateService, private route:Router) {
+  //   translate.setDefaultLang('geo'); 
   // }
 
-  // switchLanguage(language:string){
-  //   this.translate.use(language);
-    
+  // switchLanguage(lang: 'geo' | 'en'){
+  //   this.translate.use(lang);
   // }
   
   // selectedOption: string = 'Geo';
@@ -26,30 +25,8 @@ export class ContactComponent {
   //   this.isDropdownOpen = open;
   // }
 
-  // toggleOptions() {
-  //   if (this.selectedOption === 'ENG') {
-  //     this.selectedOption = 'Geo';
-  //   } else {
-  //     this.selectedOption = 'ENG';
-  //   }
-  //   this.isDropdownOpen = false;
-  // }
-
-  // isEngOptionVisible(): boolean {
-  //   return this.selectedOption !== 'ENG';
-  // }
-
-  // isGeoOptionVisible(): boolean {
-  //   return this.selectedOption !== 'Geo';
-  // }
-
   // selectOption(option: string) {
   //   this.selectedOption = option;
   //   this.isDropdownOpen = false;
   // }
-
-  // trackByLang(index: number, lang: string): string {
-  //   return lang; // Or return a unique identifier if available
-  // }
 }
-

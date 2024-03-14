@@ -1,24 +1,49 @@
-.select__language {
+
+  
+
+.custom__select {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom__select .select__trigger {
+    display: block;
+    background-repeat: no-repeat;
     background-color: var(--yellow-color);
     color: #fff;
     width: 99px;
     height: 46px;
-    padding: 11px, 16px, 11px, 16px;
-    border-radius: 8px;
-    gap: 10px;
-    border: none;
     text-align: center;
-    // margin-left: 40px;
     outline: none;
-    background-repeat: no-repeat;
-    background-position: 8px;
+    border-radius: 8px;
+    background-position: 16px;
     text-transform: uppercase;
-    padding-left:16px;
-    -webkit-appearance: none;
     cursor: pointer;
-
-          // background-image:url('/QuickTest/src/assets/language_menu.png'); 
-      // background-image: url('/QuickTest/src/assets/global.png');
-
+    padding: 11px 0 0 24px;
   }
   
+  
+  .custom__select .select__options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border-top: none;
+    display: none;
+    text-transform: uppercase;
+    background-color: var(--yellow-color);
+    color: #fff;
+  
+  }
+  
+  .custom__select .select__options.show {
+    display: block;
+  }
+  
+  .custom__select .select__options li {
+    padding:8px;
+    margin-left: 32px;
+    list-style-type: none;
+    cursor: pointer;
+  }
