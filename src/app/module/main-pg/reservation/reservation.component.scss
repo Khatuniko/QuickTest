@@ -96,7 +96,8 @@ input[type=text], select, textarea {
 //  btn and checkbox
   
 button[type=submit] {
-  background-color: #FBD19E;
+  // background-color: #FBD19E;
+  background-color:var(--yellow-color);
   width: 155px;
   height: 44px;
   padding: 11px, 36px, 11px, 36px;
@@ -117,12 +118,14 @@ button[type=submit] {
 
 }
   
-button[type=submit]:hover {
-  background-color:var(--yellow-color);
-}
+// button[type=submit]:hover {
+//   background-color:var(--yellow-color);
+// }
 // es unda iyos roca kvela sheivseba
 
-
+// buttton-ze 
+//   background-color: #FBD19E; jer unda ikos es 
+//   background-color:#F7A23E kvela rom sheivseba mere es 
 
 ::-webkit-datetime-edit-month-field,
 ::-webkit-datetime-edit-day-field,
@@ -253,3 +256,4 @@ input:focus {
 input.focused {
   border: none;
 }
+

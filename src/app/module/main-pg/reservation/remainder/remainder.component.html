@@ -1,4 +1,4 @@
-<section class="remainder__section">
+<!-- <section class="remainder__section">
     <h3 class="remainder__heading">შეხსენების გააქტიურება</h3>
     <div class="remainder__container">
         <div class="remainder__form">
@@ -16,12 +16,34 @@
                       <option value="30">{{'HOME.REMIND30' | translate }}</option>
                     </select>
                 </div>
-    
             </div>
-
         </div>
         <input (click)="successAlert()" type="submit" value="გააქტიურება">
 
+        </div>
+    </div>
+</section> -->
+
+<section class="remainder__section">
+    <h3 class="remainder__heading">შეხსენების გააქტიურება</h3>
+    <div class="remainder__container">
+        <div class="remainder__form" [formGroup]="reminderForm">
+            <div class="remainder__inputs">
+                <label>{{ 'HOME.MOBILE' | translate }}</label>
+                <input placeholder="+995 123-456" type="tel" formControlName="mobile">
+            </div>
+            <div class="reservation__inputs">
+                <div class=container>
+                    <div class="col-75" class="branches">
+                        <label>{{ 'HOME.PERIOD' | translate }}</label>
+                        <select id="period" name="period" formControlName="period">
+                            <option value="14">{{ 'HOME.REMIND14' | translate }}</option>
+                            <option value="30">{{ 'HOME.REMIND30' | translate }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <input (click)="successAlert()" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'" value="გააქტიურება">
         </div>
     </div>
 </section>
