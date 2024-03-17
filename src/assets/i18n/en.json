@@ -1,6 +1,5 @@
 {
     "HOME": {
-    "SELECT": "Select Languages",
     "ABOUT-US": "About Us",
     "BRANCHES":"Branches",
     "RESERVATION": "Reservation",
@@ -52,6 +51,7 @@
     "PERIOD":"Periodicity",
     "CALCULATOR": "*Vehicle number not found",
     "FIELD": "*Field is required"
+
 }
 }
 
