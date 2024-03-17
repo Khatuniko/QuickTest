@@ -6,14 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-
+goToFacebook(): void {
+  window.open('https://www.facebook.com/VehicleInspectionCentre', '_blank')
 }
 
+goToInstagram(): void {
+  window.open('https://www.instagram.com/quicktest.ge/', '_blank')
+}
 
-// goToFacebook(): void {
-//   window.location.href = 'https://www.facebook.com/tourismgeorgia111';
-// }
-// goToInstagram(): void {
-// window.location.href = 'https://www.instagram.com/admiraltravelgroup/?igshid=MjEwN2IyYWYwYw%3D%3D&fbclid=IwAR1Jsgyly6j0ps_uQ8ZPrvDOOMZJhg_B7iwAyOF0PZnC_ukJkMBWklgsLCo'
+goToLinkedin(): void {
+  window.open('https://www.linkedin.com/company/quicktestge/about/', '_blank');
 
-// }
+}
+}

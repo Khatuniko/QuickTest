@@ -7,7 +7,6 @@ import { ModuleComponent } from './module/module.component';
 import { AboutUsComponent } from './module/main-pg/about-us/about-us.component';
 import { HeaderComponent } from './module/main-pg/header/header.component';
 import { FooterComponent } from './module/main-pg/footer/footer.component';
-import { ContactComponent } from './module/main-pg/contact/contact.component';
 import { ReservationComponent } from './module/main-pg/reservation/reservation.component';
 import { NewsComponent } from './module/main-pg/news/news.component';
 import { ServiceCentersComponent } from './module/main-pg/service-centers/service-centers.component';
@@ -37,7 +36,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutUsComponent,
     HeaderComponent,
     FooterComponent,
-    ContactComponent,
     ReservationComponent,
     NewsComponent,
     ServiceCentersComponent,
