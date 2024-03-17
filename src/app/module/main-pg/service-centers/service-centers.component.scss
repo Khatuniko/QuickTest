@@ -59,13 +59,16 @@
     transform:rotate(180deg);
     transition: 0.2s ease-out;
 }
-
+.container__section{
+    margin-left: 240px;
+    margin-right:240px;
+}
 .container {
     width: 551px;
     height: 247px;
     gap: 24px;
     margin-top:40px;
-    margin-left: 204px;
+    margin-left: 60px;
 }
 // inside info
 .info {
