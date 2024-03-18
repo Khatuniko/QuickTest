@@ -12,12 +12,7 @@
             <label>{{ 'HOME.MOBILE' | translate }}</label>
             <input formControlName="mobileNumber" placeholder="+995 123-456" type="tel">
           </div>
-  
-          <div class="reservation__inputs">
-            <label>{{ 'HOME.DATE' | translate }}</label>
-            <input (input)="onDateChange($event)" formControlName="date" type="date" placeholder="now">
-          </div>
-  
+
           <div class="reservation__inputs">
             <div class=container>
               <div class="col-75" class="branches">
@@ -31,6 +26,23 @@
               </div>
             </div>
           </div>
+
+          <div class="reservation__inputs">
+            <label>{{ 'HOME.DATE' | translate }}</label>
+            <input (input)="onDateChange($event)" formControlName="date" type="date" placeholder="now">
+          </div>
+
+          <div class="reservation__inputs">
+            <div class=container>
+              <div class="col-75" class="branches">
+                <label>დრო</label>
+                  <select id="hourDropdown" [(ngModel)]="selectedHour" (change)="handleHourSelection($event)" class="branches__select" formControlName="hours">
+                    <option *ngFor="let timeSlot of timeSlots" [value]="timeSlot">{{ timeSlot }}</option>
+                  </select>
+
+              </div>
+            </div>
+          </div>
   
           <label class="container__checkbox">
             {{ 'HOME.AGREE' | translate }} <a class="roles" target="_blank"
@@ -39,11 +51,28 @@
             <span class="checkmark"></span>
           </label>
   
-          <button class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+          <!-- <button class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
             {{ 'HOME.BOOKING' | translate }}
+          </button> -->
+
+          <button routerLink="/payment" [routerLinkActive]="'active-link'" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+            ბარათით გადახდა
           </button>
+
+          <button  class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+            ადგილზე გადახდა
+          </button>
+
         </div>
       </div>
     </div>
   </form>
   
+          
+    <!-- ჯსონში უნდა ჩაიწეროს ამ გვერდით თარგმანი -->
+    <!-- jsonshi  -->
+
+<!-- romel pilialshic aris imis mixedvit unda mikondes tarigebi da ra dges -->
+<!-- tarigi da dge mikondes scorad -->
+<!-- nomers rom sheikvans mag nomerze miuvides kodi javshnis shesaxeb -->
+

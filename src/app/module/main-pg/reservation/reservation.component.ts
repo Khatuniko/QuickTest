@@ -13,8 +13,15 @@ import { Router } from '@angular/router';
 export class ReservationComponent implements OnInit {
   reservationForm:any = FormGroup;
   submitted = false;
+  timeSlots: string[] = [];
+  selectedHour: string | null = null;
 
-  constructor(private formBuilder: FormBuilder,  private router: Router) { }
+  constructor(private formBuilder: FormBuilder,  private router: Router) {
+    for (let hour = 10; hour < 19; hour++) {
+      this.timeSlots.push(`${hour}:00`);
+      this.timeSlots.push(`${hour}:30`);
+    }
+   }
 
   ngOnInit(): void {
     this.reservationForm = this.formBuilder.group({
@@ -22,7 +29,8 @@ export class ReservationComponent implements OnInit {
       mobileNumber: ['', Validators.required],
       date: ['', Validators.required],
       branches: ['', Validators.required],
-      checkbox: [false, Validators.requiredTrue]
+      checkbox: [false, Validators.requiredTrue],
+      hours:['', Validators.required]
     });
   }
 
@@ -32,20 +40,27 @@ export class ReservationComponent implements OnInit {
     if(this.reservationForm.invalid){
       return
     }
-    Swal.fire({
-      title: "წარმატებით დაიჯავშნა ვიზიტი",
-      text: "გნებავთ გადახდა?",
+    // Swal.fire({
+    //   title: "თქვენ წარმატებით დაჯავშნეთ ვიზიტი",
+    //   text: "გნებავთ გადახდა?",
+    //   icon: "success",
+    //   showCancelButton: true,
+    //   confirmButtonColor: "#3085d6",
+    //   cancelButtonColor: "#d33",
+    //   confirmButtonText: "დიახ, ბარათით გადახდა",
+    //   cancelButtonText: "არა, ადგილზე გადავიხდი",
+    // }).then((result) => {
+    //   if (result.isConfirmed) {
+    //     this.router.navigate(['/payment']);
+    //   }
+    // });
+        Swal.fire({
+      title: "თქვენ წარმატებით დაჯავშნეთ ვიზიტი",
       icon: "success",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "დიახ",
-      cancelButtonText: "არა",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        this.router.navigate(['/payment']);
-      }
-    });
+      confirmButtonColor: "#F7A23E",
+    })
+
+
   }
 
   isFormValid(): boolean {
@@ -58,5 +73,12 @@ export class ReservationComponent implements OnInit {
     target.classList.add('selected-date');
   
    }
+
+  handleHourSelection(event: Event) {
+    const selectedValue = (event.target as HTMLSelectElement).value;
+    console.log(`Selected meeting hour: ${selectedValue}`);
+    this.selectedHour = selectedValue; // Set the selected meeting hour
+  }
+
   }
   

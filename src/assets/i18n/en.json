@@ -50,7 +50,10 @@
     "REMIND30":"Remind me 30 days before",
     "PERIOD":"Periodicity",
     "CALCULATOR": "*Vehicle number not found",
-    "FIELD": "*Field is required"
+    "FIELD": "*Field is required",
+    "REMINDER-HEADING": "Activate Reminder"
+
+
 
 }
 }
