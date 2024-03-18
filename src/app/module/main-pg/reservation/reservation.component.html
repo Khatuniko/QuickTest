@@ -35,7 +35,7 @@
           <div class="reservation__inputs">
             <div class=container>
               <div class="col-75" class="branches">
-                <label>დრო</label>
+                <label> {{ 'HOME.TIME' | translate }} </label>
                   <select id="hourDropdown" [(ngModel)]="selectedHour" (change)="handleHourSelection($event)" class="branches__select" formControlName="hours">
                     <option *ngFor="let timeSlot of timeSlots" [value]="timeSlot">{{ timeSlot }}</option>
                   </select>
@@ -56,11 +56,11 @@
           </button> -->
 
           <button routerLink="/payment" [routerLinkActive]="'active-link'" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
-            ბარათით გადახდა
+            {{ 'HOME.CREDIT' | translate }}
           </button>
 
           <button  class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
-            ადგილზე გადახდა
+            {{ 'HOME.CASH' | translate }}
           </button>
 
         </div>

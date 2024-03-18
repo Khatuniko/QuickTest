@@ -51,7 +51,10 @@
     "PERIOD":"Periodicity",
     "CALCULATOR": "*Vehicle number not found",
     "FIELD": "*Field is required",
-    "REMINDER-HEADING": "Activate Reminder"
+    "REMINDER-HEADING": "Activate Reminder",
+    "CREDIT": "Pay with the credit card",
+    "CASH": "Pay at the service center",
+    "TIME": "Time"
 
 
 
