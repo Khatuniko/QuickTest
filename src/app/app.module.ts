@@ -29,6 +29,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { PaymentComponent } from './module/main-pg/reservation/payment/payment.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClockComponent } from './module/main-pg/reservation/clock/clock.component';
+import { DefaultLayoutComponent } from './default-layout/default-layout.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { ClockComponent } from './module/main-pg/reservation/clock/clock.compone
     WrongModalComponent,
     PaymentComponent,
     ClockComponent,
+    DefaultLayoutComponent,
     
   ],
   imports: [

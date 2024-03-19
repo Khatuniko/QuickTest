@@ -77,7 +77,7 @@ export class ReservationComponent implements OnInit {
   handleHourSelection(event: Event) {
     const selectedValue = (event.target as HTMLSelectElement).value;
     console.log(`Selected meeting hour: ${selectedValue}`);
-    this.selectedHour = selectedValue; // Set the selected meeting hour
+    this.selectedHour = selectedValue;
   }
 
   }

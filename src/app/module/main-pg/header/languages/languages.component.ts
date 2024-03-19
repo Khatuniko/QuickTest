@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-languages',
   templateUrl: './languages.component.html',
@@ -23,4 +24,6 @@ export class LanguagesComponent {
     this.selectedOption = this.selectedOption === 'Geo' ? 'ENG' : 'Geo';
     this.switchLanguage(this.selectedOption === 'Geo' ? 'geo' : 'en');
   }
+
+
 }

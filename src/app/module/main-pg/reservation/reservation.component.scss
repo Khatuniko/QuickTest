@@ -110,23 +110,14 @@ input[type=text], select, textarea {
   letter-spacing: -0.015em;
   text-align: center;
   color: #FFFFFF;
-  // margin-left:25%;
   margin-top:8%;
   display: inline;
-  // flex-direction: row;
   margin-left:32px;
-  // margin-
+
 
 }
   
-// button[type=submit]:hover {
-//   background-color:var(--yellow-color);
-// }
-// es unda iyos roca kvela sheivseba
 
-// buttton-ze 
-//   background-color: #FBD19E; jer unda ikos es 
-//   background-color:#F7A23E kvela rom sheivseba mere es 
 
 ::-webkit-datetime-edit-month-field,
 ::-webkit-datetime-edit-day-field,
@@ -258,3 +249,17 @@ input.focused {
   border: none;
 }
 
+// computer
+@media screen and  (min-width:1024px){
+  
+}
+
+// for tablets
+@media screen and (min-width:768px) and (max-width:1023px){
+  
+}
+
+// for mobile
+@media screen and (min-width:768px) {
+
+}
