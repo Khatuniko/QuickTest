@@ -1,17 +1,16 @@
-
 .calculator__section {
-    margin-left: 240px;
-    margin-right:240px;
+    margin-left: 15rem;
+    margin-right:15rem;
   }
   
   .calculator__container {
-    width: 520px;
-    height: 657px;
-    margin-left: 860px;
+    width: 32.5rem;
+    height: 41rem;
+    margin-left:60%;
     margin-top: 103px;
-    padding: 44px, 24px, 44px, 24px;
+    padding: 44px, 24px;
     border-radius: 24px;
-    gap: 36px;
+    gap: 3rem;
     box-shadow: 0px 0px 24px 0px #00000026;
   }
   .btn__back{
@@ -35,24 +34,23 @@
   .calculator__img{
     margin-top: 5%;
     margin-left: 43%;
-    width: 64px;
-    height: 64px;
+    width: 4rem;
+    height: 4rem;
   
   }
   
   .calculator__number {
-    font-family: Noto Sans Georgian;
     font-size: 32px;
     font-weight: 700;
     line-height: 44px;
     letter-spacing: -0.015em;
     text-align: center;
     color: #262626;
-    margin-top:16px;
+    margin-top:1rem;
 }
 .calculator__information {
     margin-top:48px;
-  
+    text-align: center;
   }
 
 .paragraph__past{
@@ -60,25 +58,23 @@
     font-weight: 700;
     line-height: 33px;
     letter-spacing: -0.015em;
-    text-align: center;
     color: #38B782;
 
   }
 .calculator__date{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.015em;
-    text-align: center;
     color: #1B1B1B;
-    margin-top:16px;
+    margin-top:1rem;
   }
 
 .calculator__line {
     border: 1px solid #E0E0E0;
-    width: 288px;
+    width: 18rem;
     margin-left:25%;
-    margin-top:16px;
+    margin-top:1rem;
   }
 
 .paragraph__future{
@@ -86,23 +82,20 @@
     font-weight: 700;
     line-height: 33px;
     letter-spacing: -0.015em;
-    text-align: center;
     color: #7A7A7A;
-    margin-top:16px;
+    margin-top:1rem;
 
   }
 
-
   
   .btn__remainder {
-    width:379px;
+    width:24rem;
     height: 44px;
-    padding: 11px, 36px, 11px, 36px;
+    padding: 11px, 36px;
     border-radius: 8px;
     gap: 10px;
     color: #ffffff;
-    font-family: Noto Sans Georgian;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 22px;
     letter-spacing: -0.015em;
@@ -110,18 +103,16 @@
     background-color: var(--yellow-color);
     border:none;
     cursor: pointer;
-    margin-top:32px;
-    margin-left:15%;
+    margin-top:2rem;
   }
 
   .btn__booking{
-    width:379px;
+    width:24rem;
     height: 44px;
-    padding: 11px, 36px, 11px, 36px;
+    padding: 11px, 36px;
     border-radius: 8px;
     border: 2px solid #F7A23E;
     gap: 10px;
-    font-family: Noto Sans Georgian;
     font-size: 16px;
     font-weight: 600;
     line-height: 22px;
@@ -129,7 +120,112 @@
     text-align: center;
     color:var(--yellow-color);
     background-color: #ffffff;
-    margin-top:32px;
-    margin-left:15%;
+    margin-top:2rem;
     cursor: pointer;
+  }
+
+
+  // for mobile
+
+@media screen and (max-width:767px) {
+  .calculator__section {
+    margin-left: 15%;
+    margin-right:15%;
+  }
+  
+  .calculator__container {
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-top: 3rem;
+  
+  }
+  
+  .calculator__img{
+    margin-top: 1%;
+  }
+  
+  .calculator__number{
+    margin-top:8px;
+  }
+
+  .calculator__information {
+    margin-top:8px;
+  }
+
+  .calculator__line{
+    border: 1px solid #E0E0E0;
+    width: 55%;
+    margin-top:8px;
+
+
+  }
+  .calculator__date {
+    margin-top:8px;
+  }
+
+  .paragraph__future {
+    margin-top:8px;
+  }
+
+  .btn__remainder{
+    width:85%;
+    margin-top:1rem;
+  }
+
+  .btn__booking{
+    width:85%;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+  }
+
+
+
+
+
+
+
+
+  }
+
+
+  
+  // for tablets
+  
+  @media screen and (min-width:768px) and (max-width:1023px) {
+    .calculator__section {
+      margin-left: 15%;
+      margin-right:15%;
+    }
+    
+  
+    .calculator__container {
+      margin-left:20%;
+    }
+  
+  
+    
+
+    
+    .calculator__img{
+      margin-top:8%;
+    
+    }
+    
+    .calculator__information {
+      width: 54%;
+      margin-top:2rem;
+    
+    }
+
+    
+
+  }
+  
+  
+  @media screen and (min-width:1024px) and (max-width:1440px) {
+  
+    .calculator__container {
+      margin-left:45%;
+    }
   }

@@ -1,16 +1,21 @@
 <section class="calculator__section">
     <div class="calculator__container">
-        <img class="calculator__img" src="./assets/calculator/default.png" alt="calculator">
-        <h3 class="calculator__heading"> {{'HOME.GUESS' | translate }}</h3>
-        <div class="calculator__information">
+        <div class="calculator__main">
+            <img class="calculator__img" src="./assets/calculator/default.png" alt="calculator">
+            <h3 class="calculator__heading"> {{'HOME.GUESS' | translate }}</h3>
+        <!-- </div> -->
+          <div class="calculator__information">
             <div class="calculator__line"></div>
             <p class="calculator__paragraph">{{'HOME.ENTER' | translate }}</p>
             <input class="calculator__inputs" placeholder="XX001XX" [formControl]="inputControl">
             <div *ngIf="inputControl.invalid && (inputControl.dirty || inputControl.touched)" class="calculator__validators">
             <div *ngIf="inputControl.errors && inputControl.errors['required']">{{'HOME.FIELD' | translate}}</div>
             <div *ngIf="inputControl.errors && inputControl.errors['pattern']"> {{'HOME.CALCULATOR' | translate }}</div>            
+            </div>
+            <button routerLink="/correct-model" [routerLinkActive]="'active-link'" class="calculator__btn" type="submit"  [disabled]="inputControl.invalid">
+            {{'HOME.CHECK' | translate }}
+            </button>
         </div>
-        <input routerLink="/correct-model" [routerLinkActive]="'active-link'" class="calculator__btn" type="submit" value="{{'HOME.CHECK' | translate }}" [disabled]="inputControl.invalid">
     </div>
-</div>
+    </div>
 </section>
