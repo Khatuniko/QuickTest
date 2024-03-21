@@ -20,16 +20,12 @@ import { MapComponent } from './module/main-pg/service-centers/map/map.component
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-// import { ReactiveFormsModule } from '@angular/forms';
 import { CorrectModelComponent } from './module/main-pg/calculate/correct-model/correct-model.component';
 import { WrongModalComponent } from './module/main-pg/calculate/wrong-modal/wrong-modal.component';
-// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-// import { FormsModule } from '@angular/forms';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { PaymentComponent } from './module/main-pg/reservation/payment/payment.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ClockComponent } from './module/main-pg/reservation/clock/clock.component';
-import { DefaultLayoutComponent } from './default-layout/default-layout.component';
+
 
 @NgModule({
   declarations: [
@@ -50,9 +46,7 @@ import { DefaultLayoutComponent } from './default-layout/default-layout.componen
     MapComponent,
     CorrectModelComponent,
     WrongModalComponent,
-    PaymentComponent,
-    ClockComponent,
-    DefaultLayoutComponent,
+    PaymentComponent
     
   ],
   imports: [
