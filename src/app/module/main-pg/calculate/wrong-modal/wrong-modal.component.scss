@@ -1,23 +1,22 @@
 .calculator__section {
-    margin-left: 240px;
-    margin-right:240px;
+    margin-left: 15rem;
+    margin-right:15rem;
   }
   
   .calculator__container {
-    width: 520px;
-    height: 657px;
-    margin-left: 860px;
+    width: 32.5rem;
+    height: 41rem;
+    margin-left: 60%;
     margin-top: 103px;
-    padding: 44px, 24px, 44px, 24px;
+    padding: 44px, 24px;
     border-radius: 24px;
-    gap: 36px;
+    gap: 3rem;
     box-shadow: 0px 0px 24px 0px #00000026;
   
   
   }
   .btn__back{
     color: #E0E0E0;
-    font-family: Noto Sans Georgian;
     font-size: 20px;
     font-weight: 700;
     line-height: 27px;
@@ -35,23 +34,23 @@
   .calculator__img{
     margin-top: 5%;
     margin-left: 43%;
-    width: 64px;
-    height: 64px;
+    width: 4rem;
+    height: 4rem;
   
   }
   
   .calculator__number {
-    font-family: Noto Sans Georgian;
     font-size: 32px;
     font-weight: 700;
     line-height: 44px;
     letter-spacing: -0.015em;
     text-align: center;
     color: #262626;
-    margin-top:16px;
+    margin-top:1rem;
 }
 .calculator__information {
     margin-top:48px;
+    text-align: center;
   
   }
 
@@ -60,7 +59,6 @@
     font-weight: 700;
     line-height: 33px;
     letter-spacing: -0.015em;
-    text-align: center;
     color: #EA6553;
 
   }
@@ -70,37 +68,91 @@
     font-weight: 700;
     line-height: 27px;
     letter-spacing: -0.015em;
-    text-align: center;
     color: #7A7A7A;
-    margin-top:16px;
+    margin-top:1rem;
   }
 
 .calculator__date{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.015em;
-    text-align: center;
     color: #1B1B1B;
-    margin-top:16px;
+    margin-top:1rem;
 
   }
 
   .btn__booking {
-    width:330px;
+    width:21rem;
     height: 44px;
-    padding: 11px, 36px, 11px, 36px;
+    padding: 11px, 36px;
     border-radius: 8px;
     gap: 10px;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 22px;
     letter-spacing: -0.015em;
-    text-align: center;
     background-color: var(--yellow-color);
     border:none;
     cursor: pointer;
-    margin-top:32px;
+    margin-top: 2rem;
+  }
+
+// mobile
+@media screen and (max-width:767px) {
+  .calculator__section{
+    margin-left: 15%;
+    margin-right:15%;
+  }
+
+  .calculator__container{
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-top: 3rem;
+  }
+
+  .calculator__img{
+    margin-top: 0%;
+  }
+
+  .calculator__number{
+    margin-top:8px;
+  }
+
+  .calculator__information {
+    margin-top:8px;
+  }
+
+  .btn__booking{
+    width:70%;
+    margin-bottom: 3rem;
+  }
+
+}
+
+// tablet
+
+@media screen and (min-width:768px) and (max-width:1024px){
+  .calculator__section{
+    margin-left: 15%;
+    margin-right:15%;
+  }
+
+  .calculator__container{
     margin-left:20%;
   }
+
+  .calculator__information {
+    margin-top:2rem;
+  }
+
+} 
+
+@media screen and (min-width:1024px) and (max-width:1440px) {
+  .calculator__container {
+    margin-left:45%;
+  }
+}
+  

@@ -15,7 +15,7 @@
   }
   .btn__back{
     color: #E0E0E0;
-    font-family: Noto Sans Georgian;
+
     font-size: 20px;
     font-weight: 700;
     line-height: 27px;
@@ -165,7 +165,7 @@
 
   .btn__remainder{
     width:85%;
-    margin-top:1rem;
+    margin-top:2rem;
   }
 
   .btn__booking{
@@ -196,7 +196,6 @@
   
   
   @media screen and (min-width:1024px) and (max-width:1440px) {
-  
     .calculator__container {
       margin-left:45%;
     }
