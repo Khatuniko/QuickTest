@@ -1,76 +1,71 @@
 <form class="reservation__form" [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
-    <div>
-      <h3 class="reservation__heading">{{ 'HOME.RESERVATION' | translate }}</h3>
-      <div class="reservation__container">
-        <div class="form">
-          <div class="reservation__inputs">
-            <label>{{ 'HOME.CAR_NUMBER' | translate }}</label>
-            <input formControlName="carNumber" placeholder="AA123AA">
-          </div>
-  
-          <div class="reservation__inputs">
-            <label>{{ 'HOME.MOBILE' | translate }}</label>
-            <input formControlName="mobileNumber" placeholder="+995 123-456" type="tel">
-          </div>
-
-          <div class="reservation__inputs">
-            <div class=container>
-              <div class="col-75" class="branches">
-                <label>{{ 'HOME.BRANCHES' | translate }}</label>
-                <select class="branches__select" formControlName="branches">
-                  <option value="tbilisi">{{ 'HOME.TBILISI' | translate }}</option>
-                  <option value="rustavi">{{ 'HOME.RUSTAVI' | translate }}</option>
-                  <option value="kutaisi">{{ 'HOME.KUTAISI' | translate }}</option>
-                  <option value="batumi">{{ 'HOME.BATUMI' | translate }}</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <div class="reservation__inputs">
-            <label>{{ 'HOME.DATE' | translate }}</label>
-            <input (input)="onDateChange($event)" formControlName="date" type="date" placeholder="now">
-          </div>
-
-          <div class="reservation__inputs">
-            <div class=container>
-              <div class="col-75" class="branches">
-                <label> {{ 'HOME.TIME' | translate }} </label>
-                  <select id="hourDropdown" [(ngModel)]="selectedHour" (change)="handleHourSelection($event)" class="branches__select" formControlName="hours">
-                    <option *ngFor="let timeSlot of timeSlots" [value]="timeSlot">{{ timeSlot }}</option>
-                  </select>
-
-              </div>
-            </div>
-          </div>
-  
-          <label class="container__checkbox">
-            {{ 'HOME.AGREE' | translate }} <a class="roles" target="_blank"
-              href="./assets/roles.pdf">{{ 'HOME.POLICY' | translate }}</a>
-            <input type="checkbox" formControlName="checkbox">
-            <span class="checkmark"></span>
-          </label>
-  
-          <!-- <button class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
-            {{ 'HOME.BOOKING' | translate }}
-          </button> -->
-
-          <button routerLink="/payment" [routerLinkActive]="'active-link'" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
-            {{ 'HOME.CREDIT' | translate }}
-          </button>
-
-          <button  class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
-            {{ 'HOME.CASH' | translate }}
-          </button>
-
+    <h3 class="reservation__heading">{{ 'HOME.RESERVATION' | translate }}</h3>
+    <div class="reservation__container">
+        <div class="reservation__inputs">
+          <label class="reservation__label">{{ 'HOME.CAR_NUMBER' | translate }}</label>
+          <input class="reservation__input" formControlName="carNumber" placeholder="AA123AA">
         </div>
-      </div>
+  
+        <div class="reservation__inputs">
+          <label class="reservation__label">{{ 'HOME.MOBILE' | translate }}</label>
+          <input class="reservation__input" formControlName="mobileNumber" placeholder="+995 123-456" type="tel">
+        </div>
+
+        <div class="reservation__inputs">
+          <label class="reservation__label">{{ 'HOME.BRANCHES' | translate }}</label>
+          <select class="reservation__select" formControlName="branches">
+            <option value="tbilisi">{{ 'HOME.TBILISI' | translate }}</option>
+            <option value="rustavi">{{ 'HOME.RUSTAVI' | translate }}</option>
+            <option value="kutaisi">{{ 'HOME.KUTAISI' | translate }}</option>
+            <option value="batumi">{{ 'HOME.BATUMI' | translate }}</option>
+          </select>
+        </div>
+
+        <div class="reservation__inputs">
+          <label class="reservation__label">{{ 'HOME.DATE' | translate }}</label>
+          <input class="reservation__input" (input)="onDateChange($event)" formControlName="date" type="date" placeholder="now">
+        </div>
+
+        <div class="reservation__inputs">
+          <label class="reservation__label"> {{ 'HOME.TIME' | translate }} </label>
+          <select id="hourDropdown" [(ngModel)]="selectedHour" (change)="handleHourSelection($event)" class="reservation__select" formControlName="hours">
+            <option *ngFor="let timeSlot of timeSlots" [value]="timeSlot">{{ timeSlot }}</option>
+          </select>
     </div>
-  </form>
+
+    <div class="reservation__checkbox">
+      <input type="checkbox" class="reservation__checkmark" formControlName="checkbox" id="agreeCheckbox">
+      <label class="container__checkbox" for="agreeCheckbox">
+        <span class="checkbox__text">{{ 'HOME.AGREE' | translate }}</span>
+        <a class="checkbox__roles" target="_blank" href="./assets/roles.pdf">{{ 'HOME.POLICY' | translate }}</a>
+      </label>
+    </div>
+
+    <div class="reservation__btns">
+      <button routerLink="/payment" [routerLinkActive]="'active-link'" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+        {{ 'HOME.CREDIT' | translate }}
+      </button>
+  
+      <button  class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+        {{ 'HOME.CASH' | translate }}
+      </button>
+
+    </div>
+<!-- 
+    <button routerLink="/payment" [routerLinkActive]="'active-link'" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+      {{ 'HOME.CREDIT' | translate }}
+    </button>
+
+    <button  class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+      {{ 'HOME.CASH' | translate }}
+    </button> -->
+
+  </div>
+</form>
   
           
-    <!-- ჯსონში უნდა ჩაიწეროს ამ გვერდით თარგმანი -->
-    <!-- jsonshi  -->
+<!-- ჯსონში უნდა ჩაიწეროს ამ გვერდით თარგმანი -->
+<!-- jsonshi  -->
 
 <!-- romel pilialshic aris imis mixedvit unda mikondes tarigebi da ra dges -->
 <!-- tarigi da dge mikondes scorad -->
