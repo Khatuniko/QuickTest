@@ -12,21 +12,17 @@
     width: 100%;
 }
 .header__section {
-    // margin-left: 15rem;
-    // margin-right:15rem;
     margin-left:15%;
     margin-right: 15%;
 }
 
 .header__components {
-    // margin-left:60px;
     float: inline-start;
 }
 
 .header__languages{
     float: inline-end;
     margin-top:16px;
-    // margin-right: 60px;
 }
 
 
@@ -47,14 +43,14 @@
             letter-spacing: -0.015em;
             text-align: center;
         }
-        
-
     }
+
     li a:focus{
         color: var(--yellow-color);
         font-weight: 600;
     }
 }
+
 a:hover{
     transition: .5s;
 }
@@ -74,6 +70,7 @@ a:hover{
     cursor:pointer;
     display:none;
 }
+
 #check {
     display: none;
 }
@@ -118,7 +115,6 @@ a:hover{
 // for mobile
 
 @media screen and (max-width:767px) {
-
     .header__main{
         width: 100%;
         background-color: green;
@@ -166,6 +162,8 @@ a:hover{
     #check:checked ~ ul {
         left:0;
     }
+
+
     .header__components{
         float: inline-start;
         margin-left:0px;
