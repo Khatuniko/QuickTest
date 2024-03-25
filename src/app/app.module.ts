@@ -16,7 +16,6 @@ import { MainPgComponent } from './module/main-pg/main-pg.component';
 import { LogoComponent } from './module/main-pg/header/logo/logo.component';
 import { LanguagesComponent } from './module/main-pg/header/languages/languages.component';
 import { RemainderComponent } from './module/main-pg/reservation/remainder/remainder.component';
-import { MapComponent } from './module/main-pg/service-centers/map/map.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -43,7 +42,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LogoComponent,
     LanguagesComponent,
     RemainderComponent,
-    MapComponent,
     CorrectModelComponent,
     WrongModalComponent,
     PaymentComponent
@@ -52,8 +50,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     SweetAlert2Module.forRoot(),
-    // FontAwesomeModule,
-    // AngularFontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
@@ -77,7 +73,3 @@ export class AppModule {}
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }
-
-// export function HttpLoaderFactory(http: HttpClient) {
-//   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-// }
