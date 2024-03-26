@@ -53,7 +53,6 @@
   letter-spacing: -0.015em;
 }
 
-
 .remainder__btn {
     font-size: 1rem;
     font-weight: 600;
@@ -95,7 +94,6 @@
   appearance: none;
 }
 
-  //  for mobile
 @media screen and (max-width:767px) {
   .remainder__section{
     margin-left: 2%;
@@ -107,7 +105,6 @@
   }
 }
 
-// for tables
 @media screen and (min-width:768px) and (max-width:1023px) {
   .remainder__section{
     margin-left: 15%;
@@ -120,7 +117,6 @@
 }
 
 @media screen and (min-width:1024px) and (max-width:1440px) {
-
   .remainder__section{
     margin-left: 15%;
     margin-right: 15%;

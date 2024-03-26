@@ -13,9 +13,9 @@
     gap: 3rem;
     box-shadow: 0px 0px 24px 0px #00000026;
   }
+
   .btn__back{
     color: #E0E0E0;
-
     font-size: 20px;
     font-weight: 700;
     line-height: 27px;
@@ -27,7 +27,6 @@
     padding:24px 24px;
     display: flex;
     cursor: pointer;
-
   }
 
 
@@ -36,7 +35,6 @@
     margin-left: 43%;
     width: 4rem;
     height: 4rem;
-  
   }
   
   .calculator__number {
@@ -48,10 +46,11 @@
     color: #262626;
     margin-top:1rem;
 }
+
 .calculator__information {
     margin-top:48px;
     text-align: center;
-  }
+}
 
 .paragraph__past{
     font-size: 24px;
@@ -59,8 +58,8 @@
     line-height: 33px;
     letter-spacing: -0.015em;
     color: #38B782;
+}
 
-  }
 .calculator__date{
     font-size: 1rem;
     font-weight: 700;
@@ -68,14 +67,14 @@
     letter-spacing: -0.015em;
     color: #1B1B1B;
     margin-top:1rem;
-  }
+}
 
 .calculator__line {
     border: 1px solid #E0E0E0;
     width: 18rem;
     margin-left:25%;
     margin-top:1rem;
-  }
+}
 
 .paragraph__future{
     font-size: 24px;
@@ -84,48 +83,43 @@
     letter-spacing: -0.015em;
     color: #7A7A7A;
     margin-top:1rem;
+}
 
-  }
+.btn__remainder {
+  width:24rem;
+  height: 44px;
+  padding: 11px, 36px;
+  border-radius: 8px;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  background-color: var(--yellow-color);
+  border:none;
+  cursor: pointer;
+  margin-top:2rem;
+}
 
-  
-  .btn__remainder {
-    width:24rem;
-    height: 44px;
-    padding: 11px, 36px;
-    border-radius: 8px;
-    gap: 10px;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 22px;
-    letter-spacing: -0.015em;
-    text-align: center;
-    background-color: var(--yellow-color);
-    border:none;
-    cursor: pointer;
-    margin-top:2rem;
-  }
-
-  .btn__booking{
-    width:24rem;
-    height: 44px;
-    padding: 11px, 36px;
-    border-radius: 8px;
-    border: 2px solid #F7A23E;
-    gap: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-    letter-spacing: -0.015em;
-    text-align: center;
-    color:var(--yellow-color);
-    background-color: #ffffff;
-    margin-top:2rem;
-    cursor: pointer;
-  }
-
-
-  // for mobile
+.btn__booking{
+  width:24rem;
+  height: 44px;
+  padding: 11px, 36px;
+  border-radius: 8px;
+  border: 2px solid #F7A23E;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  color:var(--yellow-color);
+  background-color: #ffffff;
+  margin-top:2rem;
+  cursor: pointer;
+}
 
 @media screen and (max-width:767px) {
   .calculator__section {
@@ -174,29 +168,24 @@
   }
 }
   
-  // for tablets
-  
-  @media screen and (min-width:768px) and (max-width:1023px) {
+@media screen and (min-width:768px) and (max-width:1023px) {
     .calculator__section {
       margin-left: 15%;
       margin-right:15%;
     }
-    
   
-    
   .calculator__container {
     margin: 0 auto;
   }
 
-    .calculator__information {
-      margin-top:2rem;
-    }
-
+  .calculator__information {
+    margin-top:2rem;
+  }
   }
   
   
-  @media screen and (min-width:1024px) and (max-width:1440px) {
-    .calculator__container {
-      margin-left:45%;
-    }
+@media screen and (min-width:1024px) and (max-width:1440px) {
+  .calculator__container {
+    margin-left:45%;
   }
+}

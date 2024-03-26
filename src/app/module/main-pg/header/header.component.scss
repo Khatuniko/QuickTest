@@ -25,7 +25,6 @@
     margin-top:16px;
 }
 
-
 .header__navigation ul{
     text-align: center;
     li{
@@ -76,12 +75,8 @@ a:hover{
 }
 
 
-
-
-//for tablets 
-
 @media screen and (min-width:768px) and (max-width:1023px) {
-    .header__section {
+     .header__section {
         margin-left: 1rem;
         margin-right:1rem;
     }
@@ -112,7 +107,6 @@ a:hover{
     
 }
 
-// for mobile
 
 @media screen and (max-width:767px) {
     .header__main{
@@ -136,8 +130,6 @@ a:hover{
                 text-align: center;
             }
 
-
-
     .header__main nav ul li {
         display: block;
         margin:50px 0;
@@ -158,11 +150,9 @@ a:hover{
 
     }
 
-        
     #check:checked ~ ul {
         left:0;
     }
-
 
     .header__components{
         float: inline-start;

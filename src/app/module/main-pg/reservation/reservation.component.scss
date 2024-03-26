@@ -50,7 +50,6 @@
 
 }
 
-
 ::placeholder {
   color:#E0E0E0;
   font-size: 16px;
@@ -58,7 +57,6 @@
   line-height: 22px;
   letter-spacing: -0.015em;
 }
-
 
 .reservation__select {
   background-repeat: no-repeat;
@@ -75,7 +73,6 @@
   border-radius: 8px;
   height:44px;
   font-size: 14px;
-
 }
 
 
@@ -189,10 +186,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
- 
-
-
-// for mobile
 
 @media screen and (max-width:400px){
 .reservation__heading {
@@ -206,7 +199,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 }
 
-@media screen and (max-width:767px) {
+@media screen and (min-width:401px) and  (max-width:767px) {
   .reservation__form {
     margin-left: 15%;
     margin-right:15%;
@@ -217,7 +210,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 100%;
   }
 
-
   .btn__submit {
     width: 30%;
     margin-left:15%;
@@ -225,13 +217,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 }
 
-
-// for tablets
 @media screen and (min-width:768px) and (max-width:1023px){
   .reservation__form {
     margin-left: 15%;
     margin-right:15%;
   }
-
 }
 
