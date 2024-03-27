@@ -11,9 +11,6 @@ import { RemainderComponent } from './module/main-pg/reservation/remainder/remai
 import { CorrectModelComponent } from './module/main-pg/calculate/correct-model/correct-model.component';
 import { PaymentComponent } from './module/main-pg/reservation/payment/payment.component';
 
-
-
-
 const routes: Routes = [
   { path: '', component:ModuleComponent},
   { path: 'about-us', component:AboutUsComponent},

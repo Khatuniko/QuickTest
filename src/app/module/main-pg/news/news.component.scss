@@ -1,33 +1,31 @@
 .news__section {
-    margin-left: 240px;
-    margin-right:240px;
-
+    margin-left: 15rem;
+    margin-right:15rem;
 }
 
 .news__heading {
     margin-top: 44px;
-    font-family: Noto Sans Georgian;
     font-size: 24px;
     font-weight: 600;
     line-height: 33px;
     letter-spacing: -0.015em;
     text-align: center;
-
 }
 
 .news__cards {
     margin-top:44px;
-    width: 1,320px;
+    // width: 1,320px;
+    width: 100%;
     gap: 24px;
     display: flex;
     flex-wrap: wrap;
     margin-left: 60px;
-
 }
 
 .news__card {
     box-shadow: 0px 0px 24px 0px #00000026;
-    width: 648px;
+    // width: 648px;
+    width: 45%;
     height: 208px;
     padding: 24px;
     border-radius: 16px;
@@ -35,7 +33,6 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-
 }
 
 
@@ -58,9 +55,9 @@
     position: absolute;
     bottom:24px;
     right: 24px;
-    
-
 }
+
+// pages
 
 .more__links {
     margin-top: 64px;
@@ -74,4 +71,66 @@
 .links a {
     color:var(--yellow-color);
     margin:5px;
+}
+
+
+// responsive start here 
+
+@media screen and (max-width:767px){
+    .news__section {
+        margin-left: 2%;
+        margin-right:2%;
+    }
+    .news__cards {
+        margin-left: 0px;
+    }
+
+    .news__card {
+        width: 100%;
+        height: 100%;
+    }
+    .news__paragraph {
+        font-size: 12px;
+    }
+
+    .news__more{
+        font-size:12px;
+    }
+
+    img {
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .news__section {
+        margin-left: 5%;
+        margin-right:5%;
+    }
+    .news__cards {
+        margin-left: 0px;
+    }
+
+    .news__card {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1440px){
+    .news__section {
+        margin-left: 2%;
+        margin-right:2%;
+    }
+    .news__cards {
+        margin-left: 0px;
+    }
+
+    .news__card {
+        text-align: center;
+        margin: 0 auto;
+        gap: 8px;
+    }
 }

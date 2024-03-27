@@ -24,6 +24,7 @@ import { WrongModalComponent } from './module/main-pg/calculate/wrong-modal/wron
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { PaymentComponent } from './module/main-pg/reservation/payment/payment.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewsInnerComponent } from './module/main-pg/news/news-inner/news-inner.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RemainderComponent,
     CorrectModelComponent,
     WrongModalComponent,
-    PaymentComponent
+    PaymentComponent,
+    NewsInnerComponent
     
   ],
   imports: [
