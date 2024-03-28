@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './news-inner.component.html',
   styleUrls: ['./news-inner.component.scss']
 })
-export class NewsInnerComponent {
 
-}
+export class NewsInnerComponent {}
+ 

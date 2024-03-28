@@ -12,8 +12,8 @@
         </div>
 
         <div class="reservation__inputs">
-          <label class="reservation__label">{{ 'HOME.BRANCHES' | translate }}</label>
-          <select class="reservation__select" formControlName="branches">
+          <label class="reservation__label" for="citySelect">{{ 'HOME.BRANCHES' | translate }}</label>
+          <select id="citySelect" class="reservation__select" formControlName="city" (change)="onCityChange()">
             <option value="tbilisi">{{ 'HOME.TBILISI' | translate }}</option>
             <option value="rustavi">{{ 'HOME.RUSTAVI' | translate }}</option>
             <option value="kutaisi">{{ 'HOME.KUTAISI' | translate }}</option>
@@ -22,52 +22,34 @@
         </div>
 
         <div class="reservation__inputs">
-          <label class="reservation__label">{{ 'HOME.DATE' | translate }}</label>
-          <input class="reservation__input" (input)="onDateChange($event)" formControlName="date" type="date" placeholder="now">
+          <label class="reservation__label">{{ 'HOME.DATE' | translate }}</label>     
+          <input id="dateInput" type="date" class="reservation__input" formControlName="date" (change)="onDateChange($event)" placeholder="now">
         </div>
 
         <div class="reservation__inputs">
           <label class="reservation__label"> {{ 'HOME.TIME' | translate }} </label>
-          <select id="hourDropdown" [(ngModel)]="selectedHour" (change)="handleHourSelection($event)" class="reservation__select" formControlName="hours">
-            <option *ngFor="let timeSlot of timeSlots" [value]="timeSlot">{{ timeSlot }}</option>
+          <select id="timeSelect"  formControlName="meetingTime" class="reservation__select">
+            <option *ngFor="let time of availableTimes" [value]="time">{{ time }}</option>
           </select>
-    </div>
+        </div>
 
-    <div class="reservation__checkbox">
-      <input type="checkbox" class="reservation__checkmark" formControlName="checkbox" id="agreeCheckbox">
-      <label class="container__checkbox" for="agreeCheckbox">
-        <span class="checkbox__text">{{ 'HOME.AGREE' | translate }}</span>
-        <a class="checkbox__roles" target="_blank" href="./assets/roles.pdf">{{ 'HOME.POLICY' | translate }}</a>
-      </label>
-    </div>
+        <div class="reservation__checkbox">
+          <input type="checkbox" class="reservation__checkmark" formControlName="checkbox" id="agreeCheckbox">
+          <label class="container__checkbox" for="agreeCheckbox">
+            <span class="checkbox__text">{{ 'HOME.AGREE' | translate }}</span>
+            <a class="checkbox__roles" target="_blank" href="./assets/roles.pdf">{{ 'HOME.POLICY' | translate }}</a>
+          </label>
+        </div>
 
-    <div class="reservation__btns">
-      <button routerLink="/payment" [routerLinkActive]="'active-link'" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
-        {{ 'HOME.CREDIT' | translate }}
-      </button>
-  
-      <button  class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
-        {{ 'HOME.CASH' | translate }}
-      </button>
-
-    </div>
-<!-- 
-    <button routerLink="/payment" [routerLinkActive]="'active-link'" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
-      {{ 'HOME.CREDIT' | translate }}
-    </button>
-
-    <button  class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
-      {{ 'HOME.CASH' | translate }}
-    </button> -->
-
+        <div class="reservation__btns">
+          <button routerLink="/payment" [routerLinkActive]="'active-link'" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+            {{ 'HOME.CREDIT' | translate }}
+          </button>
+    
+          <button  class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+            {{ 'HOME.CASH' | translate }}
+          </button> 
+        </div>
   </div>
 </form>
   
-          
-<!-- ჯსონში უნდა ჩაიწეროს ამ გვერდით თარგმანი -->
-<!-- jsonshi  -->
-
-<!-- romel pilialshic aris imis mixedvit unda mikondes tarigebi da ra dges -->
-<!-- tarigi da dge mikondes scorad -->
-<!-- nomers rom sheikvans mag nomerze miuvides kodi javshnis shesaxeb -->
-

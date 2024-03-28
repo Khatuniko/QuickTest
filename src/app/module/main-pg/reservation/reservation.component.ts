@@ -13,26 +13,20 @@ import { Router } from '@angular/router';
 export class ReservationComponent implements OnInit {
   reservationForm:any = FormGroup;
   submitted = false;
-  timeSlots: string[] = [];
   selectedHour: string | null = null;
+  availableTimes: string[] = [];
 
   constructor(private formBuilder: FormBuilder,  private router: Router) {
-    for (let hour = 10; hour < 19; hour++) {
-      this.timeSlots.push(`${hour}:00`);
-      this.timeSlots.push(`${hour}:30`);
-    }
-   }
-
-  ngOnInit(): void {
     this.reservationForm = this.formBuilder.group({
       carNumber: ['', Validators.required],
       mobileNumber: ['', Validators.required],
       date: ['', Validators.required],
-      branches: ['', Validators.required],
+      city: ['', Validators.required],
       checkbox: [false, Validators.requiredTrue],
-      hours:['', Validators.required]
+      meetingTime:['', Validators.required]
     });
-  }
+   }
+
 
   onSubmit(){
     this.submitted = true;
@@ -40,45 +34,88 @@ export class ReservationComponent implements OnInit {
     if(this.reservationForm.invalid){
       return
     }
-    // Swal.fire({
-    //   title: "თქვენ წარმატებით დაჯავშნეთ ვიზიტი",
-    //   text: "გნებავთ გადახდა?",
-    //   icon: "success",
-    //   showCancelButton: true,
-    //   confirmButtonColor: "#3085d6",
-    //   cancelButtonColor: "#d33",
-    //   confirmButtonText: "დიახ, ბარათით გადახდა",
-    //   cancelButtonText: "არა, ადგილზე გადავიხდი",
-    // }).then((result) => {
-    //   if (result.isConfirmed) {
-    //     this.router.navigate(['/payment']);
-    //   }
-    // });
-        Swal.fire({
+      Swal.fire({
       title: "თქვენ წარმატებით დაჯავშნეთ ვიზიტი",
       icon: "success",
       confirmButtonColor: "#F7A23E",
     })
-
-
   }
 
   isFormValid(): boolean {
     return this.reservationForm.valid;
   }
-  
+ 
+
+  ngOnInit(): void {
+    this.generateAvailableTimes();
+  }
+
+  onCityChange(): void {
+    this.generateAvailableTimes();
+  }
+
+    
   onDateChange(event: Event) {
+    this.generateAvailableTimes();
     const target = event.target as HTMLInputElement;
     const selectedDate = target.value;
     target.classList.add('selected-date');
-  
    }
 
-  handleHourSelection(event: Event) {
-    const selectedValue = (event.target as HTMLSelectElement).value;
-    console.log(`Selected meeting hour: ${selectedValue}`);
-    this.selectedHour = selectedValue;
-  }
+  generateAvailableTimes(): void {
+    const selectedCity = this.reservationForm.get('city')?.value;
+    const selectedDate = new Date(this.reservationForm.get('date')?.value);
+    const dayOfWeek = selectedDate.getDay();
+    const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+    const isSaturday = dayOfWeek === 0 || dayOfWeek === 6;
+    const isSunday = dayOfWeek === 0 || dayOfWeek === 0;
 
+    switch (selectedCity) {
+      case 'tbilisi':
+        if (isSunday) {
+          this.availableTimes = 
+          ['09:00','09:30', '10:00', '10:30', '11:00', '11:30', 
+          '12:00', '12:30','13:00', '13:30', '14:00', '14:30'];
+        }  else if (isSaturday) {
+          this.availableTimes = 
+           ['09:00','09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', 
+           '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30'];
+
+        }else {
+          this.availableTimes = [ '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
+              '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
+              '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',
+              '18:00', '18:30' ]
+        }
+      break;
+      case 'rustavi':
+        this.availableTimes = isWeekend ? ['09:00', '09:30', '10:00', '10:30', '11:00', 
+        '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
+        '15:00', '15:30', '16:00', '16:30'] 
+        : ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
+        '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
+        '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',
+        '18:00', '18:30'];
+        break;
+      case 'kutaisi':
+        this.availableTimes = isWeekend ? ['10:00', '10:30', '11:00', '11:30',
+        '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',] 
+        : ['10:00', '10:30', '11:00', '11:30',
+        '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
+        '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',];
+        break;
+      case 'batumi':
+        this.availableTimes = isWeekend ? ['10:00', '10:30', '11:00', '11:30',
+        '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
+        '15:00', '15:30', '16:00', '16:30']
+        : ['10:00', '10:30', '11:00', '11:30',
+        '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
+        '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',];
+        break;
+      default:
+        this.availableTimes = [];
+        break;
+    }
   }
+}
   
