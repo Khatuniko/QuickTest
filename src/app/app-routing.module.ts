@@ -10,6 +10,7 @@ import { RegulationComponent } from './module/main-pg/regulation/regulation.comp
 import { RemainderComponent } from './module/main-pg/reservation/remainder/remainder.component';
 import { CorrectModelComponent } from './module/main-pg/calculate/correct-model/correct-model.component';
 import { PaymentComponent } from './module/main-pg/reservation/payment/payment.component';
+import { NewsInnerComponent } from './module/main-pg/news/news-inner/news-inner.component';
 
 const routes: Routes = [
   { path: '', component:ModuleComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'remainder', component:RemainderComponent},
   { path: 'calculator', component:CalculateComponent},
   { path: 'correct-model', component:CorrectModelComponent},
-  { path: 'payment', component:PaymentComponent}
+  { path: 'payment', component:PaymentComponent},
+  { path: 'news-inner', component:NewsInnerComponent}
 
 ];
 
