@@ -1,0 +1,86 @@
+<!-- <input type="checkbox" id="check">
+<label for="check" class="checkbtn">
+    <img src="/assets/burger.svg" alt="menu" class="menu">
+</label> -->
+
+<!-- <div class="burger-box">
+    <div class="burger-icon">
+      <img *ngIf="!isShow; else elseBlock" 
+      (click)="onBurgerShow()" src="/assets/burger.svg" alt="">
+
+      <ng-template  #elseBlock> <img class="close-img" 
+        src="/assets/images/close.svg" (click)="onBurgerShow()" alt=""> 
+      </ng-template>
+    </div>
+ </div> -->
+
+ <!-- <div class="burger-menu" [class.active]="isMenuOpen" (click)="toggleMenu()">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+<ul class="menu-items" *ngIf="isMenuOpen">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Services</a></li>
+  Add more menu items as needed
+</ul> -->
+
+
+
+<!-- sstart 01.04. -->
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-3">
+        <div class="logo">
+          <img src="assets/logo.png" alt="logo">
+        </div>
+      </div>
+
+
+      <div class="col-md-9 col-sm-9 col-9 text-end">
+        <div class="menu_icon"  [class.menu_icon_Class]="menu_icon_variable"  (click)="openMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu" [class.menuClass]="menuVariable">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Gallery</li>
+            <li>blog</li>
+          </ul>
+          <!-- <ul >
+            <li>
+                <a routerLink="/about-us" [routerLinkActive]="'active-link'">{{'HOME.ABOUT-US' | translate }}</a>
+            </li>
+            <li>
+                <a routerLink="/service-centers" [routerLinkActive]="'active-link'">{{'HOME.BRANCHES' | translate }}</a>
+            </li> -->
+            <!-- <li>
+                <a routerLink="/reservation" [routerLinkActive]="'active-link'">{{'HOME.RESERVATION' | translate }}</a>
+            </li>
+            <li>
+                <a routerLink="/regulation" [routerLinkActive]="'active-link'">{{'HOME.REGLAMENT' | translate }}</a>
+            </li>
+            <li>
+                <a routerLink="/news" [routerLinkActive]="'active-link'">{{'HOME.NEWS' | translate }}</a>
+            </li> -->
+        <!-- </ul> -->
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</header>
+
+
+
+

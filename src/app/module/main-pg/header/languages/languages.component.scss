@@ -16,32 +16,21 @@
     background-position: 16px;
     text-transform: uppercase;
     cursor: pointer;
-    padding: 11px 0 0 24px;
+    padding: 11px 0 0 24px; 
   }
 }
 
 
-// for tables
-@media screen and (min-width:768px) and (max-width:1023px) {
-  
-}
+@media screen and (max-width:768px) {
+  .custom__select {
+    position: relative;
+    display: inline-block;
 
-
-// for mobile
-  @media screen and (max-width:768px) {
-    .custom__select {
-      position: relative;
-      display: inline-block;
-  
-    
-    .select__trigger {
-      width: 80px;
-      height: 40px;
-      padding: 8px 0 0px  24px;
-      background-position: 8px;
-
-
-    }
-
-}
+  .select__trigger {
+    width: 40px;
+    height: 40px;
+    background-position: 8px;
+    font-size: 0px;
   }
+  }
+}

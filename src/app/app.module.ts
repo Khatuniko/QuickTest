@@ -25,6 +25,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { PaymentComponent } from './module/main-pg/reservation/payment/payment.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewsInnerComponent } from './module/main-pg/news/news-inner/news-inner.component';
+import { TestingComponent } from './module/main-pg/testing/testing.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { NewsInnerComponent } from './module/main-pg/news/news-inner/news-inner.
     CorrectModelComponent,
     WrongModalComponent,
     PaymentComponent,
-    NewsInnerComponent
+    NewsInnerComponent,
+    TestingComponent
     
   ],
   imports: [
