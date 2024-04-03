@@ -1,15 +1,14 @@
-// .full-screen-bg {
-//     background: url('/assets/background_photo.png') no-repeat center center fixed;
-//     background-size: cover;
-//     height: 100vh; /* Full viewport height */
-//   }
-
-
-// main {
-//     margin-right: 15rem;
-//     margin-left: 15rem;
-// }
-
-// footer {
-//     background-color: red;
-// }
+.background{
+    margin:0;
+    background-image: url("/assets/1920.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; 
+}
