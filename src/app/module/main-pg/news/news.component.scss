@@ -14,7 +14,6 @@
 
 .news__cards {
     margin-top:44px;
-    // width: 1,320px;
     width: 100%;
     gap: 24px;
     display: flex;
@@ -24,7 +23,6 @@
 
 .news__card {
     box-shadow: 0px 0px 24px 0px #00000026;
-    // width: 648px;
     width: 45%;
     height: 208px;
     padding: 24px;
@@ -57,7 +55,6 @@
     right: 24px;
 }
 
-// pages
 
 .more__links {
     margin-top: 64px;
@@ -73,8 +70,6 @@
     margin:5px;
 }
 
-
-// responsive start here 
 
 @media screen and (max-width:767px){
     .news__section {
