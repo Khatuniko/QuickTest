@@ -14,7 +14,7 @@
 
   .reminder__container {
     height: 350px;
-    width: 32.6%;
+    width: 32rem;
     margin: 2.5rem  auto;
     padding: 44px;
     border-radius: 1rem;
@@ -59,10 +59,10 @@
     line-height: 22px;
     letter-spacing: -0.015em;
     text-align: center;
+    align-items: center;
     color: #FFFFFF;
     margin-left:25%;
     margin-top: 3rem;
-    align-items: center;
     background-color:var(--yellow-color);
     width: 187px;
     height: 44px;
@@ -71,6 +71,7 @@
     gap: 10px;
     cursor: pointer;
     border: none;
+  
 }
 
 .reminder__inputs{
@@ -103,6 +104,12 @@
   .reminder__container {
     width: 100%;
   }
+
+  .reminder__btn  {
+    margin-left:20%;
+  }
+
+
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
@@ -111,9 +118,7 @@
     margin-right:15%;
   }
 
-  .reminder__container {
-    width: 70%;
-  }
+
 }
 
 @media screen and (min-width:1024px) and (max-width:1440px) {
@@ -121,11 +126,6 @@
     margin-left: 15%;
     margin-right: 15%;
   }
-
-  .reminder__container {
-    width: 50%;
-  }
-
 
 
 }
