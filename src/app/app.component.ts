@@ -41,7 +41,7 @@ export class AppComponent {
     return this.router.url.includes('regulation');
   }
   isReminderRoute() : boolean {
-    return this.router.url.includes('remainder');
+    return this.router.url.includes('reminder');
   }
   isNewsInnerRoute() : boolean {
     return this.router.url.includes('news-inner');

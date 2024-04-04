@@ -149,5 +149,15 @@
         height: 100%;
     }
 
+    .regulation__folders{
+        padding-bottom: 15%;
+    }
+    
+    .regulation__cards{
+        margin-left: 0px;
+        display: flex;
+        flex-wrap: wrap; 
+    }
+
 
 }

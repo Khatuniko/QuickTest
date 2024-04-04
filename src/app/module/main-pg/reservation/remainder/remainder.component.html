@@ -1,21 +1,21 @@
-<section class="remainder__section">
-    <h3 class="remainder__heading">{{ 'HOME.REMINDER-HEADING' | translate }}</h3>
-    <div class="remainder__container">
-        <div class="remainder__form" [formGroup]="reminderForm">
-            <div class="remainder__inputs">
-                <label class="remainder__label">{{ 'HOME.MOBILE' | translate }}</label>
-                <input class="remainder__input" placeholder="+995 123-456" type="tel" formControlName="mobile">
+<section class="reminder__section">
+    <h3 class="reminder__heading">{{ 'HOME.REMINDER-HEADING' | translate }}</h3>
+    <div class="reminder__container">
+        <div class="reminder__form" [formGroup]="reminderForm">
+            <div class="reminder__inputs">
+                <label class="reminder__label">{{ 'HOME.MOBILE' | translate }}</label>
+                <input class="reminder__input" placeholder="+995 123-456" type="tel" formControlName="mobile">
             </div>
             <div class="reservation__inputs">
                 <div class=container>
-                    <label class="remainder__label">{{ 'HOME.PERIOD' | translate }}</label>
-                        <select class="remainder__select" id="period" name="period" formControlName="period">
+                    <label class="reminder__label">{{ 'HOME.PERIOD' | translate }}</label>
+                        <select class="reminder__select" id="period" name="period" formControlName="period">
                             <option value="14">{{ 'HOME.REMIND14' | translate }}</option>
                             <option value="30">{{ 'HOME.REMIND30' | translate }}</option>
                         </select>
                 </div>
             </div>
-            <button class="remainder__btn" (click)="successAlert()" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+            <button class="reminder__btn" (click)="successAlert()" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
                  {{'HOME.ACTIVATION' | translate }}
             </button>
         </div>

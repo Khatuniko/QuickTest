@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'calculate-date', component:CalculateComponent},
   { path: 'news', component:NewsComponent},
   { path: 'regulation', component:RegulationComponent},
-  { path: 'remainder', component:RemainderComponent},
+  { path: 'reminder', component:RemainderComponent},
   { path: 'calculator', component:CalculateComponent},
   { path: 'correct-model', component:CorrectModelComponent},
   { path: 'payment', component:PaymentComponent},
