@@ -11,6 +11,7 @@ import { RemainderComponent } from './module/main-pg/reservation/remainder/remai
 import { CorrectModelComponent } from './module/main-pg/calculate/correct-model/correct-model.component';
 import { PaymentComponent } from './module/main-pg/reservation/payment/payment.component';
 import { NewsInnerComponent } from './module/main-pg/news/news-inner/news-inner.component';
+import { WrongModalComponent } from './module/main-pg/calculate/wrong-modal/wrong-modal.component';
 
 const routes: Routes = [
   { path: '', component:ModuleComponent},
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'calculator', component:CalculateComponent},
   { path: 'correct-model', component:CorrectModelComponent},
   { path: 'payment', component:PaymentComponent},
-  { path: 'news-inner', component:NewsInnerComponent}
+  { path: 'news-inner', component:NewsInnerComponent},
+  { path: 'wrong-modal', component:WrongModalComponent}
 
 ];
 

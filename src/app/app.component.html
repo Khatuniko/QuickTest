@@ -1,5 +1,9 @@
-<!-- <div class="background"> -->
-
+<div  [ngClass]="{ 'about-background': isAboutUsRoute(), 'centers-background': isCentersRoute(), 
+'reservation-background': isReservationRoute(), 'reglament-background': isReglamentRoute(), 
+'reminder-background': isReminderRoute(), 'news-inner-background': isNewsInnerRoute(), 
+'news-background': isNewsRoute(), 'calculator-background': isCalculatorRoute(),
+'correct-background': isCorrectModelRoute(), 'wrong-background': isWrongModalRoute(), 
+'payment-background': isPaymentRoute(), 'modal-background':isModuleRoute()}">
 
 <header>
     <app-header></app-header>
@@ -9,9 +13,11 @@
     <router-outlet></router-outlet>
 </main>
 
-<footer>
-
-    <app-footer></app-footer>
+<footer [ngClass]="{ 'about-footer': isAboutUsRoute(), 'centers-footer': isCentersRoute(), 
+'reservation-footer': isReservationRoute(), 'reglament-footer': isReglamentRoute(), 
+'reminder-footer': isReminderRoute(), 'news-inner-footer': isNewsInnerRoute(), 
+'news-footer': isNewsRoute(),'payment-footer': isPaymentRoute(), 'modal-footer':isModuleRoute()}">
+   
+   <app-footer></app-footer>
 </footer>
-
-<!-- </div> -->
+</div>
