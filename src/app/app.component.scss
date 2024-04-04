@@ -45,3 +45,22 @@ background-image: none;
   position: fixed;
   z-index: 1;
 }
+
+
+.about-header,
+.centers-header,
+.reservation-header,
+.reglament-header,
+.reminder-header,
+.news-inner-header,
+.news-header,
+.payment-header {
+  background-color: white !important;
+}
+
+.modal-header,
+.correct-header,
+.wrong-header, 
+.calculator-header{
+  background-color: #000000B2;
+}

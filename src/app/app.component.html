@@ -5,7 +5,12 @@
 'correct-background': isCorrectModelRoute(), 'wrong-background': isWrongModalRoute(), 
 'payment-background': isPaymentRoute(), 'modal-background':isModuleRoute()}">
 
-<header>
+<header [ngClass]="{ 'about-header': isAboutUsRoute(), 'centers-header': isCentersRoute(), 
+'reservation-header': isReservationRoute(), 'reglament-header': isReglamentRoute(), 
+'reminder-header': isReminderRoute(), 'news-inner-header': isNewsInnerRoute(), 
+'news-header': isNewsRoute(), 'calculator-header': isCalculatorRoute(),
+'correct-header': isCorrectModelRoute(), 'wrong-header': isWrongModalRoute(), 
+'payment-header': isPaymentRoute(), 'modal-header':isModuleRoute()}">
     <app-header></app-header>
 </header>
 
