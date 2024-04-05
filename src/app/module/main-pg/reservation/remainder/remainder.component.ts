@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -11,7 +12,7 @@ import Swal from 'sweetalert2';
 export class RemainderComponent implements OnInit {
   reminderForm:any =  FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private router: Router) { }
 
   
   ngOnInit(): void {
@@ -25,11 +26,17 @@ export class RemainderComponent implements OnInit {
     if (this.reminderForm.valid) {
       Swal.fire({
         title: "გააქტიურებულია",
+        icon: "success",
         confirmButtonColor: "#F7A23E",
-        icon: "success"
+      }).then((result) => {
+        if (result.isConfirmed) {
+         this.router.navigate(['/']);
+        }
       });
     }
   }
+
+  
 
   isFormValid(): boolean {
     return this.reminderForm.valid;

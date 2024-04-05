@@ -34,11 +34,16 @@ export class ReservationComponent implements OnInit {
     if(this.reservationForm.invalid){
       return
     }
-      Swal.fire({
+    Swal.fire({
       title: "თქვენ წარმატებით დაჯავშნეთ ვიზიტი",
       icon: "success",
       confirmButtonColor: "#F7A23E",
-    })
+    }).then((result) => {
+      if (result.isConfirmed) {
+       this.router.navigate(['/']);
+      }
+    });
+    
   }
 
   isFormValid(): boolean {

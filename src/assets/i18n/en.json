@@ -54,10 +54,10 @@
     "REMINDER-HEADING": "Activate Reminder",
     "CREDIT": "Pay with the credit card",
     "CASH": "Pay at the service center",
-    "TIME": "Time"
-
-
-
-}
+    "TIME": "Time",
+    "PERIOD-OVER":"The date of technical inspection is overdue",
+    "INSP-PERIOD":"Date of technical inspection"
+    
+    }
 }
 
