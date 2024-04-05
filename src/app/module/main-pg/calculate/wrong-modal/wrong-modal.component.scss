@@ -95,8 +95,43 @@
     margin-top: 2rem;
   }
 
+@media screen and (max-width:400px) {
+  .calculator__section {
+    margin-left: 5%;
+    margin-right:5%;
+  }
+  .calculator__container {
+    width: 100%;
+    height: 100%;
+    margin: 0rem auto;
+  }
 
-@media screen and (max-width:767px) {
+  .calculator__img{
+    margin-top: 0%;
+  }
+
+  .paragraph__past{
+    font-size: 20px;
+  }
+
+  .calculator__number{
+    margin-top:8px;
+  }
+
+  .calculator__information {
+    margin-top:8px;
+  }
+
+  .btn__booking{
+    width:70%;
+    margin-bottom: 2rem;
+  }
+
+
+}
+
+
+@media screen and (min-width:401px) and  (max-width:767px) {
   .calculator__section{
     margin-left: 15%;
     margin-right:15%;
@@ -134,11 +169,14 @@
   }
 
   .calculator__container {
-    margin: 0 auto;
+    margin: 3rem auto;
   }
 
   .calculator__information {
     margin-top:2rem;
+  }
+  .btn__booking {
+    margin-top: 3rem;
   }
 } 
 

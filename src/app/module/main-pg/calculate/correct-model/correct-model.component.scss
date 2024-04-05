@@ -137,6 +137,8 @@
   
   .calculator__img{
     margin-top: 0%;
+    width: 2rem;
+    height: 2rem;
   }
   
   .calculator__number{
@@ -156,17 +158,21 @@
 
   .paragraph__future {
     margin-top:8px;
+    font-size: 16px;
+  }
+  .paragraph__past{
+    font-size: 16px;
   }
 
   .btn__remainder{
     width:85%;
-    margin-top:2rem;
+    margin-top:1rem;
   }
 
   .btn__booking{
     width:85%;
     margin-top:1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
 
 }
@@ -226,6 +232,7 @@
   
   .calculator__container {
     margin: 0 auto;
+
   }
 
   .calculator__information {

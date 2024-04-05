@@ -40,7 +40,6 @@
     line-height: 27px;
     letter-spacing: -0.015em;
     text-align: left;
-
 }
 
 .news__more {
@@ -76,6 +75,7 @@
         margin-left: 2%;
         margin-right:2%;
     }
+
     .news__cards {
         margin-left: 0px;
     }
@@ -85,15 +85,23 @@
         height: 100%;
     }
     .news__paragraph {
-        font-size: 12px;
-    }
+        font-size: 10px;
+        line-height: 14px;
+        letter-spacing: -0.015em;
 
+    }
+    
     .news__more{
-        font-size:12px;
+        font-size:8px;
+        line-height: 14px;
     }
 
     img {
         width: 50%;
+    }
+
+    .more__links{
+
     }
 
 }
@@ -112,6 +120,9 @@
         text-align: center;
         margin: 0 auto;
     }
+    // .more__links{
+        
+    // }
 }
 
 @media screen and (min-width:1024px) and (max-width:1440px){
@@ -128,4 +139,7 @@
         margin: 0 auto;
         gap: 8px;
     }
+    // .more__links{
+        
+    // }
 }
