@@ -61,6 +61,7 @@ a:hover{
 @media screen and (max-width:767px){
   .header__main{
     width: 100%;
+    background: yellow;
   }
 
   .header__components{
@@ -156,7 +157,11 @@ a:hover{
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
-     .header__section {
+  .header__main{
+    // width: 100%;
+    background:green;
+  }  
+  .header__section {
         margin-left: 1rem;
         margin-right:1rem;
     }
@@ -184,5 +189,9 @@ a:hover{
     .header__section {
         margin-left: 40px;
         margin-right:40px;
+    }
+    .header__main{
+      // width: 100%;
+      background: red;
     }
 }

@@ -56,7 +56,10 @@
     "CASH": "Pay at the service center",
     "TIME": "Time",
     "PERIOD-OVER":"The date of technical inspection is overdue",
-    "INSP-PERIOD":"Date of technical inspection"
+    "INSP-PERIOD":"Date of technical inspection",
+    "MAIN-HEADING-1":"Pass inspection",
+    "QUICKTEST": "at QuickTest",
+    "MAIN-HEADING-2": "and drive with confident"
     
     }
 }

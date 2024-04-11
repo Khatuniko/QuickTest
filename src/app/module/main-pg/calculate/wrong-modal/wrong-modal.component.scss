@@ -3,6 +3,35 @@
     margin-right:15rem;
   }
 
+  .main__heading {
+    color:#fff; 
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 59.84px;
+    letter-spacing: -0.015em;
+    display:inline;
+  }
+  
+  .main__span {
+    color:var(--yellow-color);
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 59.84px;
+    letter-spacing: -0.015em;
+  }
+  
+  .text {
+    margin-top:28%;
+    margin-left: 60px;
+    padding: 24px;
+    gap: 10px;
+    border-radius: 16px;
+    opacity: 0px;
+    background-color: #00000080;
+    width: 53%;
+    float: left;
+  }
+
   .calculator__container {
     width: 32.5rem;
     height: 40rem;
@@ -127,6 +156,9 @@
     margin-bottom: 2rem;
   }
 
+  .text {
+    display:none;
+  }
 
 }
 
@@ -159,10 +191,13 @@
     width:70%;
     margin-bottom: 3rem;
   }
+  .text {
+    display:none;
+  }
 
 }
 
-@media screen and (min-width:768px) and (max-width:1024px){
+@media screen and (min-width:768px) and (max-width:1023px){
   .calculator__section{
     margin-left: 15%;
     margin-right:15%;
@@ -178,11 +213,36 @@
   .btn__booking {
     margin-top: 3rem;
   }
+  .text {
+    display:none;
+  }
 } 
 
 @media screen and (min-width:1024px) and (max-width:1440px) {
-  .calculator__container {
-    margin-left:45%;
+  .calculator__section {
+    margin-left: 60px;
+    margin-right: 60px;
   }
+
+  .text {
+    margin-left:0px;
+    width:50%;
+    margin-top:40%;
+  }
+  .calculator__container {
+    margin-left:0%;
+    float:right;
+    width:36%;
+  }
+
+  .main__heading, .main__span {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .btn__booking { 
+    width: 70%;
+  }
+
 }
   
