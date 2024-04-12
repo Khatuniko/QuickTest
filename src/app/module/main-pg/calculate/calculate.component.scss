@@ -10,7 +10,6 @@
     font-weight: 700;
     line-height: 59.84px;
     letter-spacing: -0.015em;
-    display:inline;
   }
   
   
@@ -30,7 +29,7 @@
     border-radius: 16px;
     opacity: 0px;
     background-color: #00000080;
-    width: 53%;
+    width: 45%;
     float: left;
   }
   
@@ -46,6 +45,7 @@
     z-index: 1;
     background-color: #FFFFFF;
   }
+
   .calculator__main{
     text-align: center;
   }
@@ -207,6 +207,7 @@
   }
 }
 
+
 @media screen and (min-width:1024px) and (max-width:1440px) {
   .calculator__section {
     margin-left: 60px;
@@ -231,7 +232,3 @@
   
 }
 
-  
-
-
- 

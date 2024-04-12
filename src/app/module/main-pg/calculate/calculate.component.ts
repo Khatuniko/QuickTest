@@ -11,7 +11,7 @@ export class CalculateComponent {
     Validators.required,
     // Validators.pattern('^[A-Z]{2}[0-9]{3}[A-Z]{2}$')
     Validators.pattern('x')
-    // validadators. mankanis nomeri tu ver modis beqidan
+    // validadators. mankanis nomeri tu ver modis backdan (an ar arsebobs)
   ]);
 
 }

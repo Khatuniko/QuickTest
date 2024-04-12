@@ -8,8 +8,6 @@
 }
 
 body {
-    // background-color: #fafafa;
-    // background-image: url(/assets/images.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -17,6 +15,9 @@ body {
     width: 100%;
     height: 100vh;
 
+}
+header {
+    font-family: 'Noto Sans Georgian', sans-serif;
 }
 
 .active-link{
@@ -30,3 +31,7 @@ body {
     --header-color:#FFFFFF;
     --font-standard:16px;
 }
+
+.noScroll {
+    overflow: hidden;
+  }
