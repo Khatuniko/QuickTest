@@ -36,7 +36,6 @@ constructor(private translateService: TranslateService,private formBuilder: Form
   });
 }
 
-    
 onDateChange(event: Event) {
   const target = event.target as HTMLInputElement;
   const dateString = target.value;
@@ -46,12 +45,19 @@ onDateChange(event: Event) {
       this.centers = response;
       this.uniqueBranchNames = this.getUniqueBranchNames(this.centers);
       console.log('Unique branch names:', this.uniqueBranchNames);
+
+      if (dateString) {
+        target.classList.add('selected-date');
+      } else {
+        target.classList.remove('selected-date');
+      }
     },
     (error) => {
       console.error('Error fetching booking data:', error);
     }
   );
 }
+
 
 getUniqueBranchNames(response: any[]): string[] {
   const uniqueBranchNames: string[] = [];
@@ -112,7 +118,5 @@ onSubmit(){
 isFormValid(): boolean {
   return this.reservationForm.valid;
 }
-
-
 }
   

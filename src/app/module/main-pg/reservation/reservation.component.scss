@@ -88,8 +88,9 @@ input[type="date"].selected-date::-webkit-datetime-edit-month-field,
 input[type="date"].selected-date::-webkit-datetime-edit-day-field,
 input[type="date"].selected-date::-webkit-datetime-edit-year-field,
 input[type="date"].selected-date::-webkit-datetime-edit-text {
-  color: #262626;
+  color: #262626 !important;;
 }
+
 
 ::-webkit-calendar-picker-indicator { 
   margin: 4%;
