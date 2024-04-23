@@ -10,25 +10,22 @@
           <label class="reservation__label">{{ 'HOME.MOBILE' | translate }}</label>
           <input class="reservation__input" formControlName="mobileNumber" placeholder="+995 123-456" type="tel">
         </div>
-
-        <div class="reservation__inputs">
-          <label class="reservation__label" for="citySelect">{{ 'HOME.BRANCHES' | translate }}</label>
-          <select id="citySelect" class="reservation__select" formControlName="city" (change)="onCityChange()">
-            <option value="tbilisi">{{ 'HOME.TBILISI' | translate }}</option>
-            <option value="rustavi">{{ 'HOME.RUSTAVI' | translate }}</option>
-            <option value="kutaisi">{{ 'HOME.KUTAISI' | translate }}</option>
-            <option value="batumi">{{ 'HOME.BATUMI' | translate }}</option>
-          </select>
-        </div>
-
+        
         <div class="reservation__inputs">
           <label class="reservation__label">{{ 'HOME.DATE' | translate }}</label>     
           <input id="dateInput" type="date" class="reservation__input" formControlName="date" (change)="onDateChange($event)" placeholder="now">
         </div>
 
         <div class="reservation__inputs">
+          <label class="reservation__label" for="citySelect">{{ 'HOME.BRANCHES' | translate }}</label>
+          <select id="citySelect" class="reservation__select" formControlName="city" (change)="onCityChange($event)">
+            <option *ngFor="let branchName of uniqueBranchNames" [value]="branchName">{{ 'HOME.' + branchName | translate }}</option>
+          </select>
+        </div>
+        
+        <div class="reservation__inputs">
           <label class="reservation__label"> {{ 'HOME.TIME' | translate }} </label>
-          <select id="timeSelect"  formControlName="meetingTime" class="reservation__select">
+          <select id="timeSelect" formControlName="meetingTime" class="reservation__select">
             <option *ngFor="let time of availableTimes" [value]="time">{{ time }}</option>
           </select>
         </div>

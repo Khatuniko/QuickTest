@@ -25,9 +25,8 @@ const routes: Routes = [
   { path: 'calculator', component:CalculateComponent},
   { path: 'correct-model', component:CorrectModelComponent},
   { path: 'payment', component:PaymentComponent},
-  { path: 'news-inner', component:NewsInnerComponent},
-  { path: 'wrong-modal', component:WrongModalComponent}
-
+  { path: 'wrong-modal', component:WrongModalComponent},
+  { path: 'news/:id', component: NewsInnerComponent }
 ];
 
 

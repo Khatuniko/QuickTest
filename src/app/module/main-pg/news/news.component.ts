@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { NewsService } from './services/news.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-news',
@@ -6,6 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
+  @Output() sendIdToChildEvent = new EventEmitter<number>();
+
+  navigateToDetails(id: number) {
+  this.router.navigate([`news/${id}`])
+  }
+
+
+  object: any[] = []; 
+
+  
+  constructor(private newsService: NewsService, private router:Router) {
+
+  } 
+
   cards: any[] = [/* card data here */];
   cardsPerPage = 10;
   currentPage = 1;
@@ -15,6 +31,13 @@ export class NewsComponent implements OnInit {
   ngOnInit() {
     this.totalPages = Math.ceil(this.cards.length / this.cardsPerPage);
     this.paginateCards();
+
+    this.newsService.getNews().subscribe({
+      next: (res) => { 
+        this.object = res; 
+        console.log(this.object); 
+      }
+    });
   }
 
   paginateCards() {
@@ -36,5 +59,9 @@ export class NewsComponent implements OnInit {
       this.paginateCards();
     }
   }
-  
+
+  logId(id:number){
+    console.log(id);
+  }
+
 }

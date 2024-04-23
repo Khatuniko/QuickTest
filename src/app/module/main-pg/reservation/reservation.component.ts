@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { ReservationService } from './bookingservices/reservation.service';
+import { TranslateService } from '@ngx-translate/core';
+
 
 
 @Component({
@@ -10,117 +13,106 @@ import { Router } from '@angular/router';
   styleUrls: ['./reservation.component.scss']
 })
 
-export class ReservationComponent implements OnInit {
+export class ReservationComponent {
   reservationForm:any = FormGroup;
   submitted = false;
   selectedHour: string | null = null;
   availableTimes: string[] = [];
-
-  constructor(private formBuilder: FormBuilder,  private router: Router) {
-    this.reservationForm = this.formBuilder.group({
-      carNumber: ['', Validators.required],
-      mobileNumber: ['', Validators.required],
-      date: ['', Validators.required],
-      city: ['', Validators.required],
-      checkbox: [false, Validators.requiredTrue],
-      meetingTime:['', Validators.required]
-    });
-   }
+  branches: string[] = [];
+  centers: any [] = [];
+  branchName!: string;
+  BranchData!:any;
+  uniqueBranchNames: string[] = [];
 
 
-  onSubmit(){
-    this.submitted = true;
+constructor(private translateService: TranslateService,private formBuilder: FormBuilder,private router: Router, private reservationService: ReservationService) {
+  this.reservationForm = this.formBuilder.group({
+    carNumber: ['', Validators.required],
+    mobileNumber: ['', Validators.required],
+    date: ['', Validators.required],
+    city: ['', Validators.required],
+    checkbox: [false, Validators.requiredTrue],
+    meetingTime:['', Validators.required]
+  });
+}
+
+    
+onDateChange(event: Event) {
+  const target = event.target as HTMLInputElement;
+  const dateString = target.value;
+
+  this.reservationService.getBooking(dateString).subscribe(
+    (response) => {
+      this.centers = response;
+      this.uniqueBranchNames = this.getUniqueBranchNames(this.centers);
+      console.log('Unique branch names:', this.uniqueBranchNames);
+    },
+    (error) => {
+      console.error('Error fetching booking data:', error);
+    }
+  );
+}
+
+getUniqueBranchNames(response: any[]): string[] {
+  const uniqueBranchNames: string[] = [];
+  const branchNameSet: Set<string> = new Set();
+
+  response.forEach((item: { BranchName: string }) => {
+    const branchName = item.BranchName.trim().toLowerCase();
+    if (!branchNameSet.has(branchName)) {
+      branchNameSet.add(branchName);
+      uniqueBranchNames.push(branchName);
+    }
+  });
+
+  return uniqueBranchNames;
+}
+
+
+onCityChange(event: Event): void {
+  const selectedBranch = (event.target as HTMLSelectElement).value;
+  console.log(this.centers);
   
-    if(this.reservationForm.invalid){
-      return
+  let selectedCenter = this.centers.filter(center => center.BranchName === selectedBranch);
+  if (selectedCenter) {
+    let availableTimes = selectedCenter.map(center => center.AvailableTime);
+    console.log('Available times for', selectedBranch, ':', availableTimes);
+    availableTimes = availableTimes.map(time => time.split('T')[1]);
+    this.availableTimes = availableTimes;
+  } else {
+    console.log('Center not found for selected branch:', selectedBranch);
+    this.availableTimes = [];
+  }
+}
+
+generateAvailableTimes(event: Event): void {
+  const  availableTimes = (event.target as HTMLSelectElement).value;
+  console.log(this.availableTimes);
+}
+
+
+onSubmit(){
+  this.submitted = true;
+
+  if(this.reservationForm.invalid){
+    return
+  }
+  Swal.fire({
+    title: "თქვენ წარმატებით დაჯავშნეთ ვიზიტი",
+    icon: "success",
+    confirmButtonColor: "#F7A23E",
+  }).then((result) => {
+    if (result.isConfirmed) {
+     this.router.navigate(['/']);
     }
-    Swal.fire({
-      title: "თქვენ წარმატებით დაჯავშნეთ ვიზიტი",
-      icon: "success",
-      confirmButtonColor: "#F7A23E",
-    }).then((result) => {
-      if (result.isConfirmed) {
-       this.router.navigate(['/']);
-      }
-    });
-    
-  }
+  });
+  
+}
 
-  isFormValid(): boolean {
-    return this.reservationForm.valid;
-  }
- 
+isFormValid(): boolean {
+  return this.reservationForm.valid;
+}
 
-  ngOnInit(): void {
-    this.generateAvailableTimes();
-  }
 
-  onCityChange(): void {
-    this.generateAvailableTimes();
-  }
-
-    
-  onDateChange(event: Event) {
-    this.generateAvailableTimes();
-    const target = event.target as HTMLInputElement;
-    const selectedDate = target.value;
-    target.classList.add('selected-date');
-   }
-
-  generateAvailableTimes(): void {
-    const selectedCity = this.reservationForm.get('city')?.value;
-    const selectedDate = new Date(this.reservationForm.get('date')?.value);
-    const dayOfWeek = selectedDate.getDay();
-    const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
-    const isSaturday = dayOfWeek === 0 || dayOfWeek === 6;
-    const isSunday = dayOfWeek === 0 || dayOfWeek === 0;
-
-    switch (selectedCity) {
-      case 'tbilisi':
-        if (isSunday) {
-          this.availableTimes = 
-          ['09:00','09:30', '10:00', '10:30', '11:00', '11:30', 
-          '12:00', '12:30','13:00', '13:30', '14:00', '14:30'];
-        }  else if (isSaturday) {
-          this.availableTimes = 
-           ['09:00','09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', 
-           '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30'];
-
-        }else {
-          this.availableTimes = [ '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
-              '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
-              '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',
-              '18:00', '18:30' ]
-        }
-      break;
-      case 'rustavi':
-        this.availableTimes = isWeekend ? ['09:00', '09:30', '10:00', '10:30', '11:00', 
-        '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
-        '15:00', '15:30', '16:00', '16:30'] 
-        : ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
-        '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
-        '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',
-        '18:00', '18:30'];
-        break;
-      case 'kutaisi':
-        this.availableTimes = isWeekend ? ['10:00', '10:30', '11:00', '11:30',
-        '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',] 
-        : ['10:00', '10:30', '11:00', '11:30',
-        '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
-        '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',];
-        break;
-      case 'batumi':
-        this.availableTimes = isWeekend ? ['10:00', '10:30', '11:00', '11:30',
-        '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
-        '15:00', '15:30', '16:00', '16:30']
-        : ['10:00', '10:30', '11:00', '11:30',
-        '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
-        '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',];
-        break;
-      default:
-        this.availableTimes = [];
-        break;
-    }
-  }
 }
   

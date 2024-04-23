@@ -1,29 +1,25 @@
 <section class="news__section">
-    <h3 class="news__heading">{{'HOME.NEWS' | translate }}</h3>
+    <h3 class="news__heading">{{ 'HOME.NEWS' | translate }}</h3>
     <div class="news__cards">
-        <div class="news__card">
-            <img src="./assets/news/1.png" alt="quicktest">
-            <p class="news__paragraph">იცოდით, რომ ქვიქტესტში თქვენი ავტომობილის დათვალიერებას სჭირდება სულ რაღაც 10 წუთი?</p>
-            <a class="news__more" routerLink="/news-inner" [routerLinkActive]="'active-link'">ვრცლად</a>
+        <div class="news__card" *ngFor="let newsItem of object" (click)="navigateToDetails(newsItem.id)">
+            <img [src]="newsItem.mainphoto" alt="quicktest">     
+            <p class="news__paragraph">{{ newsItem.name }}</p>
+            <a class="news__more" >
+                {{ 'HOME.MORE' | translate }}
+            </a>
         </div>
-        <div class="news__card">
-            <img src="./assets/news/1.png" alt="quicktest">
-            <p class="news__paragraph">იცოდით, რომ ქვიქტესტში თქვენი ავტომობილის დათვალიერებას სჭირდება სულ რაღაც 10 წუთი?</p>
-            <a class="news__more" routerLink="/news-inner" [routerLinkActive]="'active-link'">ვრცლად</a>
-        </div>
-        <div class="news__card">
-            <img src="./assets/news/1.png" alt="quicktest">
-            <p class="news__paragraph">იცოდით, რომ ქვიქტესტში თქვენი ავტომობილის დათვალიერებას სჭირდება სულ რაღაც 10 წუთი?</p>
-            <a class="news__more" routerLink="/news-inner" [routerLinkActive]="'active-link'">ვრცლად</a>
-        </div>
-        <div class="news__card">
-            <img src="./assets/news/1.png" alt="quicktest">
-            <p class="news__paragraph">იცოდით, რომ ქვიქტესტში თქვენი ავტომობილის დათვალიერებას სჭირდება სულ რაღაც 10 წუთი?</p>
-            <a class="news__more" routerLink="/news-inner" [routerLinkActive]="'active-link'">ვრცლად</a>
-        </div>
-        </div>
+    </div>
+</section>
+        
 
-        <div class="more__links">
+        
+
+
+
+
+        <!-- </div> -->
+
+        <!-- <div class="more__links">
             <div class="links">
                 <a href="">1</a>
                 <a href="">2</a>
@@ -31,20 +27,12 @@
                 <a href="">4</a>
                 <a href="">></a>
             </div>
-        </div>
+        </div> -->
 
         <!-- <div>
             <button (click)="previousPage()">Previous</button>
             <span>Page {{ currentPage }} of {{ totalPages }}</span>
             <button (click)="nextPage()">Next</button>
         </div> -->
-</section>
+<!-- </section> -->
 
-
-
-<!-- <div *ngFor="let newsItem of newsList">
-    <h2>{{ newsItem.title }}</h2>
-    <p>{{ newsItem.summary }}</p>
-    <a [routerLink]="['/news', newsItem.id]">Read More</a>
-    <hr>
-  </div> -->

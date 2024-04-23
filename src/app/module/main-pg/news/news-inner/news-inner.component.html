@@ -1,20 +1,42 @@
-<section class="news__inner__section">
-    <div class="news__inner__container">
-        <div class="news__inner__img__container">
-          <img src="./assets/news/1.png" alt="Image" class="news__inner__image">
-        </div>
-        <div class="news__inner__content__container">
-          <h1 class="news__inner__heading">Heading</h1>
-          <p class="news__inner__time">30.03.2024  </p>
-          <p class="news__inner__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque odit accusamus porro deserunt quos quisquam libero saepe minima similique cumque magnam esse nisi dignissimos maiores laboriosam architecto, aperiam accusantium. Deleniti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consequatur vitae ipsam non quisquam distinctio illo provident quidem voluptatum dolorem quibusdam suscipit maiores molestias, natus autem sit vero ullam atque!</p>
-        </div>
+<!-- <section class="news__inner__section">
+  <div class="news__inner__container">
+      <div class="news__inner__img__container">
+          <img [src]="newsItem.mainphoto" alt="Image" class="news__inner__image">
       </div>
+      <div class="news__inner__content__container">
+          <h1 class="news__inner__heading">{{newsItem.name }}</h1>
+          <p class="news__inner__time">{{newsItem.date }}</p>
+          <p class="news__inner__text">{{newsItem.bigdescription }}</p>
+      </div>
+  </div>
+</section> -->
+
+<!-- <section class="news__inner__section">
+  <div class="news__inner__container" >
+      <div class="news__inner__img__container">
+        <img [src]="object[0].mainphoto" alt="Image" class="news__inner__image">
+      </div>
+      <div class="news__inner__content__container">
+        <h1 class="news__inner__heading">{{object[0].name}}</h1>
+        <p class="news__inner__time">{{object[0].date}}  </p>
+        <p class="news__inner__text">{{object[0].bigdescription}}</p>
+      </div>
+    </div>
+</section> -->
+
+
+
+
+
+<section class="news__inner__section">
+  <div class="news__inner__container">
+      <div class="news__inner__img__container">
+          <img [src]="object.mainphoto" alt="Image" class="news__inner__image">
+      </div>
+      <div class="news__inner__content__container">
+          <h1 class="news__inner__heading">{{object.name }}</h1>
+          <p class="news__inner__time">{{object.date | date}}</p>
+          <p class="news__inner__text">{{object.bigdescription }}</p>
+      </div>
+  </div>
 </section>
-
-
-
-<!-- <div *ngIf="selectedNews">
-    <h2>{{ selectedNews.title }}</h2>
-    <p>{{ selectedNews.content }}</p>
-    <p>Time Added: {{ selectedNews.timeAdded | date }}</p>
-</div> -->
