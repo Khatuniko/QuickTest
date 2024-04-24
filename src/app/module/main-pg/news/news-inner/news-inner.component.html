@@ -6,7 +6,9 @@
       <div class="news__inner__content__container">
           <h1 class="news__inner__heading">{{object.name }}</h1>
           <p class="news__inner__time">{{object.date | date}}</p>
-          <p class="news__inner__text">{{object.bigdescription }}</p>
+          <div class="news__description">
+            <p class="news__inner__text">{{object.bigdescription }}</p>
+          </div>
       </div>
   </div>
 </section>

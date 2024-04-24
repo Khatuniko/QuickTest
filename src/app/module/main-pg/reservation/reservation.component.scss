@@ -14,16 +14,16 @@
 
 .reservation__container {
   width: 470px;
-  height: 608px;
+  height: 100%;
   margin: 40px auto;
-  padding: 44px;
+  padding: 24px;
   border-radius: 1rem;
   gap: 52px;
   box-shadow: 0px 0px 24px 0px #00000026;
 }
 
 .reservation__inputs {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .reservation__label {
@@ -124,7 +124,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   letter-spacing: -0.015em;
   text-align: center;
   color: #FFFFFF;
-  margin-top:8%;
+  margin-top:10%;
   margin-left:2rem;
 }
 
@@ -205,7 +205,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 40%;
     margin-left:10%;
   }
-
 }
 
 @media screen and (min-width:768px) and (max-width:1023px){
@@ -222,3 +221,5 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
 }
+
+

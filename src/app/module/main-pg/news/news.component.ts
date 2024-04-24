@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NewsService } from './services/news.service';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-news',
@@ -8,19 +8,15 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
+  object: any[] = []; 
+
   @Output() sendIdToChildEvent = new EventEmitter<number>();
 
   navigateToDetails(id: number) {
   this.router.navigate([`news/${id}`])
   }
 
-
-  object: any[] = []; 
-
-  
-  constructor(private newsService: NewsService, private router:Router) {
-
-  } 
+  constructor(private newsService: NewsService, private router:Router) {} 
 
   cards: any[] = [/* card data here */];
   cardsPerPage = 10;

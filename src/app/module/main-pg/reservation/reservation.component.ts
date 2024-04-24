@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { ReservationService } from './bookingservices/reservation.service';
 import { TranslateService } from '@ngx-translate/core';
-
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-reservation',
@@ -23,16 +21,21 @@ export class ReservationComponent {
   branchName!: string;
   BranchData!:any;
   uniqueBranchNames: string[] = [];
+  payment!: number;
 
 
-constructor(private translateService: TranslateService,private formBuilder: FormBuilder,private router: Router, private reservationService: ReservationService) {
+constructor(private translateService: TranslateService,
+  private formBuilder: FormBuilder,
+  private router: Router, 
+  private reservationService: ReservationService) {
   this.reservationForm = this.formBuilder.group({
     carNumber: ['', Validators.required],
     mobileNumber: ['', Validators.required],
     date: ['', Validators.required],
     city: ['', Validators.required],
     checkbox: [false, Validators.requiredTrue],
-    meetingTime:['', Validators.required]
+    meetingTime:['', Validators.required],
+    personName:['', Validators.required]
   });
 }
 
@@ -59,6 +62,49 @@ onDateChange(event: Event) {
 }
 
 
+postBooking(payment:number){
+  const bookingData = {
+    GovNumber: this.reservationForm.get('carNumber').value,
+    BranchId: this.getBranchId(this.reservationForm.get('city').value), 
+    BookingTime: this.reservationForm.get('meetingTime').value,
+    MobileNumber: this.reservationForm.get('mobileNumber').value,
+    PersonName: this.reservationForm.get('personName').value,
+    PaymentType:  payment
+  };
+
+  this.reservationService.postBooking(bookingData).subscribe(
+    response => {
+
+      console.log("Booking successful:", response);
+
+  
+    },
+    error => {
+
+      console.error("Error occurred while booking:", error);
+      
+    }
+  );
+
+  console.log(bookingData);
+}
+
+getBranchId(selectedCenter: string): number {
+  switch(selectedCenter) {
+    case "თბილისი":
+      return 1;
+    case "რუსთავი":
+      return 2;
+    case "ბათუმი":
+      return 3;
+    case "ქვიტირი":
+      return 4;
+    default:
+      return 0; 
+  }
+}
+
+
 getUniqueBranchNames(response: any[]): string[] {
   const uniqueBranchNames: string[] = [];
   const branchNameSet: Set<string> = new Set();
@@ -82,13 +128,19 @@ onCityChange(event: Event): void {
   let selectedCenter = this.centers.filter(center => center.BranchName === selectedBranch);
   if (selectedCenter) {
     let availableTimes = selectedCenter.map(center => center.AvailableTime);
-    console.log('Available times for', selectedBranch, ':', availableTimes);
-    availableTimes = availableTimes.map(time => time.split('T')[1]);
+    // console.log('Available times for', selectedBranch, ':', availableTimes);
     this.availableTimes = availableTimes;
   } else {
-    console.log('Center not found for selected branch:', selectedBranch);
+    // console.log('Center not found for selected branch:', selectedBranch);
     this.availableTimes = [];
   }
+
+  // if (selectedCenter[1] === "თბილისი") {
+  //   this.BranchId = 1;
+
+  // }
+  
+  console.log("rame", selectedCenter);
 }
 
 generateAvailableTimes(event: Event): void {
@@ -118,5 +170,6 @@ onSubmit(){
 isFormValid(): boolean {
   return this.reservationForm.valid;
 }
+
 }
   

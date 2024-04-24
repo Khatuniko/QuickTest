@@ -1,6 +1,10 @@
 <form class="reservation__form" [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
     <h3 class="reservation__heading">{{ 'HOME.RESERVATION' | translate }}</h3>
     <div class="reservation__container">
+      <div class="reservation__inputs">
+        <label class="reservation__label">{{ 'HOME.PERSON' | translate }}</label>
+        <input class="reservation__input" formControlName="personName" placeholder="სახელი/გვარი">
+      </div>
         <div class="reservation__inputs">
           <label class="reservation__label">{{ 'HOME.CAR_NUMBER' | translate }}</label>
           <input class="reservation__input" formControlName="carNumber" placeholder="AA123AA">
@@ -26,8 +30,11 @@
         <div class="reservation__inputs">
           <label class="reservation__label"> {{ 'HOME.TIME' | translate }} </label>
           <select id="timeSelect" formControlName="meetingTime" class="reservation__select">
-            <option *ngFor="let time of availableTimes" [value]="time">{{ time }}</option>
+            <option *ngFor="let time of availableTimes" [value]="time">
+              {{ time | date: 'hh:mm a' }}
+            </option>
           </select>
+          
         </div>
 
         <div class="reservation__checkbox">
@@ -39,11 +46,11 @@
         </div>
 
         <div class="reservation__btns">
-          <button routerLink="/payment" [routerLinkActive]="'active-link'" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+          <button (click)="postBooking(0)" routerLink="/payment" [routerLinkActive]="'active-link'" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
             {{ 'HOME.CREDIT' | translate }}
           </button>
     
-          <button  class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+          <button (click)="postBooking(1)" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
             {{ 'HOME.CASH' | translate }}
           </button> 
         </div>
