@@ -22,6 +22,7 @@ export class ReservationComponent {
   BranchData!:any;
   uniqueBranchNames: string[] = [];
   payment!: number;
+  response!:any;
 
 
 constructor(private translateService: TranslateService,
@@ -75,14 +76,30 @@ postBooking(payment:number){
   this.reservationService.postBooking(bookingData).subscribe(
     response => {
 
-      console.log("Booking successful:", response);
-
-  
+  if(response.Code===0){
+    Swal.fire({
+      title: "თქვენ წარმატებით დაჯავშნეთ ვიზიტი",
+      icon: "success",
+      confirmButtonColor: "#F7A23E",
+    }).then((result) => {
+      if (result.isConfirmed) {
+       this.router.navigate(['/']);
+      }
+    });
+  }
+      else{Swal.fire({
+      title: "თქვენი ვიზიტი ვერ დაიჯავშნა",
+      text:"გთხოვთ,ცადოთ თავიდან",
+      icon: "error",
+      confirmButtonColor: "#FF0000",
+    }).then((result) => {
+      if (result.isConfirmed) {
+       this.router.navigate(['/reservation']);
+      }
+    });}
     },
     error => {
 
-      console.error("Error occurred while booking:", error);
-      
     }
   );
 
@@ -103,7 +120,6 @@ getBranchId(selectedCenter: string): number {
       return 0; 
   }
 }
-
 
 getUniqueBranchNames(response: any[]): string[] {
   const uniqueBranchNames: string[] = [];
@@ -128,19 +144,13 @@ onCityChange(event: Event): void {
   let selectedCenter = this.centers.filter(center => center.BranchName === selectedBranch);
   if (selectedCenter) {
     let availableTimes = selectedCenter.map(center => center.AvailableTime);
-    // console.log('Available times for', selectedBranch, ':', availableTimes);
+    console.log('Available times for', selectedBranch, ':', availableTimes);
     this.availableTimes = availableTimes;
   } else {
-    // console.log('Center not found for selected branch:', selectedBranch);
+    console.log('Center not found for selected branch:', selectedBranch);
     this.availableTimes = [];
-  }
-
-  // if (selectedCenter[1] === "თბილისი") {
-  //   this.BranchId = 1;
-
-  // }
-  
-  console.log("rame", selectedCenter);
+  }  
+  console.log(selectedCenter);
 }
 
 generateAvailableTimes(event: Event): void {
@@ -151,20 +161,9 @@ generateAvailableTimes(event: Event): void {
 
 onSubmit(){
   this.submitted = true;
-
   if(this.reservationForm.invalid){
     return
   }
-  Swal.fire({
-    title: "თქვენ წარმატებით დაჯავშნეთ ვიზიტი",
-    icon: "success",
-    confirmButtonColor: "#F7A23E",
-  }).then((result) => {
-    if (result.isConfirmed) {
-     this.router.navigate(['/']);
-    }
-  });
-  
 }
 
 isFormValid(): boolean {
