@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NewsInnerService } from './news-inner-services/news-inner.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,7 +9,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./news-inner.component.scss']
 })
 export class NewsInnerComponent implements OnInit { 
-  @Input() newsItemId: number | null = null;
   object:any;
   newsItem: any;
   public id: any | null = "";

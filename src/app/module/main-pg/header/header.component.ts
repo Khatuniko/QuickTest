@@ -21,4 +21,10 @@ export class HeaderComponent {
       bodyElement.classList.toggle('noScroll');
     }
   }
+
+  closeMenu(){
+    this.menuVariable = !this.menuVariable;
+    this.menu_icon_variable = !this.menu_icon_variable;
+
+  }
 }

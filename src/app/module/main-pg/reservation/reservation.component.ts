@@ -86,8 +86,7 @@ postBooking(payment:number){
        this.router.navigate(['/']);
       }
     });
-  }
-      else{Swal.fire({
+  }else{Swal.fire({
       title: "თქვენი ვიზიტი ვერ დაიჯავშნა",
       text:"გთხოვთ,ცადოთ თავიდან",
       icon: "error",
@@ -99,7 +98,6 @@ postBooking(payment:number){
     });}
     },
     error => {
-
     }
   );
 
