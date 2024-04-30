@@ -94,8 +94,22 @@
   -moz-appearance: none;
   appearance: none;
 }
+@media screen and (max-width:280px) {
+  .reminder__section{
+    margin-left: 2%;
+    margin-right: 2%;
+  }
 
-@media screen and (max-width:767px) {
+  .reminder__container {
+    width: 100%;
+  }
+
+  .reminder__btn  {
+    margin-left:0%;
+  }
+}
+
+@media screen and (min-width:281px) and (max-width:767px) {
   .reminder__section{
     margin-left: 2%;
     margin-right: 2%;

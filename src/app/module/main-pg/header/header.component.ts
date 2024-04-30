@@ -26,5 +26,11 @@ export class HeaderComponent {
     this.menuVariable = !this.menuVariable;
     this.menu_icon_variable = !this.menu_icon_variable;
 
+  
+  const bodyElement = document.body;
+  if (bodyElement) {
+    bodyElement.classList.toggle('noScroll');
   }
+}
+  
 }
