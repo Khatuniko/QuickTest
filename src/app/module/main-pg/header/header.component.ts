@@ -15,22 +15,21 @@ export class HeaderComponent {
   openMenu() {
     this.menuVariable = !this.menuVariable;
     this.menu_icon_variable = !this.menu_icon_variable;
-
+  
     const bodyElement = document.body;
-    if (bodyElement) {
-      bodyElement.classList.toggle('noScroll');
+    if (bodyElement && this.menuVariable) { 
+      bodyElement.classList.add('noScroll');
     }
   }
-
-  closeMenu(){
+  
+  closeMenu() {
     this.menuVariable = !this.menuVariable;
     this.menu_icon_variable = !this.menu_icon_variable;
-
   
-  const bodyElement = document.body;
-  if (bodyElement) {
-    bodyElement.classList.toggle('noScroll');
+    const bodyElement = document.body;
+    if (bodyElement) {
+      bodyElement.classList.remove('noScroll'); 
+    }
   }
-}
   
 }

@@ -75,33 +75,39 @@ postBooking(payment:number){
 
   this.reservationService.postBooking(bookingData).subscribe(
     response => {
+      console.log(response);
 
-  if(response.Code===0){
-    Swal.fire({
-      title: "თქვენ წარმატებით დაჯავშნეთ ვიზიტი",
-      icon: "success",
-      confirmButtonColor: "#F7A23E",
-    }).then((result) => {
-      if (result.isConfirmed) {
-       this.router.navigate(['/']);
+      if (response.link) {
+         window.open(response.link, '_blank');
       }
-    });
-  }else{Swal.fire({
-      title: "თქვენი ვიზიტი ვერ დაიჯავშნა",
-      text:"გთხოვთ,ცადოთ თავიდან",
-      icon: "error",
-      confirmButtonColor: "#FF0000",
-    }).then((result) => {
-      if (result.isConfirmed) {
-       this.router.navigate(['/reservation']);
-      }
-    });}
+
     },
     error => {
+      console.error('Error:', error);
     }
   );
 
   console.log(bookingData);
+
+  // this.reservationService.postBooking(bookingData).subscribe(
+  //   response => {
+  //     console.log(response);
+
+  //     if(response.link){
+
+
+  
+
+
+  //     }
+
+  
+  //   },
+  //   error => {
+  //   }
+  // );
+
+  // console.log(bookingData);
 }
 
 getBranchId(selectedCenter: string): number {
@@ -170,3 +176,23 @@ isFormValid(): boolean {
 
 }
   
+// if(response.Code===0){
+//   Swal.fire({
+//     title: "თქვენ წარმატებით დაჯავშნეთ ვიზიტი",
+//     icon: "success",
+//     confirmButtonColor: "#F7A23E",
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+//      this.router.navigate(['/']);
+//     }
+//   });
+// }else{Swal.fire({
+//     title: "თქვენი ვიზიტი ვერ დაიჯავშნა",
+//     text:"გთხოვთ,ცადოთ თავიდან",
+//     icon: "error",
+//     confirmButtonColor: "#FF0000",
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+//      this.router.navigate(['/reservation']);
+//     }
+//   });}

@@ -44,11 +44,11 @@
         </div>
 
         <div class="reservation__btns">
-          <button (click)="postBooking(0)" routerLink="/payment" [routerLinkActive]="'active-link'" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+          <button (click)="postBooking(1)" routerLink="/payment" [routerLinkActive]="'active-link'" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
             {{ 'HOME.CREDIT' | translate }}
           </button>
     
-          <button (click)="postBooking(1)" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
+          <button (click)="postBooking(0)" class="btn__submit" type="submit" [style.background]="isFormValid() ? '#F7A23E' : '#FBD19E'">
             {{ 'HOME.CASH' | translate }}
           </button> 
         </div>
